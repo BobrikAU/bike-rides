@@ -1,0 +1,5 @@
+@import '../../mixins/link';
+
+.link {
+  @include link (18px, 600, 1.2853, 75%)
+}
