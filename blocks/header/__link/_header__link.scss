@@ -1,0 +1,15 @@
+.header__link {
+  text-decoration: none;
+  color: $colorTextMain;
+  font: {
+    family: inherit;
+    size: 14px;
+    weight: 500;
+  }
+  line-height: 1.0624;
+  cursor: $cusor;
+
+  &:hover{
+    opacity: $opacity;
+  }
+}
