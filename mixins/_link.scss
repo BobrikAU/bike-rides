@@ -1,0 +1,16 @@
+@mixin link ($fontSize: 14px, $fontWeight: 500, $lineHeight: 1.0624, $opacity: 75%) {
+  text-decoration: none;
+  color: $colorTextMain;
+  font: {
+    family: inherit;
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $lineHeight;
+  cursor: $cusor;
+  transition: .4s;
+
+  &:hover{
+    opacity: $opacity;
+  }
+}

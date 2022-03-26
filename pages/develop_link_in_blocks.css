@@ -376,20 +376,37 @@ template {
   -moz-text-size-adjust: 100%;
 }
 
-.header__link {
+.link {
   text-decoration: none;
   color: #151515;
   font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.0624;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2853;
   cursor: url("../images/pointer.svg"), auto;
   transition: 0.4s;
 }
-.header__link:hover {
+.link:hover {
   opacity: 75%;
 }
 
-.header__link_theme_dark {
+.link_closed-slide {
+  opacity: 70%;
+}
+.link_closed-slide:hover {
+  opacity: 60%;
+}
+
+.link_theme_dark {
   color: #fff;
-}/*# sourceMappingURL=develop_link_in_header.css.map */
+}
+.link_theme_dark:hover {
+  opacity: 65%;
+}
+
+.link_theme_dark-closed {
+  color: #fff;
+}
+.link_theme_dark-closed:hover {
+  opacity: 50%;
+}/*# sourceMappingURL=develop_link_in_blocks.css.map */
