@@ -1,0 +1,10 @@
+.slide__icon {
+  width: 10px;
+  height: 18px;
+  margin: auto;
+  padding: 0 3px 0 0;
+
+  .slide__batton-left-right:hover & {
+    opacity: 75%;
+  }
+}

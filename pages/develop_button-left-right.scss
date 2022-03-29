@@ -1,0 +1,13 @@
+@import '../vendor/normalize';
+@import '../vendor/fonts/fonts';
+@import '../blocks/page/page';
+@import '../variables/variables';
+
+
+
+
+@import '../blocks/slide/__batton-left-right/_slide__batton-left-right.scss';
+@import '../blocks/slide/__icon/slide__icon';
+@import '../blocks/slide/__icon/_right/slide__icon_right';
+@import '../blocks/slide/__batton-left-right/_theme/slide__batton-left-right_theme_dark';
+@import '../blocks/slide/__icon/_theme/slide__icon_theme_dark';
