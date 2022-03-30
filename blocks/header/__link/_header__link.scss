@@ -1,7 +1,8 @@
 @import '../../../mixins/link';
-
+@import '../../../mixins/link-hover';
 
 .header__link {
-  @include link (14px, 500, 1.0624, 75%);
+  @include link ($colorLink, 14px, 500, 1.0624);
+  @include linkHover (75%);
 }
 
