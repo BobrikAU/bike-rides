@@ -1,5 +1,7 @@
 @import '../../mixins/link';
+@import '../../mixins/link-hover';
 
 .link {
-  @include link (18px, 600, 1.2853, 75%)
+  @include link ($colorLink, 18px, 600, 1.2853);
+  @include linkHover (75%)
 }

@@ -1,0 +1,5 @@
+@mixin linkHover ($opacity: 75%) {
+  &:hover{
+    opacity: $opacity;
+  }
+}
