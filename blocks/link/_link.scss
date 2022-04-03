@@ -2,6 +2,6 @@
 @import '../../mixins/link-hover';
 
 .link {
-  @include link ($colorLink, 18px, 600, 1.2853);
-  @include linkHover (75%);
+  @include link (var(--colorTextMain), 18px, 600, 1.2853);
+  @include linkHover (var(--opacityLinkHover));
 }

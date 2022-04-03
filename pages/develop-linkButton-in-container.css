@@ -366,7 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
@@ -379,6 +379,10 @@ template {
 :root {
   --colorTextMain: #151515;
   --cardPseudoShadowHover: .11;
+  --backgroundColor: #f4f4f4;
+  --opacityLinkHeaderHover: 75%;
+  --opacityLinkHover: 75%;
+  --opacityLinkClosedSlideHover: 60%;
 }
 
 .container__link-button {
@@ -397,7 +401,7 @@ template {
   width: 180px;
   height: 50px;
   border-radius: 4px;
-  background-color: #24b47e;
+  background-color: rgb(36, 180, 126);
   position: relative;
   z-index: 10;
   overflow: hidden;
@@ -408,7 +412,7 @@ template {
   width: 180px;
   height: 50px;
   border-radius: 4px;
-  background-color: #319e75;
+  background-color: rgb(49, 158, 117);
   position: absolute;
   z-index: -10;
   top: 0;

@@ -366,7 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
@@ -376,9 +376,18 @@ template {
   -moz-text-size-adjust: 100%;
 }
 
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
+  --backgroundColor: #f4f4f4;
+  --opacityLinkHeaderHover: 75%;
+  --opacityLinkHover: 75%;
+  --opacityLinkClosedSlideHover: 60%;
+}
+
 .link {
   text-decoration: none;
-  color: #151515;
+  color: var(--colorTextMain);
   font-family: inherit;
   font-size: 18px;
   font-weight: 600;
@@ -387,26 +396,12 @@ template {
   transition: 0.4s;
 }
 .link:hover {
-  opacity: 75%;
+  opacity: var(--opacityLinkHover);
 }
 
 .link_closed-slide {
   opacity: 70%;
 }
 .link_closed-slide:hover {
-  opacity: 60%;
-}
-
-.link_theme_dark {
-  color: #fff;
-}
-.link_theme_dark:hover {
-  opacity: 65%;
-}
-
-.link_theme_dark-closed {
-  color: #fff;
-}
-.link_theme_dark-closed:hover {
-  opacity: 50%;
+  opacity: var(--opacityLinkClosedSlideHover);
 }/*# sourceMappingURL=develop_link_in_blocks.css.map */
