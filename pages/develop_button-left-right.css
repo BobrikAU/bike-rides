@@ -376,6 +376,11 @@ template {
   -moz-text-size-adjust: 100%;
 }
 
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
+}
+
 .slide__batton-left-right {
   padding: 0;
   border: none;

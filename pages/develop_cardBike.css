@@ -379,4 +379,50 @@ template {
 :root {
   --colorTextMain: #151515;
   --cardPseudoShadowHover: .11;
-}/*# sourceMappingURL=develop_index.css.map */
+}
+
+.card {
+  text-decoration: none;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: url("../images/pointer.svg"), auto;
+  transition: 0.4s;
+  margin: 0;
+  display: block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+}
+.card::before {
+  content: "";
+  display: block;
+  width: 380px;
+  height: 380px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: -20px;
+  z-index: -10;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  transition: 0.4s;
+}
+.card:hover::before {
+  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+}
+
+.card__image {
+  display: block;
+  width: 340px;
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.card__text {
+  display: block;
+  padding-top: 22px;
+  padding-left: 6px;
+}/*# sourceMappingURL=develop_cardBike.css.map */

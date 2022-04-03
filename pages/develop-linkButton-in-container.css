@@ -376,6 +376,11 @@ template {
   -moz-text-size-adjust: 100%;
 }
 
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
+}
+
 .container__link-button {
   text-decoration: none;
   color: #fff;
@@ -396,7 +401,6 @@ template {
   position: relative;
   z-index: 10;
   overflow: hidden;
-  margin: 30px 0 0 400px;
 }
 .container__link-button::before {
   content: "";
