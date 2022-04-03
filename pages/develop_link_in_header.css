@@ -366,7 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
-  background-color: #f4f4f4;
+  background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
@@ -376,9 +376,18 @@ template {
   -moz-text-size-adjust: 100%;
 }
 
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
+  --backgroundColor: #f4f4f4;
+  --opacityLinkHeaderHover: 75%;
+  --opacityLinkHover: 75%;
+  --opacityLinkClosedSlideHover: 60%;
+}
+
 .header__link {
   text-decoration: none;
-  color: #151515;
+  color: var(--colorTextMain);
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -387,9 +396,5 @@ template {
   transition: 0.4s;
 }
 .header__link:hover {
-  opacity: 75%;
-}
-
-.header__link_theme_dark {
-  color: #fff;
+  opacity: var(--opacityLinkHeaderHover);
 }/*# sourceMappingURL=develop_link_in_header.css.map */

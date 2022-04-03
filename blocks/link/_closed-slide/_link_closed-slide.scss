@@ -1,7 +1,7 @@
+@import '../../../mixins/link-hover';
+
 .link_closed-slide {
   opacity: 70%;
 
-  &:hover{
-    opacity: 60%;
-  }
+  @include linkHover (var(--opacityLinkClosedSlideHover));
 }
