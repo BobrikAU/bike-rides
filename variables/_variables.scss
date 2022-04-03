@@ -1,3 +1,8 @@
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
+}
+
 $colorTextMain: #151515; //основной цвет текста сайта
 $colorTextMainDarkTheme: #fff; //основной цвет текста сайта для темной темы
 $cusor: url('../images/pointer.svg'), auto; //внешний вид курсора

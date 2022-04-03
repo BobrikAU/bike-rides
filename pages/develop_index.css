@@ -374,4 +374,9 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+
+:root {
+  --colorTextMain: #151515;
+  --cardPseudoShadowHover: .11;
 }/*# sourceMappingURL=develop_index.css.map */

@@ -3,5 +3,5 @@
 
 .link {
   @include link ($colorLink, 18px, 600, 1.2853);
-  @include linkHover (75%)
+  @include linkHover (75%);
 }
