@@ -388,48 +388,128 @@ template {
   --fieldsetBorder: rgba(199, 199, 199, .5);
 }
 
-.card {
-  text-decoration: none;
+.footer__form {
+  max-width: 360px;
+  height: 50px;
+}
+
+.footer__fieldset {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid var(--fieldsetBorder);
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.footer__input {
+  padding: 0 0 0 19px;
+  background-color: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: none;
   color: var(--colorTextMain);
   font-family: inherit;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
+}
+.footer__input:hover {
   cursor: url("../images/pointer.svg"), auto;
+}
+.footer__input::-moz-placeholder {
+  color: var(--inputTextInactive);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
+  opacity: 0.7;
+  -moz-transition: 0.4s;
   transition: 0.4s;
-  margin: 0;
-  display: block;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
+}
+.footer__input:-ms-input-placeholder {
+  color: var(--inputTextInactive);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
+  opacity: 0.7;
+  -ms-transition: 0.4s;
+  transition: 0.4s;
+}
+.footer__input::placeholder {
+  color: var(--inputTextInactive);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
+  opacity: 0.7;
+  transition: 0.4s;
+}
+.footer__form:hover .footer__input::-moz-placeholder {
+  color: var(--colorTextMain);
+  opacity: 1;
+}
+.footer__form:hover .footer__input:-ms-input-placeholder {
+  color: var(--colorTextMain);
+  opacity: 1;
+}
+.footer__form:hover .footer__input::placeholder {
+  color: var(--colorTextMain);
+  opacity: 1;
+}
+.footer__input:focus {
+  color: var(--colorTextMain);
+  opacity: 1;
+  outline: none;
+}
+.footer__form:hover .footer__input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.footer__form:hover .footer__input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.footer__form:hover .footer__input:focus::placeholder {
+  opacity: 0;
+}
+.footer__input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.footer__input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.footer__input:focus::placeholder {
+  opacity: 0;
+}
+
+.footer__button {
+  padding: 0 22px 0 0;
+  border: none;
+  background-color: inherit;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
+  opacity: 0;
   position: relative;
+  left: 100%;
+  transition: opacity 0.4s 0s, left 0s 0.4s;
 }
-.card::before {
-  content: "";
-  display: block;
-  width: 380px;
-  height: 380px;
-  background-color: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: -20px;
-  z-index: -10;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
-  transition: 0.4s;
-}
-.card:hover::before {
-  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+.footer__button:hover {
+  cursor: url("../images/pointer.svg"), auto;
 }
 
-.card__image {
-  display: block;
-  width: 340px;
-  border-radius: 20px;
-  margin: 20px;
+.footer__button_visible {
+  opacity: 1;
+  left: 0;
+  transition: opacity 0.4s 0s, left 0s 0s;
 }
 
-.card__text {
-  display: block;
-  padding-top: 22px;
-  padding-left: 6px;
-}/*# sourceMappingURL=develop_cardBike.css.map */
+.footer__fieldset_focus {
+  border: 1px solid var(--fieldsetBorderFocus);
+}/*# sourceMappingURL=develop_email.css.map */

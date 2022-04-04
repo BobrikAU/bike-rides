@@ -1,12 +1,8 @@
+@import '../mixins/text';
+
 @mixin link ($colorLink: $colorTextMain, $fontSize: 14px, $fontWeight: 500, $lineHeight: 1.0624) {
   text-decoration: none;
-  color: $colorLink;
-  font: {
-    family: inherit;
-    size: $fontSize;
-    weight: $fontWeight;
-  }
-  line-height: $lineHeight;
+  @include text ($colorLink, $fontSize, $fontWeight, $lineHeight);
   cursor: $cusor;
   transition: .4s;
   @content;

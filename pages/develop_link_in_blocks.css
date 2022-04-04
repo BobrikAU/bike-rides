@@ -378,11 +378,14 @@ template {
 
 :root {
   --colorTextMain: #151515;
+  --inputTextInactive: #222;
   --cardPseudoShadowHover: .11;
   --backgroundColor: #f4f4f4;
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;
+  --fieldsetBorderFocus: rgba(199, 199, 199, 1);
+  --fieldsetBorder: rgba(199, 199, 199, .5);
 }
 
 .link {
