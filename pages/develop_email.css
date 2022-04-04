@@ -378,11 +378,14 @@ template {
 
 :root {
   --colorTextMain: #151515;
+  --inputTextInactive: #222;
   --cardPseudoShadowHover: .11;
   --backgroundColor: #f4f4f4;
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;
+  --fieldsetBorderFocus: rgba(199, 199, 199, 1);
+  --fieldsetBorder: rgba(199, 199, 199, .5);
 }
 
 .footer__form {
@@ -393,18 +396,22 @@ template {
 .footer__fieldset {
   margin: 0;
   padding: 0;
-  border: none;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid var(--fieldsetBorder);
+  border-radius: 4px;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .footer__input {
-  padding: 0 22px 0 19px;
+  padding: 0 0 0 19px;
   background-color: inherit;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 1px solid rgba(199, 199, 199, 0.5);
-  border-radius: 4px;
+  border: none;
   color: var(--colorTextMain);
   font-family: inherit;
   font-size: 13px;
@@ -415,7 +422,7 @@ template {
   cursor: url("../images/pointer.svg"), auto;
 }
 .footer__input::-moz-placeholder {
-  color: #222;
+  color: var(--inputTextInactive);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
@@ -425,7 +432,7 @@ template {
   transition: 0.4s;
 }
 .footer__input:-ms-input-placeholder {
-  color: #222;
+  color: var(--inputTextInactive);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
@@ -435,7 +442,7 @@ template {
   transition: 0.4s;
 }
 .footer__input::placeholder {
-  color: #222;
+  color: var(--inputTextInactive);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
@@ -459,7 +466,6 @@ template {
   color: var(--colorTextMain);
   opacity: 1;
   outline: none;
-  border: 1px solid rgb(199, 199, 199);
 }
 .footer__form:hover .footer__input:focus::-moz-placeholder {
   opacity: 0;
@@ -481,11 +487,29 @@ template {
 }
 
 .footer__button {
-  padding: 0;
+  padding: 0 22px 0 0;
   border: none;
+  background-color: inherit;
   color: var(--colorTextMain);
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
   line-height: 1.78;
+  opacity: 0;
+  position: relative;
+  left: 100%;
+  transition: opacity 0.4s 0s, left 0s 0.4s;
+}
+.footer__button:hover {
+  cursor: url("../images/pointer.svg"), auto;
+}
+
+.footer__button_visible {
+  opacity: 1;
+  left: 0;
+  transition: opacity 0.4s 0s, left 0s 0s;
+}
+
+.footer__fieldset_focus {
+  border: 1px solid var(--fieldsetBorderFocus);
 }/*# sourceMappingURL=develop_email.css.map */

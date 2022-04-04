@@ -1,6 +1,11 @@
 .footer__fieldset {
   margin: 0;
   padding: 0;
-  border: none;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid var(--fieldsetBorder);
+  border-radius: 4px;
+  width: 100%;
   height: 100%;
+  overflow: hidden;
 }
