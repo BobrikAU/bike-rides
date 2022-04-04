@@ -478,4 +478,14 @@ template {
 }
 .footer__input:focus::placeholder {
   opacity: 0;
+}
+
+.footer__button {
+  padding: 0;
+  border: none;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.78;
 }/*# sourceMappingURL=develop_email.css.map */

@@ -1,3 +1,7 @@
-.footer__button {
+@import '../../../mixins/text';
 
+.footer__button {
+  padding: 0;
+  border: none;
+  @include text (var(--colorTextMain), 13px, 500, 1.78)
 }
