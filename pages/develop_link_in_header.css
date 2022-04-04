@@ -397,7 +397,11 @@ template {
   line-height: 1.0624;
   cursor: url("../images/pointer.svg"), auto;
   transition: 0.4s;
+  margin-right: 30px;
 }
 .header__link:hover {
   opacity: var(--opacityLinkHeaderHover);
+}
+.header__link:last-child {
+  margin-right: 0;
 }/*# sourceMappingURL=develop_link_in_header.css.map */

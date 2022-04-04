@@ -408,6 +408,7 @@ template {
   position: relative;
   z-index: 10;
   overflow: hidden;
+  margin-top: 52px;
 }
 .container__link-button::before {
   content: "";
