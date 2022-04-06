@@ -1,8 +1,9 @@
 @import '../../../mixins/link';
 
 .popup__link {
-  @include link ($colorTextMain, 18px, 500, 1);
+  @include link (var(--colorTextMain), 18px, 500, 1);
   margin-bottom: 32px;
+  transition: 0s;
 
   &:last-child {
     margin-bottom: 0;

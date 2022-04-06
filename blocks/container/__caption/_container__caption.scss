@@ -7,5 +7,12 @@
   @include text (var(--colorTextMain), 55px, 700, 60px);
   letter-spacing: -0.5px;
   padding-top: 63px;
+
+  @media screen and (max-width: 750px) {
+    padding-top: 0;
+    max-width: 284px;
+    font-size: 32px;
+    line-height: 1.25;
+  }
 }
 
