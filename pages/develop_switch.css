@@ -366,6 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
@@ -374,6 +375,11 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+@media screen and (max-width: 615px) {
+  .page {
+    padding: 0 18px;
+  }
 }
 
 :root {
@@ -389,13 +395,13 @@ template {
   --backgroundColorRange: #fff;
 }
 
-.footer__switch {
+.switch {
   width: 136px;
   display: flex;
   align-items: center;
 }
 
-.footer__range {
+.switch__range {
   -webkit-appearance: none;
   margin: 0 22px;
   width: 44px;
@@ -404,7 +410,7 @@ template {
   background-color: var(--backgroundColorRange);
 }
 
-.footer__range::-moz-range-track {
+.switch__range::-moz-range-track {
   -moz-appearance: none;
   margin: 0 22px;
   width: 44px;
@@ -413,7 +419,7 @@ template {
   background-color: var(--backgroundColorRange);
 }
 
-.footer__range::-webkit-slider-thumb {
+.switch__range::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
@@ -421,7 +427,7 @@ template {
   background-color: #24b47e;
 }
 
-.footer__range::-moz-range-thumb {
+.switch__range::-moz-range-thumb {
   -moz-appearance: none;
   width: 20px;
   height: 20px;

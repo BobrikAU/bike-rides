@@ -1,7 +1,7 @@
 
-const range = document.querySelector('.footer__range');
-const iconThemeLight = document.querySelector('.footer__icon-light');
-const iconThemeDark = document.querySelector('.footer__icon-dark');
+const range = document.querySelector('.switch__range');
+const iconThemeLight = document.querySelector('.switch__icon-light');
+const iconThemeDark = document.querySelector('.switch__icon-dark');
 const root = document.querySelector(':root');
 
 

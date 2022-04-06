@@ -7,8 +7,34 @@
   object-fit: cover;
   position: sticky;
   float: right;
-  margin: 140px 370px 79px 0;
+  margin: 140px 370px 79px 20px;
   top: 200px;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, .2);
+
+  @media screen and (max-width: 1420px) {
+    margin-right: calc(370px + (100% - 1300px));
+  }
+
+  @media screen and (max-width: 1280px) {
+    margin-right: 230px;
+  }
+
+  @media screen and (max-width: 950px) {
+    margin-top: 10px;
+    margin-right: 160px;
+    width: 180px;
+    height: 138px;
+    padding: 11px 27px;
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-top: 115px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 615px) {
+    margin: 191px 0 31px 0;
+    float: none;
+  }
 }

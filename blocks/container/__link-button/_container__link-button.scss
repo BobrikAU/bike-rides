@@ -31,4 +31,15 @@
   &:hover::before{
     transform: translate(180px, 0);
   }
+
+  @media screen and (max-width: 750px) {
+    font-size: 13px;
+    line-height: 1.46;
+  }
+
+  @media screen and (max-width: 615px) {
+    margin: 40px auto 0;
+    width: 284px;
+    height: 46px;
+  }
 }

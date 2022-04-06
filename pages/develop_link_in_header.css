@@ -376,7 +376,7 @@ template {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 615px) {
   .page {
     padding: 0 18px;
   }
@@ -412,7 +412,7 @@ template {
 .header__link:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 615px) {
   .header__link {
     display: none;
   }
