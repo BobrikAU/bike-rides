@@ -1,0 +1,16 @@
+@import '../../../mixins/text';
+
+.slogan__about-author{
+  margin: 6px 0 4px 0;
+  @include text (var(--inputTextInactive), 16px, 400, 1.75);
+  opacity: .7;
+
+  @media screen and (max-width: 780px) {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  @media screen and (max-width: 630px) {
+    margin-top: 4px;
+  }
+}
