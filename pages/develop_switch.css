@@ -366,7 +366,6 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
-  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
@@ -375,11 +374,6 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-}
-@media screen and (max-width: 320px) {
-  .page {
-    padding: 0 18px;
-  }
 }
 
 :root {
@@ -393,4 +387,44 @@ template {
   --fieldsetBorderFocus: rgba(199, 199, 199, 1);
   --fieldsetBorder: rgba(199, 199, 199, .5);
   --backgroundColorRange: #fff;
-}/*# sourceMappingURL=develop_index.css.map */
+}
+
+.footer__switch {
+  width: 136px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__range {
+  -webkit-appearance: none;
+  margin: 0 22px;
+  width: 44px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: var(--backgroundColorRange);
+}
+
+.footer__range::-moz-range-track {
+  -moz-appearance: none;
+  margin: 0 22px;
+  width: 44px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: var(--backgroundColorRange);
+}
+
+.footer__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: #24b47e;
+}
+
+.footer__range::-moz-range-thumb {
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background-color: #24b47e;
+}/*# sourceMappingURL=develop_switch.css.map */
