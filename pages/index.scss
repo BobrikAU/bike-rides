@@ -15,9 +15,6 @@
 @import '../blocks/switch/switch';
 @import '../blocks/popup/__switch/popup__switch';
 @import '../blocks/switch/__range/switch__range';
-
-
-
 @import '../blocks/container/container';
 @import '../blocks/container/__caption/container__caption';
 @import '../blocks/container/__subtitle/container__subtitle';
@@ -25,4 +22,8 @@
 @import '../blocks/container/__image/container__image';
 @import '../blocks/container/__name/container__name';
 @import '../blocks/container/__line/container__line';
-
+@import '../blocks/slogan/slogan';
+@import '../blocks/slogan/__box/slogan__box';
+@import '../blocks/slogan/__text/slogan__text';
+@import '../blocks/slogan/__author/slogan__author';
+@import '../blocks/slogan/__about-author/slogan__about-author';

@@ -1,0 +1,25 @@
+.slogan__box {
+  margin: 0 155px 0 0;
+  width: 435px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1420px) {
+    margin-right: calc(155px + (100% - 1420px));
+  }
+
+  @media screen and (max-width: 1285px) {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: 780px) {
+    width: calc(435px + (100% - 780px));
+  }
+
+  @media screen and (max-width: 630px) {
+    margin-right: 0;
+    width: 284px;
+    padding-bottom: 80px;
+  }
+}

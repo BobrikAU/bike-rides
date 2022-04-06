@@ -679,7 +679,7 @@ template {
 }
 @media screen and (max-width: 615px) {
   .container__link-button {
-    margin: 40px auto 0;
+    margin: 40px auto 79px;
     width: 284px;
     height: 46px;
   }
@@ -730,6 +730,7 @@ template {
   .container__image {
     margin: 191px 0 31px 0;
     float: none;
+    position: static;
   }
 }
 
@@ -754,5 +755,137 @@ template {
 @media screen and (max-width: 1200px) {
   .container__line {
     display: none;
+  }
+}
+
+.slogan {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 120px 0 0 0px;
+  min-height: 580px;
+  background-image: url(../../images/norway.jpg);
+  background-repeat: no-repeat;
+  background-size: 650px;
+  background-position: left 120px top 120px;
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 1250px) {
+  .slogan {
+    background-size: 450px;
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .slogan {
+    background-position: left calc(120px + 100% - 600px) top 120px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .slogan {
+    background-position: left 20px top 120px;
+    background-size: 284px;
+    min-height: 353px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .slogan {
+    background-position: top 120px center;
+    justify-content: center;
+    align-items: flex-end;
+    min-height: 632px;
+  }
+}
+@media screen and (max-width: 615px) {
+  .slogan {
+    background-position: top 20px center;
+    border-top: 1px solid #e4e4e4;
+    min-height: 516px;
+  }
+}
+
+.slogan__box {
+  margin: 0 155px 0 0;
+  width: 435px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1420px) {
+  .slogan__box {
+    margin-right: calc(155px + 100% - 1420px);
+  }
+}
+@media screen and (max-width: 1285px) {
+  .slogan__box {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .slogan__box {
+    width: calc(435px + 100% - 780px);
+  }
+}
+@media screen and (max-width: 630px) {
+  .slogan__box {
+    margin-right: 0;
+    width: 284px;
+    padding-bottom: 80px;
+  }
+}
+
+.slogan__text {
+  margin: 0;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.294;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 780px) {
+  .slogan__text {
+    font-size: 23px;
+    line-height: 1.261;
+  }
+}
+@media screen and (max-width: 630px) {
+  .slogan__text {
+    margin-bottom: 38px;
+  }
+}
+
+.slogan__author {
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+@media screen and (max-width: 780px) {
+  .slogan__author {
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}
+
+.slogan__about-author {
+  margin: 6px 0 4px 0;
+  color: var(--inputTextInactive);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  opacity: 0.7;
+}
+@media screen and (max-width: 780px) {
+  .slogan__about-author {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+@media screen and (max-width: 630px) {
+  .slogan__about-author {
+    margin-top: 4px;
   }
 }/*# sourceMappingURL=index.css.map */
