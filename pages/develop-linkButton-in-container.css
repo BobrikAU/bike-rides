@@ -366,6 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
@@ -374,6 +375,11 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+@media screen and (max-width: 320px) {
+  .page {
+    padding: 0 18px;
+  }
 }
 
 :root {
@@ -409,6 +415,7 @@ template {
   position: relative;
   z-index: 10;
   overflow: hidden;
+  margin-top: 52px;
 }
 .container__link-button::before {
   content: "";

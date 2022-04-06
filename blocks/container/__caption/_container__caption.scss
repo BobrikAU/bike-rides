@@ -1,0 +1,11 @@
+@import '../../../mixins/text';
+
+.container__caption {
+  margin: 0;
+  max-width: 460px;
+  width: 100%;
+  @include text (var(--colorTextMain), 55px, 700, 60px);
+  letter-spacing: -0.5px;
+  padding-top: 63px;
+}
+

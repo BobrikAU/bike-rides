@@ -1,0 +1,21 @@
+@import '../vendor/normalize';
+@import '../vendor/fonts/fonts';
+@import '../blocks/page/page';
+@import '../variables/variables';
+@import '../blocks/header/header';
+@import '../blocks/header/__link/header__link';
+@import '../blocks/header/__button/header__button';
+@import '../blocks/popup/popup';
+@import '../blocks/popup/_active/popup_active';
+@import '../blocks/popup/__button/popup__button';
+@import '../blocks/popup/__menu/popup__menu';
+@import '../blocks/popup/__link/popup__link';
+
+@import '../blocks/container/container';
+@import '../blocks/container/__caption/container__caption';
+@import '../blocks/container/__subtitle/container__subtitle';
+@import '../blocks/container/__link-button/container__link-button';
+@import '../blocks/container/__image/container__image';
+@import '../blocks/container/__name/container__name';
+@import '../blocks/container/__line/container__line';
+
