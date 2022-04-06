@@ -2,6 +2,7 @@
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: 'Inter';
@@ -10,4 +11,8 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+
+  @media screen and (max-width: 320px) {
+    padding: 0 18px;
+  }
 }

@@ -366,6 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
@@ -374,6 +375,11 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+@media screen and (max-width: 320px) {
+  .page {
+    padding: 0 18px;
+  }
 }
 
 :root {
@@ -397,6 +403,11 @@ template {
   justify-content: flex-end;
   align-items: center;
 }
+@media screen and (max-width: 320px) {
+  .header {
+    padding-right: 0px;
+  }
+}
 
 .header__link {
   text-decoration: none;
@@ -414,6 +425,77 @@ template {
 }
 .header__link:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 320px) {
+  .header__link {
+    display: none;
+  }
+}
+
+.header__button {
+  display: none;
+  padding: 0;
+  border: none;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../../images/line.jpg), url(../../../images/line.jpg), url(../../../images/line.jpg);
+  background-repeat: no-repeat;
+  background-position: top, center, bottom;
+  cursor: url("../images/pointer.svg"), auto;
+}
+@media screen and (max-width: 320px) {
+  .header__button {
+    display: block;
+  }
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f4;
+  z-index: 100;
+  flex-direction: column;
+}
+
+.popup_active {
+  display: flex;
+}
+
+.popup__button {
+  border: none;
+  padding: 0;
+  align-self: flex-end;
+  width: 18px;
+  height: 18px;
+  background-image: url(../../../images/diagonal-left.svg), url(../../../images/diagonal-right.svg);
+  margin: 25px 20px 0 0;
+}
+
+.popup__menu {
+  margin: 100px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup__link {
+  text-decoration: none;
+  color: #151515;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: url("../images/pointer.svg"), auto;
+  transition: 0.4s;
+  margin-bottom: 32px;
+}
+.popup__link:last-child {
+  margin-bottom: 0;
 }
 
 .container {
@@ -503,8 +585,8 @@ template {
   position: -webkit-sticky;
   position: sticky;
   float: right;
-  margin: 325px 360px 79px 0;
-  top: 50px;
+  margin: 140px 370px 79px 0;
+  top: 200px;
   border-radius: 20px;
   box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.2);
 }

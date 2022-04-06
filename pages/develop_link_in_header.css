@@ -366,6 +366,7 @@ template {
   width: 100%;
   max-width: 1440px;
   min-height: 100vh;
+  box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
   font-family: "Inter";
@@ -374,6 +375,11 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
+}
+@media screen and (max-width: 320px) {
+  .page {
+    padding: 0 18px;
+  }
 }
 
 :root {
@@ -404,4 +410,9 @@ template {
 }
 .header__link:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 320px) {
+  .header__link {
+    display: none;
+  }
 }/*# sourceMappingURL=develop_link_in_header.css.map */
