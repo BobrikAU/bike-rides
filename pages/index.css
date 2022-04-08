@@ -1034,6 +1034,101 @@ template {
   }
 }
 
+.bikes {
+  padding: 123px 0 0 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "title control" "cards cards";
+}
+
+.bikes__title {
+  margin: 0 0 120px 0;
+  grid-area: title;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.091;
+  letter-spacing: -0.5px;
+}
+
+.bikes__control {
+  grid-area: control;
+  padding: 26px 120px 0 0;
+  justify-self: end;
+}
+
+.bikes__button {
+  padding: 0 36px 0 0;
+  background-color: inherit;
+  border: none;
+  color: rgba(34, 34, 34, 0.7);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5556;
+}
+.bikes__button:last-child {
+  padding-right: 0;
+}
+
+.bikes__cards {
+  display: flex;
+  grid-area: cards;
+}
+
+.card {
+  text-decoration: none;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  cursor: url("../images/pointer.svg"), auto;
+  transition: 0.4s;
+  margin: 0 30px 0 0;
+  display: block;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+}
+.card::before {
+  content: "";
+  display: block;
+  width: 380px;
+  height: 380px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: -20px;
+  z-index: -10;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  transition: 0.4s;
+}
+.card:hover::before {
+  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+}
+.card:last-child {
+  margin-right: 0;
+}
+
+.card__image {
+  display: block;
+  width: 340px;
+  border-radius: 20px;
+  margin: 20px;
+  -o-object-position: -1px -1px;
+     object-position: -1px -1px;
+}
+
+.card__text {
+  display: block;
+  padding-top: 22px;
+  padding-left: 6px;
+}
+
 .slider-roads__batton-left-right {
   padding: 0;
   border: none;

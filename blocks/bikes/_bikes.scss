@@ -1,0 +1,9 @@
+.bikes {
+  padding: 123px 0 0 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+  "title control"
+  "cards cards";
+}
