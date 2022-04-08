@@ -1,0 +1,12 @@
+.slider-roads__box {
+  width: calc(100% - 120px);
+  overflow: hidden;
+  position: absolute;
+  transition: .4s;
+  z-index: -5;
+
+  @media screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+

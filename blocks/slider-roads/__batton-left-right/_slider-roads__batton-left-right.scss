@@ -1,4 +1,4 @@
-.slide__batton-left-right {
+.slider-roads__batton-left-right {
   padding: 0;
   border: none;
   cursor: $cusor;
@@ -8,8 +8,20 @@
   background-color: rgba(235, 235, 235, 1);
   display: flex;
   transition: .4s;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover{
     background-color: rgba(235, 235, 235, .6);
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    margin-right: 10px;
   }
 }

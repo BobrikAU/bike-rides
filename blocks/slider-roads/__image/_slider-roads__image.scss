@@ -1,0 +1,12 @@
+.slider-roads__image {
+  width: 650px;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 750px) {
+    width: 284px;
+  }
+}

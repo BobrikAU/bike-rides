@@ -365,6 +365,7 @@ template {
 .page {
   width: 100%;
   max-width: 1440px;
+  min-width: 320px;
   min-height: 100vh;
   box-sizing: border-box;
   background-color: var(--backgroundColor);

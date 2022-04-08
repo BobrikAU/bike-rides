@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
+
   <header class="header">
     <nav class="header__nav">
       <a href="#" class="header__link">Покрытия и градиенты</a>
@@ -20,7 +21,9 @@
     </nav>
     <button type="button" class="header__button"></button>
   </header>
+
   <main>
+
     <section class="container">
       <h1 class="container__caption">Шоссе, ТТ и&nbspГрэвел</h1>
       <img src="./images/cannondale-systemsix-himod.png" alt="Велосипед Cannondale Systemsix Himod" class="container__image">
@@ -32,6 +35,7 @@
         </svg>
       </p>
     </section>
+
     <section class="slogan">
       <figure class="slogan__box">
         <blockquote class="slogan__text">«Катайся много или мало, долго или коротко, как хочешь - но катайся»</blockquote>
@@ -40,6 +44,63 @@
           <p class="slogan__about-author">Велогонщик</p>
         </figcaption>
       </figure>
+    </section>
+
+    <section class="slider-roads">
+      <div class="slider-roads__box slider-roads__highway">
+        <h2 class="slider-roads__title">Шоссе</h2>
+        <p class="slider-roads__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+        <div class="slider-roads__images">
+          <img src="./images/mountains-highway.jpg" alt="Шоссе в горах" class="slider-roads__image">
+          <img src="./images/forest-gravel.jpg" alt="Грунтовая дорога в лесу" class="slider-roads__image">
+          <svg width="98" height="40" viewBox="0 0 98 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image">
+            <path d="M0 0H93.5279C96.5014 0 98.4354 3.12925 97.1056 5.78885L81.1056 37.7889C80.428 39.144 79.043 40 77.5279 40H0V0Z" fill="#24B47E"/>
+          </svg>
+          <svg width="51" height="16" viewBox="0 0 51 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image slider-roads__icon-image_position_inside">
+            <path d="M1 15L9.38934 3.61363C11.0392 1.3744 14.4142 1.46086 15.9472 3.78163L22.1718 13.2047C22.9123 14.3256 24.1659 15 25.5094 15H34H51" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+      <div class="slider-roads__box slider-roads__gravel">
+        <h2 class="slider-roads__title">Грэвел</h2>
+        <p class="slider-roads__subtitle">Грэвел похож на шоссейный велосипед, но конструкция рамы немного отличается, и на нём стоят более широкие покрышки, всё для того чтобы проехать по лёгкому бездорожью.</p>
+        <div class="slider-roads__images">
+          <img src="./images/forest-gravel.jpg" alt="Грунтовая дорога в лесу" class="slider-roads__image">
+          <img src="./images/plain-road.jpg" alt="Асфальтированная дорога на равнине" class="slider-roads__image">
+          <svg width="98" height="40" viewBox="0 0 98 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image">
+            <path d="M0 0H93.5279C96.5014 0 98.4354 3.12925 97.1056 5.78885L81.1056 37.7889C80.428 39.144 79.043 40 77.5279 40H0V0Z" fill="#24B47E"/>
+          </svg>
+          <svg width="52" height="7" viewBox="0 0 52 7" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image slider-roads__icon-image_position_inside">
+            <path d="M1 6L12.443 2.03898C13.4403 1.69373 14.5337 1.75667 15.4849 2.21408L22.1707 5.42916C22.9417 5.79993 23.8112 5.91373 24.6517 5.75385L35.7876 3.63553C36.2587 3.54591 36.7421 3.54174 37.2147 3.62322L51 6" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+      <div class="slider-roads__box slider-roads__plain">
+        <h2 class="slider-roads__title">ТТ</h2>
+        <p class="slider-roads__subtitle">ТТ — это велосипед для триатлона или раздельного старта, гооняют на таком велике только по равнинному асфальту, велик очень быстрые и аэродинамичный.</p>
+        <div class="slider-roads__images">
+          <img src="./images/plain-road.jpg" alt="Асфальтированная дорога на равнине" class="slider-roads__image">
+          <img src="./images/mountains-highway.jpg" alt="Шоссе в горах" class="slider-roads__image">
+          <svg width="98" height="40" viewBox="0 0 98 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image">
+            <path d="M0 0H93.5279C96.5014 0 98.4354 3.12925 97.1056 5.78885L81.1056 37.7889C80.428 39.144 79.043 40 77.5279 40H0V0Z" fill="#24B47E"/>
+          </svg>
+          <svg width="50" height="2" viewBox="0 0 50 2" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon-image slider-roads__icon-image_position_inside">
+            <path d="M0 1H12H22.3577H33H50" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+      <div class="slider-roads__buttons">
+        <button type="button" class="slider-roads__batton-left-right slider-roads__left">
+          <svg width="10" height="18" viewBox="0 0 10 18" stroke="#151515" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon">
+            <path d="M9 1L2 9L9 17" stroke-width="2"/>
+          </svg>
+        </button>
+        <button type="button" class="slider-roads__batton-left-right slider-roads__right">
+          <svg width="10" height="18" viewBox="0 0 10 18" stroke="#151515" fill="none" xmlns="http://www.w3.org/2000/svg" class="slider-roads__icon slider-roads__icon_right">
+            <path d="M1 17L8 9L1 0.999999" stroke-width="2"/>
+          </svg>
+        </button>
+      </div>
     </section>
 
 

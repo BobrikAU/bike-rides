@@ -365,6 +365,7 @@ template {
 .page {
   width: 100%;
   max-width: 1440px;
+  min-width: 320px;
   min-height: 100vh;
   box-sizing: border-box;
   background-color: var(--backgroundColor);
@@ -761,7 +762,7 @@ template {
 .slogan {
   width: 100%;
   box-sizing: border-box;
-  padding: 120px 0 0 0px;
+  padding: 120px 0 0 0;
   min-height: 580px;
   background-image: url(../../images/norway.jpg);
   background-repeat: no-repeat;
@@ -888,4 +889,211 @@ template {
   .slogan__about-author {
     margin-top: 4px;
   }
+}
+
+.slider-roads {
+  min-height: 640px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 122px 0 0 120px;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 1050px) {
+  .slider-roads {
+    padding-left: calc(120px + 100% - 1050px);
+  }
+}
+@media screen and (max-width: 948px) {
+  .slider-roads {
+    padding-left: 18px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .slider-roads {
+    padding-top: 38px;
+  }
+}
+@media screen and (max-width: 615px) {
+  .slider-roads {
+    padding-left: 0;
+    border-top: 1px solid #e3e3e3;
+  }
+}
+
+.slider-roads__box {
+  width: calc(100% - 120px);
+  overflow: hidden;
+  position: absolute;
+  transition: 0.4s;
+  z-index: -5;
+}
+@media screen and (max-width: 1050px) {
+  .slider-roads__box {
+    width: 100%;
+  }
+}
+
+.slider-roads__title {
+  margin: 0;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 1.091;
+  letter-spacing: -0.5px;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+}
+
+.slider-roads__subtitle {
+  max-width: 460px;
+  margin: 45px 0 84px;
+  color: var(--inputTextInactive);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5556;
+  opacity: 0.7;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__subtitle {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 282px;
+    bottom: -209px;
+    min-height: 90px;
+  }
+}
+
+.slider-roads__image {
+  width: 650px;
+  margin-right: 40px;
+}
+.slider-roads__image:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__image {
+    width: 284px;
+  }
+}
+
+.slider-roads__images {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__images {
+    top: -179px;
+  }
+}
+
+.slider-roads__buttons {
+  display: flex;
+  margin-top: 751px;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__buttons {
+    margin-top: 7px;
+    margin-left: 226px;
+  }
+}
+
+.slider-roads__icon-image {
+  position: absolute;
+  left: 0px;
+  bottom: 17px;
+  z-index: 5;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon-image {
+    width: 68px;
+    bottom: 8px;
+  }
+}
+
+.slider-roads__icon-image_position_inside {
+  left: 16px;
+  bottom: 28px;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon-image_position_inside {
+    width: 35px;
+    bottom: 19px;
+    left: 11px;
+  }
+}
+
+.slider-roads__batton-left-right {
+  padding: 0;
+  border: none;
+  cursor: url("../images/pointer.svg"), auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  transition: 0.4s;
+  margin-right: 20px;
+}
+.slider-roads__batton-left-right:last-child {
+  margin-right: 0;
+}
+.slider-roads__batton-left-right:hover {
+  background-color: rgba(235, 235, 235, 0.6);
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__batton-left-right {
+    width: 24px;
+    height: 24px;
+    border-radius: 30px;
+    margin-right: 10px;
+  }
+}
+
+.slider-roads__icon {
+  width: 10px;
+  height: 18px;
+  margin: auto;
+  padding: 0 3px 0 0;
+  opacity: 1;
+  transition: 0.4s;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon {
+    width: 4.5px;
+    height: 10px;
+  }
+}
+
+.slider-roads__batton-left-right:hover .slider-roads__icon {
+  opacity: 0.75;
+}
+
+.slider-roads__icon_right {
+  padding: 0 0 0 4px;
+}
+
+.slider-roads__icon_theme_dark {
+  stroke: #fff;
+}
+.slider-roads__batton-left-right_theme_dark:hover .slider-roads__icon_theme_dark {
+  opacity: 0.6;
+}
+
+.slider-roads__batton-left-right_theme_dark {
+  background-color: rgb(67, 67, 67);
+}
+.slider-roads__batton-left-right_theme_dark:hover {
+  background-color: rgba(67, 67, 67, 0.6);
 }/*# sourceMappingURL=index.css.map */
