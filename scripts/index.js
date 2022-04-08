@@ -6,6 +6,8 @@ const range = document.querySelector('.switch__range');
 const iconThemeLight = document.querySelector('.switch__icon-light');
 const iconThemeDark = document.querySelector('.switch__icon-dark');
 const root = document.querySelector(':root');
+const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton-left-right');
+const arrowsInButtons = document.querySelectorAll('.slider-roads__icon');
 
 //открытие и закрытие попапа
 function openPopup() {
@@ -30,6 +32,16 @@ function changeTheme () {
     root.style.setProperty('--inputTextInactive', '#e5e5e5');
     buttonPopupOpen.classList.add('header__button_theme_dark');
     buttonPopupClose.classList.add('popup__button_theme_dark');
+    buttonsLeftRight.forEach(function (item) {
+      item.classList.add('slider-roads__batton-left-right_theme_dark');
+    });
+    arrowsInButtons.forEach(function (item) {
+      item.classList.add('slider-roads__icon_theme_dark');
+    });
+
+
+
+
   }
   if (range.value === '0') {
     iconThemeLight.setAttribute('fill', '#cfcfcf');
@@ -40,7 +52,65 @@ function changeTheme () {
     root.style.setProperty('--inputTextInactive', '#222');
     buttonPopupOpen.classList.remove('header__button_theme_dark');
     buttonPopupClose.classList.remove('popup__button_theme_dark');
+    buttonsLeftRight.forEach(function (item) {
+      item.classList.remove('slider-roads__batton-left-right_theme_dark');
+    });
+    arrowsInButtons.forEach(function (item) {
+      item.classList.remove('slider-roads__icon_theme_dark');
+    });
   }
 }
 
 range.addEventListener('change', changeTheme)
+
+//позиционирование и перелистывание отделов о типах дорог
+let left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
+let center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
+let right = getComputedStyle(document.querySelector('.slider-roads')).width;
+const highway = document.querySelector('.slider-roads__highway');
+const gravel = document.querySelector('.slider-roads__gravel');
+const plain = document.querySelector('.slider-roads__plain');
+const buttonRight = document.querySelector('.slider-roads__right');
+const buttonLeft = document.querySelector('.slider-roads__left');
+const listRoads = [plain, highway, gravel];
+let movableElement;
+
+highway.style.left = center;
+gravel.style.left = right;
+gravel.style.visibility = 'hidden';
+plain.style.left = left;
+plain.style.visibility = 'hidden';
+
+function moveFromRight () {
+  left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
+  center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
+  right = getComputedStyle(document.querySelector('.slider-roads')).width;
+  listRoads[1].style.left = left;
+  listRoads[2].style.visibility = 'visible';
+  listRoads[2].style.left = center;
+  listRoads[0].style.left = right;
+  listRoads[1].style.visibility = 'hidden';
+  movableElement = listRoads.shift();
+  listRoads.push(movableElement);
+}
+
+function moveFromLeft () {
+  left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
+  center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
+  right = getComputedStyle(document.querySelector('.slider-roads')).width;
+  listRoads[1].style.left = right;
+  listRoads[0].style.visibility = 'visible';
+  listRoads[0].style.left = center;
+  listRoads[2].style.left = left;
+  listRoads[1].style.visibility = 'hidden';
+  movableElement = listRoads.pop();
+  listRoads.unshift(movableElement);
+}
+
+buttonLeft.addEventListener('click', moveFromLeft);
+buttonRight.addEventListener('click', moveFromRight);
+
+window.addEventListener('resize', function () {
+  listRoads[1].style.left = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
+})
+

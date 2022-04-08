@@ -1,0 +1,11 @@
+.slider-roads__icon-image_position_inside {
+  left: 16px;
+  bottom: 28px;
+  z-index: 10;
+
+  @media screen and (max-width: 750px) {
+    width: 35px;
+    bottom: 19px;
+    left: 11px;
+  }
+}
