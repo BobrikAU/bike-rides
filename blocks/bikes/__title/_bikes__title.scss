@@ -1,7 +1,7 @@
 @import '../../../mixins/text';
 
 .bikes__title {
-  margin: 0 0 120px 0;
+  margin: 0 0 88px 0;
   grid-area: title;
   @include text (var(--colorTextMain), 55px, 700, 1.091);
   letter-spacing: -0.5px;

@@ -1041,9 +1041,19 @@ template {
   grid-template-rows: repeat(2, auto);
   grid-template-areas: "title control" "cards cards";
 }
+@media screen and (max-width: 1050px) {
+  .bikes {
+    padding-left: calc(123px + 100% - 1050px);
+  }
+}
+@media screen and (max-width: 945px) {
+  .bikes {
+    padding-left: 18px;
+  }
+}
 
 .bikes__title {
-  margin: 0 0 120px 0;
+  margin: 0 0 88px 0;
   grid-area: title;
   color: var(--colorTextMain);
   font-family: inherit;
@@ -1059,6 +1069,37 @@ template {
   justify-self: end;
 }
 
+.bikes__list {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: inherit;
+  width: 114px;
+  height: 30px;
+  border: 1px solid #e3e3e3;
+  border-radius: 2px;
+  color: rgb(21, 21, 21);
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5556;
+  cursor: url("../images/pointer.svg"), auto;
+  background-image: url(../../../images/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-left: 7px;
+}
+.bikes__list:focus {
+  outline: none;
+}
+
+.bikes__list-item {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: inherit;
+}
+
 .bikes__button {
   padding: 0 36px 0 0;
   background-color: inherit;
@@ -1068,14 +1109,42 @@ template {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5556;
+  cursor: url("../images/pointer.svg"), auto;
+  transition: 0.4s;
 }
 .bikes__button:last-child {
   padding-right: 0;
 }
+.bikes__button:hover {
+  color: rgba(34, 34, 34, 0.6);
+}
+@media screen and (max-width: 840px) {
+  .bikes__button {
+    display: none;
+  }
+}
+
+.bikes__button_activ {
+  color: rgb(21, 21, 21);
+  font-weight: 600;
+}
+.bikes__button_activ:hover {
+  color: rgba(21, 21, 21, 0.75);
+}
 
 .bikes__cards {
   display: flex;
+  flex-wrap: wrap;
   grid-area: cards;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s 0s, visibility 0s 0.4s;
+}
+
+.bikes__cards_open {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s 0.4s, opacity 0.4s 0.4s;
 }
 
 .card {
@@ -1087,40 +1156,27 @@ template {
   line-height: 22px;
   cursor: url("../images/pointer.svg"), auto;
   transition: 0.4s;
-  margin: 0 30px 0 0;
+  padding: 30px 30px 0 0;
   display: block;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   position: relative;
 }
-.card::before {
-  content: "";
-  display: block;
-  width: 380px;
-  height: 380px;
-  background-color: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: -20px;
-  z-index: -10;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
-  transition: 0.4s;
-}
-.card:hover::before {
-  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
-}
-.card:last-child {
-  margin-right: 0;
-}
 
 .card__image {
   display: block;
   width: 340px;
   border-radius: 20px;
-  margin: 20px;
   -o-object-position: -1px -1px;
      object-position: -1px -1px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  transition: 0.4s;
+}
+.card:hover .card__image {
+  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
 }
 
 .card__text {

@@ -6,4 +6,12 @@
   grid-template-areas:
   "title control"
   "cards cards";
+
+  @media screen and (max-width: 1050px) {
+    padding-left: calc(123px + (100% - 1050px));
+  }
+
+  @media screen and (max-width: 945px) {
+    padding-left: 18px;
+  }
 }

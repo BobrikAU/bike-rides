@@ -1,0 +1,5 @@
+.bikes__cards_open {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s .4s, opacity .4s .4s;
+}

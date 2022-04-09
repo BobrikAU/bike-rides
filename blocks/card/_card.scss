@@ -2,30 +2,8 @@
 
 .card {
   @include link (var(--colorTextMain), 18px, 600, 22px);
-  margin: 0 30px 0 0;
+  padding: 30px 30px 0 0;
   display: block;
   width: min-content;
   position: relative;
-
-  &::before {
-    content: '';
-    display: block;
-    width: 380px;
-    height: 380px;
-    background-color: #fff;
-    border-radius: 20px;
-    position: absolute;
-    top: -20px;
-    z-index: -10;
-    box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
-    transition: .4s;
-  }
-
-  &:hover::before {
-    box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
-  }
-
-  &:last-child{
-    margin-right: 0;
-  }
 }

@@ -112,5 +112,39 @@ buttonRight.addEventListener('click', moveFromRight);
 
 window.addEventListener('resize', function () {
   listRoads[1].style.left = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
+});
+
+// логика работы раздела о велосипедах
+const bikesButtons = document.querySelectorAll('.bikes__button');
+const bikesCards = document.querySelectorAll('.bikes__cards');
+
+document.querySelector('.bikes__button-highway').classList.add('bikes__button_activ');
+let markButton = document.querySelector('.bikes__button-highway');
+document.querySelector('.bikes__highway').classList.add('bikes__cards_open');
+let cardsOpen = document.querySelector('.bikes__highway');
+let selectedCards;
+
+function changeBikes (event) {
+  const pressedButton = event.target;
+  if (!pressedButton.classList.contains('bikes__button_activ')){
+    for (let i = 0; i < bikesButtons.length; i++) {
+      if (bikesButtons[i] === pressedButton){
+        selectedCards = bikesCards[i];
+        break
+      }
+    }
+    cardsOpen.classList.remove('bikes__cards_open');
+    selectedCards.classList.add('bikes__cards_open');
+    cardsOpen = selectedCards;
+    markButton.classList.remove('bikes__button_activ');
+    pressedButton.classList.add('bikes__button_activ');
+    markButton = pressedButton;
+  }
+}
+
+bikesButtons.forEach( function(item) {
+  item.addEventListener('click', changeBikes)
 })
+
+
 

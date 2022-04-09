@@ -405,40 +405,27 @@ template {
   line-height: 22px;
   cursor: url("../images/pointer.svg"), auto;
   transition: 0.4s;
-  margin: 0 30px 0 0;
+  padding: 30px 30px 0 0;
   display: block;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   position: relative;
 }
-.card::before {
-  content: "";
-  display: block;
-  width: 380px;
-  height: 380px;
-  background-color: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: -20px;
-  z-index: -10;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
-  transition: 0.4s;
-}
-.card:hover::before {
-  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
-}
-.card:last-child {
-  margin-right: 0;
-}
 
 .card__image {
   display: block;
   width: 340px;
   border-radius: 20px;
-  margin: 20px;
   -o-object-position: -1px -1px;
      object-position: -1px -1px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  transition: 0.4s;
+}
+.card:hover .card__image {
+  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
 }
 
 .card__text {

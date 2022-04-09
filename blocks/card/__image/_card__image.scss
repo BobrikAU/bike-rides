@@ -2,6 +2,13 @@
   display: block;
   width: 340px;
   border-radius: 20px;
-  margin: 20px;
   object-position: -1px -1px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+  transition: .4s;
+
+  .card:hover & {
+    box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+  }
 }
