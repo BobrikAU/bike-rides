@@ -1,0 +1,5 @@
+.card_invisible {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s .4s, opacity .4s .4s;
+}

@@ -1,0 +1,37 @@
+.bikes {
+  padding: 123px 0 0 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+  "title control"
+  "cards cards";
+
+  @media screen and (max-width: 1050px) {
+    padding-left: calc(123px + (100% - 1050px));
+  }
+
+  @media screen and (max-width: 945px) {
+    padding-left: 18px;
+  }
+
+  @media screen and (max-width: 850px) {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+    "title"
+    "control"
+    "cards";
+    position: relative;
+  }
+
+  @media screen and (max-width: 750px) {
+
+    padding-top: 40px;
+  }
+
+  @media screen and (max-width: 615px) {
+    border-top: 1px solid #e3e3e3;
+    padding-left: 0;
+  }
+}

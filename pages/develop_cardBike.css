@@ -405,39 +405,58 @@ template {
   line-height: 22px;
   cursor: url("../images/pointer.svg"), auto;
   transition: 0.4s;
-  margin: 0;
-  display: block;
+  padding: 30px 30px 0 0;
+  display: flex;
+  flex-direction: column;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.4s 0s, visibility 0s 0.4s;
 }
-.card::before {
-  content: "";
-  display: block;
-  width: 380px;
-  height: 380px;
-  background-color: #fff;
-  border-radius: 20px;
-  position: absolute;
-  top: -20px;
-  z-index: -10;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
-  transition: 0.4s;
-}
-.card:hover::before {
-  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+@media screen and (max-width: 850px) {
+  .card {
+    padding-top: 0;
+    margin-top: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #151515;
+  }
 }
 
 .card__image {
   display: block;
   width: 340px;
   border-radius: 20px;
-  margin: 20px;
+  -o-object-position: -1px -1px;
+     object-position: -1px -1px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  transition: 0.4s;
+}
+.card:hover .card__image {
+  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+}
+@media screen and (max-width: 450px) {
+  .card__image {
+    width: 254px;
+    padding: 15px 15px 37px 15px;
+  }
 }
 
 .card__text {
   display: block;
   padding-top: 22px;
   padding-left: 6px;
+}
+@media screen and (max-width: 850px) {
+  .card__text {
+    padding: 0;
+    margin: -34px auto 0;
+  }
 }/*# sourceMappingURL=develop_cardBike.css.map */
