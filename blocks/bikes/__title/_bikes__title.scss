@@ -5,4 +5,13 @@
   grid-area: title;
   @include text (var(--colorTextMain), 55px, 700, 1.091);
   letter-spacing: -0.5px;
+
+  @media screen and (max-width: 850px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 750px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }

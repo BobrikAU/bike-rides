@@ -3,7 +3,21 @@
 .card {
   @include link (var(--colorTextMain), 18px, 600, 22px);
   padding: 30px 30px 0 0;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: min-content;
-  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .4s 0s, visibility 0s .4s;
+
+  @media screen and (max-width: 850px) {
+    padding-top: 0;
+    margin-top: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorTextMain;
+  }
 }

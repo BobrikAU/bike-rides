@@ -4,5 +4,20 @@
   grid-area: cards;
   visibility: hidden;
   opacity: 0;
-  transition: opacity .4s 0s, visibility 0s .4s;
+  transition: display 0s 0s, opacity .4s 0s, visibility 0s .4s;
+
+  @media screen and (max-width: 850px) {
+    display: none;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+  }
+
+  .bikes__choice:checked + & {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transition: display 0s 0s, visibility 0s .4s, opacity .4s .4s;
+  }
 }

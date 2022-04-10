@@ -18,6 +18,10 @@
     padding-top: 38px;
   }
 
+  @media screen and (max-width: 750px) {
+    min-height: 503px;
+  }
+
   @media screen and (max-width: 615px) {
     padding-left: 0;
     border-top: 1px solid #e3e3e3;

@@ -115,36 +115,129 @@ window.addEventListener('resize', function () {
 });
 
 // логика работы раздела о велосипедах
-const bikesButtons = document.querySelectorAll('.bikes__button');
-const bikesCards = document.querySelectorAll('.bikes__cards');
+const inputsRadioRoads = document.querySelectorAll('.bikes__choice');
+const listRoadsTitle = document.querySelector('.bikes__choiceTite');
+let bikesCardsActive = document.querySelectorAll('.bikes__cards')[0];
+let bikeCardActive;
+const roadLinks = document.querySelectorAll('.bikes__road-type');
+let roadLinkActive = document.querySelector('.bikes__road-type');
 
-document.querySelector('.bikes__button-highway').classList.add('bikes__button_activ');
-let markButton = document.querySelector('.bikes__button-highway');
-document.querySelector('.bikes__highway').classList.add('bikes__cards_open');
-let cardsOpen = document.querySelector('.bikes__highway');
-let selectedCards;
+      // работа со шрифтом ссылки на выбранную группу велосипедов
+function markActiveLink () {
+  roadLinkActive.classList.add('bikes__road-type_open');
+}
 
-function changeBikes (event) {
-  const pressedButton = event.target;
-  if (!pressedButton.classList.contains('bikes__button_activ')){
-    for (let i = 0; i < bikesButtons.length; i++) {
-      if (bikesButtons[i] === pressedButton){
-        selectedCards = bikesCards[i];
-        break
-      }
-    }
-    cardsOpen.classList.remove('bikes__cards_open');
-    selectedCards.classList.add('bikes__cards_open');
-    cardsOpen = selectedCards;
-    markButton.classList.remove('bikes__button_activ');
-    pressedButton.classList.add('bikes__button_activ');
-    markButton = pressedButton;
+function uncheckLink () {
+  roadLinkActive.classList.remove('bikes__road-type_open');
+}
+
+            // выделение активной ссылки при загрузке страницы
+if (window.innerWidth > 850) {
+  markActiveLink();
+}
+
+            // запоминание активной ссылки при клике на нее и смена шрифта при экране более 850px
+function handleLinks(event) {
+  if (window.innerWidth > 850) {
+    uncheckLink ();
+  }
+  roadLinkActive = event.target;
+  if (window.innerWidth > 850) {
+    markActiveLink ();
   }
 }
 
-bikesButtons.forEach( function(item) {
-  item.addEventListener('click', changeBikes)
+roadLinks.forEach(function(item) {
+  item.addEventListener('click', handleLinks);
+})
+            // контроль шрифта ссылки при изменении экрана пользователем осуществляется ниже
+
+      // работа переключателя списков велосипедов в виде выпадающего меню с экрана в 850px и ниже
+function changeBikes(event) {
+  if (window.innerWidth <= 850) {
+    removeInvisibilityCards ();
+  }
+  listRoadsTitle.textContent = event.target.value;
+  document.querySelector('.bikes__control').blur();
+  bikesCardsActive = event.target.nextElementSibling;
+  if (window.innerWidth <= 850) {
+    hideExtraCards();
+  }
+}
+
+inputsRadioRoads.forEach(function (item) {
+  item.addEventListener('change', changeBikes);
 })
 
+      // прекращение состояния невидимости карточек
+function removeInvisibilityCards () {
+  bikesCardsActive.querySelectorAll('.card').forEach(function(item){
+    item.classList.remove('card_invisible');
+    item.removeEventListener('touchstart', findTouchstartX);
+    item.removeEventListener('touchend', findTouchendX);
+  });
+}
+      // оставление открытой только одной карточки при экране от и ниже 850px
+function hideExtraCards() {
+  bikeCardActive = bikesCardsActive.querySelectorAll('.card')[0];
+  watchBikeCardActive();
+  bikesCardsActive.querySelectorAll('.card')[1].classList.add('card_invisible');
+  bikesCardsActive.querySelectorAll('.card')[2].classList.add('card_invisible');
+}
+            // при загрузке страницы на экране 850px и иниже
+if (window.innerWidth <= 850) {
+  hideExtraCards();
+}
+            // контроль видимости карточек и шрифта активной ссылки изменении пользователем размера экрана
+window.addEventListener('resize', function () {
+  if (window.innerWidth <= 850) {
+    hideExtraCards();
+    uncheckLink ();
+  } else {
+    removeInvisibilityCards ();
+    markActiveLink ();
+  }
+})
+
+            //смена карточек свайпом
+let touchstartX;
+let touchendX;
+
+function findTouchstartX (event) {
+  touchstartX = event.changedTouches[0].screenX;
+}
+
+function findTouchendX (event) {
+  touchendX = event.changedTouches[0].screenX;
+  let lengthMovement = touchstartX > touchendX ? touchstartX - touchendX : touchendX - touchstartX;
+  if (lengthMovement >= 75) {
+    changeCard();
+  }
+}
+
+function changeCard() {
+  let indexCardActive;
+  bikesCardsActive.querySelectorAll('.card').forEach(function(item, index) {
+    if(!item.classList.contains('card_invisible')) {
+      indexCardActive = index;
+    }
+  });
+  bikeCardActive.removeEventListener('touchstart', findTouchstartX);
+  bikeCardActive.removeEventListener('touchend', findTouchendX);
+  bikeCardActive.classList.add('card_invisible');
+  if(indexCardActive === 2) {
+    indexCardActive = 0;
+  } else {
+    indexCardActive++;
+  }
+  bikeCardActive = bikesCardsActive.querySelectorAll('.card')[indexCardActive];
+  bikeCardActive.classList.remove('card_invisible');
+  watchBikeCardActive();
+}
+
+function watchBikeCardActive() {
+  bikeCardActive.addEventListener('touchstart', findTouchstartX);
+  bikeCardActive.addEventListener('touchend', findTouchendX);
+}
 
 
