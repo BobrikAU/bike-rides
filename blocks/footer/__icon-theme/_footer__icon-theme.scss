@@ -1,0 +1,14 @@
+.footer__icon-theme {
+  display: none;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: end;
+
+
+
+  @media screen and (max-width: 615px) {
+    display: block;
+  }
+}

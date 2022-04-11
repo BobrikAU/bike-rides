@@ -377,17 +377,14 @@ template {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 }
-@media screen and (max-width: 615px) {
-  .page {
-    padding: 0 18px;
-  }
-}
 
 :root {
   --colorTextMain: #151515;
   --inputTextInactive: #222;
+  --colorTextFooterText: #cfcfcf;
   --cardPseudoShadowHover: .11;
   --backgroundColor: #f4f4f4;
+  --backgroundColorFooter: #efefef;
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;

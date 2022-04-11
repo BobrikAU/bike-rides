@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--backgroundColorFooter);
+  min-height: 424px;
+  box-sizing: border-box;
+  padding: 80px 120px 60px;
+  display: grid;
+  grid-template-columns: 1fr 136px;
+  grid-template-rows: 114px 100px 1fr;
+
+  @media screen and (max-width: 1439px) {
+    padding-right: calc(120px + (100% - 1439px));
+  }
+
+  @media screen and (max-width: 1337px) {
+    padding-right: 18px;
+  }
+
+  @media screen and (max-width: 1050px) {
+    padding-left: calc(120px - (1050px - 100%));
+  }
+
+  @media screen and (max-width: 948px) {
+    padding-left: 18px;
+  }
+
+  @media screen and (max-width: 615px) {
+    grid-template-columns: 1fr 32px;
+    grid-template-rows: 102px 100px 1fr;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    min-height: 358px;
+  }
+}
