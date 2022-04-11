@@ -1,0 +1,9 @@
+@import '../../../mixins/text';
+
+.footer__title {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  margin: 0;
+  @include text (var(--colorTextMain), 24px, 600, 32px);
+  width: 229px;
+}

@@ -377,17 +377,14 @@ template {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
 }
-@media screen and (max-width: 615px) {
-  .page {
-    padding: 0 18px;
-  }
-}
 
 :root {
   --colorTextMain: #151515;
   --inputTextInactive: #222;
+  --colorTextFooterText: #cfcfcf;
   --cardPseudoShadowHover: .11;
   --backgroundColor: #f4f4f4;
+  --backgroundColorFooter: #efefef;
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;
@@ -397,8 +394,15 @@ template {
 }
 
 .footer__form {
+  grid-column-start: 1;
+  grid-row-start: 2;
   max-width: 360px;
   height: 50px;
+}
+@media screen and (max-width: 615px) {
+  .footer__form {
+    max-width: 284px;
+  }
 }
 
 .footer__fieldset {
@@ -424,7 +428,7 @@ template {
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.78;
+  line-height: 28px;
 }
 .footer__input:hover {
   cursor: url("../images/pointer.svg"), auto;
@@ -434,7 +438,7 @@ template {
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.78;
+  line-height: 28px;
   opacity: 0.7;
   -moz-transition: 0.4s;
   transition: 0.4s;
@@ -444,7 +448,7 @@ template {
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.78;
+  line-height: 28px;
   opacity: 0.7;
   -ms-transition: 0.4s;
   transition: 0.4s;
@@ -454,7 +458,7 @@ template {
   font-family: inherit;
   font-size: 13px;
   font-weight: 500;
-  line-height: 1.78;
+  line-height: 28px;
   opacity: 0.7;
   transition: 0.4s;
 }

@@ -2,12 +2,13 @@
 const buttonPopupOpen = document.querySelector('.header__button');
 const popup = document.querySelector('.popup');
 const buttonPopupClose = document.querySelector('.popup__button');
-const range = document.querySelector('.switch__range');
 const iconThemeLight = document.querySelector('.switch__icon-light');
 const iconThemeDark = document.querySelector('.switch__icon-dark');
 const root = document.querySelector(':root');
 const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton-left-right');
 const arrowsInButtons = document.querySelectorAll('.slider-roads__icon');
+const ranges = document.querySelectorAll('.switch__range');
+const iconTheme = document.querySelector('.footer__icon-theme');
 
 //открытие и закрытие попапа
 function openPopup() {
@@ -22,14 +23,20 @@ buttonPopupOpen.addEventListener('click', openPopup);
 buttonPopupClose.addEventListener('click', closePopup);
 
 // смена темы страницы переключателем
-function changeTheme () {
-  if (range.value === '10') {
+let numberTheme = 0;
+
+function changeTheme() {
+  if (numberTheme === 0) {
     iconThemeLight.setAttribute('fill', '#676767');
     iconThemeDark.setAttribute('fill', '#676767');
     root.style.setProperty('--backgroundColor', '#333');
     root.style.setProperty('--backgroundColorRange', '#545454');
     root.style.setProperty('--colorTextMain', '#fff');
     root.style.setProperty('--inputTextInactive', '#e5e5e5');
+    root.style.setProperty('--backgroundColorFooter', '#2f2f2f');
+    root.style.setProperty('--colorTextFooterText', '#565656');
+    root.style.setProperty('--fieldsetBorder', 'rgba(125, 125, 125, .5)');
+    root.style.setProperty('--fieldsetBorderFocus', 'rgba(125, 125, 125, 1)');
     buttonPopupOpen.classList.add('header__button_theme_dark');
     buttonPopupClose.classList.add('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
@@ -38,18 +45,22 @@ function changeTheme () {
     arrowsInButtons.forEach(function (item) {
       item.classList.add('slider-roads__icon_theme_dark');
     });
-
-
-
-
-  }
-  if (range.value === '0') {
+    ranges.forEach(function(item) {
+      item.value = '10';
+    });
+    iconTheme.style.stroke = '#fff';
+    numberTheme = 1;
+  } else {
     iconThemeLight.setAttribute('fill', '#cfcfcf');
     iconThemeDark.setAttribute('fill', '#cfcfcf');
     root.style.setProperty('--backgroundColor', '#f4f4f4');
     root.style.setProperty('--backgroundColorRange', '#fff');
     root.style.setProperty('--colorTextMain', '#151515');
     root.style.setProperty('--inputTextInactive', '#222');
+    root.style.setProperty('--backgroundColorFooter', '#efefef');
+    root.style.setProperty('--colorTextFooterText', '#cfcfcf');
+    root.style.setProperty('--fieldsetBorder', 'rgba(199, 199, 199, .5)');
+    root.style.setProperty('--fieldsetBorderFocus', 'rgba(199, 199, 199, 1)');
     buttonPopupOpen.classList.remove('header__button_theme_dark');
     buttonPopupClose.classList.remove('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
@@ -58,10 +69,19 @@ function changeTheme () {
     arrowsInButtons.forEach(function (item) {
       item.classList.remove('slider-roads__icon_theme_dark');
     });
+    ranges.forEach(function(item) {
+      item.value = '0';
+    });
+    iconTheme.style.stroke = '#151515';
+    numberTheme = 0;
   }
 }
 
-range.addEventListener('change', changeTheme)
+ranges.forEach(function(item) {
+  item.addEventListener('change', changeTheme);
+});
+iconTheme.addEventListener('click', changeTheme);
+
 
 //позиционирование и перелистывание отделов о типах дорог
 let left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
@@ -181,6 +201,7 @@ function removeInvisibilityCards () {
 function hideExtraCards() {
   bikeCardActive = bikesCardsActive.querySelectorAll('.card')[0];
   watchBikeCardActive();
+  bikesCardsActive.querySelectorAll('.card')[0].classList.remove('card_invisible');
   bikesCardsActive.querySelectorAll('.card')[1].classList.add('card_invisible');
   bikesCardsActive.querySelectorAll('.card')[2].classList.add('card_invisible');
 }
@@ -240,4 +261,30 @@ function watchBikeCardActive() {
   bikeCardActive.addEventListener('touchend', findTouchendX);
 }
 
+
+//логика работы формы для e-mail
+const fieldset = document.querySelector('.footer__fieldset');
+const input = document.querySelector('.footer__input');
+const button = document.querySelector('.footer__button');
+const form = document.querySelector('.footer__form');
+
+
+
+function doBorderDark() {
+  fieldset.classList.add('footer__fieldset_focus');
+  button.classList.add('footer__button_visible');
+};
+
+function doBorderEsey() {
+  fieldset.classList.remove('footer__fieldset_focus');
+  button.classList.remove('footer__button_visible');
+}
+
+
+input.addEventListener('focus', doBorderDark);
+input.addEventListener('blur', doBorderEsey);
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  input.value = 'Круто!';
+})
 

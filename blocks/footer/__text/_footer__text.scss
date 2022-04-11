@@ -1,0 +1,13 @@
+@import '../../../mixins/text';
+
+.footer__text {
+  margin: 0;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  align-self: end;
+  @include text (var(--colorTextFooterText), 14px, 600, 1.4);
+
+  @media screen and (max-width: 615px) {
+    margin-bottom: 4px;
+  }
+}

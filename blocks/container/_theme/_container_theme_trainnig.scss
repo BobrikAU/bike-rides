@@ -1,0 +1,38 @@
+.container_theme_trainnig {
+  background-image: url(../../../images/training.jpg);
+  background-size: 580px;
+  background-position: right 120px top 208px;
+  min-height: 788px;
+  padding-top: 147px;
+  padding-bottom: 126px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 1439px) {
+    background-position: right calc(119px + (100% - 859px)) top 208px;
+  }
+
+  @media screen and (max-width: 1338px) {
+    background-position: right 18px top 208px;
+  }
+
+  @media screen and (max-width: 1180px) {
+    background-size: calc(580px + (100% - 1180px));
+  }
+
+  @media screen and (max-width: 884px) {
+    background-size: 284px
+  }
+
+  @media screen and (max-width: 750px){
+    padding-top: 40px;
+    background-position: right 18px top 120px;
+    min-height: 658px;
+  }
+
+  @media screen and (max-width: 615px) {
+    border-top: 1px solid #e3e3e3;
+    min-height: 596px;
+    padding-bottom: 62px
+  }
+}
