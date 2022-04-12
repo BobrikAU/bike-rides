@@ -9,6 +9,7 @@ const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton-left-r
 const arrowsInButtons = document.querySelectorAll('.slider-roads__icon');
 const ranges = document.querySelectorAll('.switch__range');
 const iconTheme = document.querySelector('.footer__icon-theme');
+const popupLink = document.querySelectorAll('.popup__link');
 
 //открытие и закрытие попапа
 function openPopup() {
@@ -21,6 +22,9 @@ function closePopup() {
 
 buttonPopupOpen.addEventListener('click', openPopup);
 buttonPopupClose.addEventListener('click', closePopup);
+popupLink.forEach(function(item) {
+  item.addEventListener('click', closePopup);
+})
 
 // смена темы страницы переключателем
 let numberTheme = 0;
@@ -231,7 +235,7 @@ function findTouchstartX (event) {
 function findTouchendX (event) {
   touchendX = event.changedTouches[0].screenX;
   let lengthMovement = touchstartX > touchendX ? touchstartX - touchendX : touchendX - touchstartX;
-  if (lengthMovement >= 75) {
+  if (lengthMovement >= 50) {
     changeCard();
   }
 }

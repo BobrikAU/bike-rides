@@ -1,0 +1,27 @@
+@mixin point ($topY, $leftX, $topYY, $leftXX) {
+  @media screen and (max-width: 850px) {
+    &::before{
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--colorTextMain);
+      position: absolute;
+      top: $topY;
+      left: $leftX;
+      visibility: visible;
+      transition: .4s;
+    }
+
+    &.card_invisible::before{
+      background-color: #cacaca;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    &::before{
+      top: $topYY;
+      left: $leftXX;
+    }
+  }
+}

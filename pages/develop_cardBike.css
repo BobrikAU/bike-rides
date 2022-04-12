@@ -409,8 +409,7 @@ template {
   width: -moz-min-content;
   width: min-content;
   visibility: visible;
-  opacity: 1;
-  transition: opacity 0.4s 0s, visibility 0s 0.4s;
+  transition: visibility 0s 0.4s;
 }
 @media screen and (max-width: 850px) {
   .card {
@@ -422,6 +421,20 @@ template {
     font-size: 14px;
     line-height: 18px;
     color: #151515;
+  }
+  .card::after {
+    content: "";
+    width: 384px;
+    height: 384px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 20px;
+    background-color: rgba(244, 244, 244, 0);
+    transition: background-color 0.4s;
+  }
+  .card.card_invisible::after {
+    background-color: rgb(244, 244, 244);
   }
 }
 

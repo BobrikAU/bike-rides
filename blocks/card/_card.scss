@@ -7,8 +7,7 @@
   flex-direction: column;
   width: min-content;
   visibility: visible;
-  opacity: 1;
-  transition: opacity .4s 0s, visibility 0s .4s;
+  transition: visibility 0s .4s;
 
   @media screen and (max-width: 850px) {
     padding-top: 0;
@@ -19,5 +18,24 @@
     font-size: 14px;
     line-height: 18px;
     color: $colorTextMain;
+
+    &::after {
+      content: '';
+      width: 384px;
+      height: 384px;
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      border-radius: 20px;
+      background-color: rgba(244, 244, 244, 0);
+      transition: background-color .4s;
+    }
+
+    &.card_invisible::after{
+      background-color: rgba(244, 244, 244, 1);
+    }
   }
+
+
 }
+

@@ -1308,7 +1308,7 @@ template {
 }
 
 .bikes__cards {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   grid-area: cards;
   visibility: hidden;
@@ -1328,7 +1328,7 @@ template {
   display: flex;
   visibility: visible;
   opacity: 1;
-  transition: display 0s 0s, visibility 0s 0.4s, opacity 0.4s 0.4s;
+  transition: display 0s 0.4s, visibility 0s 0.4s, opacity 0.4s 0.4s;
 }
 
 .card {
@@ -1347,8 +1347,7 @@ template {
   width: -moz-min-content;
   width: min-content;
   visibility: visible;
-  opacity: 1;
-  transition: opacity 0.4s 0s, visibility 0s 0.4s;
+  transition: visibility 0s 0.4s;
 }
 @media screen and (max-width: 850px) {
   .card {
@@ -1360,6 +1359,20 @@ template {
     font-size: 14px;
     line-height: 18px;
     color: #151515;
+  }
+  .card::after {
+    content: "";
+    width: 384px;
+    height: 384px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 20px;
+    background-color: rgba(244, 244, 244, 0);
+    transition: background-color 0.4s;
+  }
+  .card.card_invisible::after {
+    background-color: rgb(244, 244, 244);
   }
 }
 
@@ -1398,8 +1411,79 @@ template {
 
 .card_invisible {
   visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 0.4s, opacity 0.4s 0.4s;
+  transition: visibility 0s 0.4s;
+}
+
+@media screen and (max-width: 850px) {
+  .card_position_left::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--colorTextMain);
+    position: absolute;
+    top: 401px;
+    left: 180px;
+    visibility: visible;
+    transition: 0.4s;
+  }
+  .card_position_left.card_invisible::before {
+    background-color: #cacaca;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card_position_left::before {
+    top: 326px;
+    left: 131px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card_position_center::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--colorTextMain);
+    position: absolute;
+    top: 401px;
+    left: 189px;
+    visibility: visible;
+    transition: 0.4s;
+  }
+  .card_position_center.card_invisible::before {
+    background-color: #cacaca;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card_position_center::before {
+    top: 326px;
+    left: 140px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .card_position_rigth::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--colorTextMain);
+    position: absolute;
+    top: 401px;
+    left: 198px;
+    visibility: visible;
+    transition: 0.4s;
+  }
+  .card_position_rigth.card_invisible::before {
+    background-color: #cacaca;
+  }
+}
+@media screen and (max-width: 450px) {
+  .card_position_rigth::before {
+    top: 326px;
+    left: 149px;
+  }
 }
 
 .slider-roads__batton-left-right {
