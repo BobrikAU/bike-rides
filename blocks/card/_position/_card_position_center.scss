@@ -1,0 +1,5 @@
+@import '../../../mixins/point-card';
+
+.card_position_center {
+  @include point (401px, 189px, 326px, 140px);
+}
