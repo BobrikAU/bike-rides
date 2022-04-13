@@ -1,5 +1,6 @@
 @import '../vendor/normalize';
 @import '../vendor/fonts/fonts';
+@import '../blocks/document/document';
 @import '../blocks/page/page';
 @import '../variables/variables';
 @import '../blocks/header/header';
@@ -36,60 +37,35 @@
 @import '../blocks/slider-roads/__buttons/slider-roads__buttons';
 @import '../blocks/slider-roads/__icon-image/slider-roads__icon-image';
 @import '../blocks/slider-roads/__icon-image/_position/slider-roads__icon-image_position_inside';
-
 @import '../blocks/bikes/bikes';
 @import '../blocks/bikes/__title/bikes__title';
 @import '../blocks/bikes/__control/bikes__control';
-@import '../blocks/bikes/__choiceTite/bikes__choiceTite';
-@import '../blocks/bikes/__list/bikes__list';
-@import '../blocks/bikes/__list-item/bikes__list-item';
-@import '../blocks/bikes/__button/bikes__button';
-@import '../blocks/bikes/__button/_activ/bikes__button_activ';
-
+@import '../blocks/bikes/__choice-tite/bikes__choice-tite';
 @import '../blocks/bikes/__roads-list/bikes__roads-list';
 @import '../blocks/bikes/__road-type/bikes__road-type';
 @import '../blocks/bikes/__road-type/_open/bikes__road-type_open';
 @import '../blocks/bikes/__choice/bikes__choice';
 @import '../blocks/bikes/__road-item/bikes__road-item';
-
 @import '../blocks/bikes/__cards/bikes__cards';
-@import '../blocks/bikes/__cards/_move/bikes__cards_move';
-
-
 @import '../blocks/card/card';
 @import '../blocks/card/__image/card__image';
 @import '../blocks/card/__text/card__text';
 @import '../blocks/card/_invisible/card_invisible';
-
 @import '../blocks/card/_position/card_position_left';
 @import '../blocks/card/_position/card_position_center';
 @import '../blocks/card/_position/card_position_rigth';
-
-
-
 @import '../blocks/slider-roads/__batton-left-right/slider-roads__batton-left-right';
 @import '../blocks/slider-roads/__icon/slider-roads__icon';
 @import '../blocks/slider-roads/__icon/_right/slider-roads__icon_right';
 @import '../blocks/slider-roads/__icon/_theme/slider-roads__icon_theme_dark';
 @import '../blocks/slider-roads/__batton-left-right/_theme/slider-roads__batton-left-right_theme_dark';
-
-
 @import '../blocks/container/_theme/container_theme_trainnig';
 @import '../blocks/container/__link/container__link';
 @import '../blocks/container/__subtitle/_theme/container__subtitle_theme_trainnig';
 @import '../blocks/container/__caption/_theme/container__caption_theme_trainnig';
 @import '../blocks/container/__nav/container__nav';
-
-
-
-
-
-
-
-
 @import '../blocks/footer/footer';
 @import '../blocks/footer/__title/footer__title';
-
 @import '../blocks/footer/__form/footer__form';
 @import '../blocks/footer/__fieldset/footer__fieldset';
 @import '../blocks/footer/__input/footer__input';

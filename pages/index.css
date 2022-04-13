@@ -362,6 +362,10 @@ template {
   font-style: normal;
   font-weight: 400;
 }
+.document {
+  scroll-behavior: smooth;
+}
+
 .page {
   width: 100%;
   max-width: 1440px;
@@ -394,6 +398,7 @@ template {
 }
 
 .header {
+  max-width: 1440px;
   width: 100%;
   min-height: 94px;
   box-sizing: border-box;
@@ -401,11 +406,15 @@ template {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: var(--backgroundColor);
 }
 @media screen and (max-width: 615px) {
   .header {
     padding: 24px 18px 46px 0;
-    min-height: 68px;
+    min-height: 74px;
   }
 }
 
@@ -439,7 +448,7 @@ template {
   width: 20px;
   height: 20px;
   background-color: inherit;
-  background-image: url(../../../images/line.svg), url(../../../images/line.svg), url(../../../images/line.svg);
+  background-image: url(../images/line.svg), url(../images/line.svg), url(../images/line.svg);
   background-repeat: no-repeat;
   background-position: top, center, bottom;
   cursor: url("../images/pointer.svg"), auto;
@@ -451,7 +460,7 @@ template {
 }
 
 .header__button_theme_dark {
-  background-image: url(../../../../images/line-white.svg), url(../../../images/line-white.svg), url(../../../images/line-white.svg);
+  background-image: url(../images/line-white.svg), url(../images/line-white.svg), url(../images/line-white.svg);
 }
 
 .popup {
@@ -482,12 +491,12 @@ template {
   width: 18px;
   height: 18px;
   background-color: inherit;
-  background-image: url(../../../images/diagonal-left.svg), url(../../../images/diagonal-right.svg);
+  background-image: url(../images/diagonal-left.svg), url(../images/diagonal-right.svg);
   margin: 25px 20px 0 0;
 }
 
 .popup__button_theme_dark {
-  background-image: url(../../../../images/diagonal-left-white.svg), url(../../../../images/diagonal-right-white.svg);
+  background-image: url(../images/diagonal-left-white.svg), url(../images/diagonal-right-white.svg);
 }
 
 .popup__menu {
@@ -564,11 +573,12 @@ template {
   width: 100%;
   box-sizing: border-box;
   padding-left: 120px;
-  min-height: 836px;
-  background-image: url(../../images/altai-forest.jpg);
-  background-size: contain;
+  padding-top: 94px;
+  min-height: 930px;
+  background-image: url(../images/altai-forest.jpg);
+  background-size: 610px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top 94px right;
 }
 @media screen and (max-width: 1050px) {
   .container {
@@ -577,6 +587,7 @@ template {
 }
 @media screen and (max-width: 950px) {
   .container {
+    background-size: 323px;
     padding-left: 20px;
     min-height: 500px;
   }
@@ -584,9 +595,8 @@ template {
 @media screen and (max-width: 615px) {
   .container {
     background-size: 254px;
-    padding-left: 18px;
-    padding-right: 18px;
-    background-position: top 144px right 18px;
+    padding: 89px 18px 79px 18px;
+    background-position: top 234px right 18px;
   }
 }
 
@@ -676,7 +686,7 @@ template {
 }
 @media screen and (max-width: 615px) {
   .container__link-button {
-    margin: 40px auto 79px;
+    margin: 40px auto 0px;
     width: 284px;
     height: 46px;
   }
@@ -760,12 +770,12 @@ template {
   box-sizing: border-box;
   padding: 120px 0 0 0;
   min-height: 580px;
-  background-image: url(../../images/norway.jpg);
+  background-image: url(../images/norway.jpg);
   background-repeat: no-repeat;
   background-size: 650px;
   background-position: left 120px top 120px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 @media screen and (max-width: 1250px) {
   .slogan {
@@ -1111,11 +1121,11 @@ template {
   }
 }
 
-.bikes__choiceTite {
+.bikes__choice-tite {
   display: none;
 }
 @media screen and (max-width: 850px) {
-  .bikes__choiceTite {
+  .bikes__choice-tite {
     display: block;
     margin: 0;
     color: var(--colorTextMain);
@@ -1134,9 +1144,9 @@ template {
     z-index: 10;
     background-color: var(--backgroundColor);
   }
-  .bikes__choiceTite::after {
+  .bikes__choice-tite::after {
     content: " ";
-    background-image: url(../../../images/arrow-down.svg);
+    background-image: url(../images/arrow-down.svg);
     background-repeat: no-repeat;
     width: 12px;
     height: 6px;
@@ -1146,95 +1156,23 @@ template {
     top: 11px;
     transition: 0.4s;
   }
-  .bikes__control:focus .bikes__choiceTite::after {
+  .bikes__control:focus .bikes__choice-tite::after {
     transform: rotate(-180deg);
   }
 }
 @media screen and (max-width: 750px) {
-  .bikes__choiceTite {
+  .bikes__choice-tite {
     font-size: 11px;
     line-height: 14px;
     padding-top: 7px;
   }
 }
 
-/*@import '../../../mixins/text';
-
-.bikes__list {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: inherit;
-  width: 114px;
-  height: 30px;
-  border: 1px solid #e3e3e3;
-  border-radius: 2px;
-  @include text (rgba(21, 21, 21, 1), 18px, 600, 1.5556);
-  cursor: $cusor;
-  background-image: url(../../../images/arrow-down.svg);
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-left: 7px;
-
-  &:focus {
-    outline: none;
-  }
-}
-*/
-.bikes__list-item {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: inherit;
-}
-
-.bikes__button {
-  padding: 0 36px 0 0;
-  background-color: inherit;
-  border: none;
-  color: rgba(34, 34, 34, 0.7);
-  font-family: inherit;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5556;
-  cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
-}
-.bikes__button:last-child {
-  padding-right: 0;
-}
-.bikes__button:hover {
-  color: rgba(34, 34, 34, 0.6);
-}
-@media screen and (max-width: 840px) {
-  .bikes__button {
-    display: none;
-  }
-}
-
-.bikes__button_activ {
-  color: rgb(21, 21, 21);
-  font-weight: 600;
-}
-.bikes__button_activ:hover {
-  color: rgba(21, 21, 21, 0.75);
-}
-
-/*.bikes__road {
-  height: 0;
-  overflow: hidden;
-  transition: height 1s 1s;
-
-  .bikes__listtttt:focus + & {
-    height: fit-content;
-    overflow: visible;
-  }
-}
-*/
 .bikes__roads-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: var(--backgroundColor);
 }
 @media screen and (max-width: 850px) {
   .bikes__roads-list {
@@ -1308,12 +1246,12 @@ template {
 }
 
 .bikes__cards {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   grid-area: cards;
   visibility: hidden;
   opacity: 0;
-  transition: display 0s 0s, opacity 0.4s 0s, visibility 0s 0.4s;
+  transition: 0.4s;
 }
 @media screen and (max-width: 850px) {
   .bikes__cards {
@@ -1328,7 +1266,6 @@ template {
   display: flex;
   visibility: visible;
   opacity: 1;
-  transition: display 0s 0.4s, visibility 0s 0.4s, opacity 0.4s 0.4s;
 }
 
 .card {
@@ -1362,17 +1299,25 @@ template {
   }
   .card::after {
     content: "";
-    width: 384px;
-    height: 384px;
+    width: 380px;
+    height: 380px;
     position: absolute;
-    top: -2px;
-    left: -2px;
+    top: 0;
+    left: 0;
     border-radius: 20px;
     background-color: rgba(244, 244, 244, 0);
     transition: background-color 0.4s;
   }
+}
+@media screen and (max-width: 850px) and (max-width: 450px) {
+  .card::after {
+    width: 288px;
+    height: 311px;
+  }
+}
+@media screen and (max-width: 850px) {
   .card.card_invisible::after {
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(244, 244, 244, 0);
   }
 }
 
@@ -1551,7 +1496,7 @@ template {
 }
 
 .container_theme_trainnig {
-  background-image: url(../../../images/training.jpg);
+  background-image: url(../images/training.jpg);
   background-size: 580px;
   background-position: right 120px top 208px;
   min-height: 788px;
@@ -1631,6 +1576,7 @@ template {
 @media screen and (max-width: 785px) {
   .container__caption_theme_trainnig {
     flex-grow: 1;
+    padding-top: 0px;
   }
 }
 

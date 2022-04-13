@@ -2,25 +2,26 @@
   width: 100%;
   box-sizing: border-box;
   padding-left: 120px;
-  min-height: 836px;
-  background-image: url(../../images/altai-forest.jpg);
-  background-size: contain;
+  padding-top: 94px;
+  min-height: 930px;
+  background-image: url(../images/altai-forest.jpg);
+  background-size: 610px;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top 94px right;
 
   @media screen and (max-width: 1050px) {
     padding-left: calc(120px - (1050px - 100%));
   }
 
   @media screen and (max-width: 950px) {
+    background-size: 323px;
     padding-left: 20px;
     min-height: 500px;
   }
 
   @media screen and (max-width: 615px) {
     background-size: 254px;
-    padding-left: 18px;
-    padding-right: 18px;
-    background-position: top 144px right 18px;
+    padding: 89px 18px 79px 18px;
+    background-position: top 234px right 18px;
   }
 }

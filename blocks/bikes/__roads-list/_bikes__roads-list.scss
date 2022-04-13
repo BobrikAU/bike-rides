@@ -1,19 +1,8 @@
-/*.bikes__road {
-  height: 0;
-  overflow: hidden;
-  transition: height 1s 1s;
-
-  .bikes__listtttt:focus + & {
-    height: fit-content;
-    overflow: visible;
-  }
-}
-*/
-
 .bikes__roads-list {
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: var(--backgroundColor);
 
   @media screen and (max-width: 850px) {
     position: absolute;

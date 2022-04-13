@@ -3,12 +3,12 @@
   box-sizing: border-box;
   padding: 120px 0 0 0;
   min-height: 580px;
-  background-image: url(../../images/norway.jpg);
+  background-image: url(../images/norway.jpg);
   background-repeat: no-repeat;
   background-size: 650px;
   background-position: left 120px top 120px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 
   @media screen and (max-width: 1250px) {
     background-size: 450px;
