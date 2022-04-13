@@ -1,6 +1,6 @@
 @import '../../../mixins/text';
 
-.bikes__choiceTite {
+.bikes__choice-tite {
   display: none;
 
   @media screen and (max-width: 850px) {
@@ -20,7 +20,7 @@
 
     &::after {
       content: ' ';
-      background-image: url(../../../images/arrow-down.svg);
+      background-image: url(../images/arrow-down.svg);
       background-repeat: no-repeat;
       width: 12px;
       height: 6px;

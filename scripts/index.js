@@ -140,7 +140,7 @@ window.addEventListener('resize', function () {
 
 // логика работы раздела о велосипедах
 const inputsRadioRoads = document.querySelectorAll('.bikes__choice');
-const listRoadsTitle = document.querySelector('.bikes__choiceTite');
+const listRoadsTitle = document.querySelector('.bikes__choice-tite');
 let bikesCardsActive = document.querySelectorAll('.bikes__cards')[0];
 let bikeCardActive;
 const roadLinks = document.querySelectorAll('.bikes__road-type');
@@ -272,8 +272,6 @@ const input = document.querySelector('.footer__input');
 const button = document.querySelector('.footer__button');
 const form = document.querySelector('.footer__form');
 
-
-
 function doBorderDark() {
   fieldset.classList.add('footer__fieldset_focus');
   button.classList.add('footer__button_visible');
@@ -283,7 +281,6 @@ function doBorderEsey() {
   fieldset.classList.remove('footer__fieldset_focus');
   button.classList.remove('footer__button_visible');
 }
-
 
 input.addEventListener('focus', doBorderDark);
 input.addEventListener('blur', doBorderEsey);
