@@ -5,6 +5,10 @@
   height: 24px;
   border-radius: 9999px;
   background-color: var(--backgroundColorRange);
+  cursor: $cusor;
+  &:hover {
+    opacity: .75;
+  }
 }
 
 .switch__range::-moz-range-track {
@@ -14,7 +18,12 @@
   height: 24px;
   border-radius: 9999px;
   background-color: var(--backgroundColorRange);
+  cursor: $cusor;
+  &:hover {
+    opacity: .7;
+  }
 }
+
 
 .switch__range::-webkit-slider-thumb {
   -webkit-appearance: none;

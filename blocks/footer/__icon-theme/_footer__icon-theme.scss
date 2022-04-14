@@ -5,7 +5,11 @@
   grid-row-start: 3;
   grid-row-end: 4;
   align-self: end;
+  cursor: $cusor;
 
+  &:hover {
+    opacity: .75;
+  }
 
 
   @media screen and (max-width: 615px) {
