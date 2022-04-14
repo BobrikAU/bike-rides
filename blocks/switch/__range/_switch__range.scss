@@ -20,9 +20,10 @@
   background-color: var(--backgroundColorRange);
   cursor: $cusor;
   &:hover {
-    opacity: .75;
+    opacity: .7;
   }
 }
+
 
 .switch__range::-webkit-slider-thumb {
   -webkit-appearance: none;

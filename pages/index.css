@@ -559,7 +559,7 @@ template {
   cursor: url("../images/pointer.svg"), auto;
 }
 .switch__range::-moz-range-track:hover {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
 .switch__range::-webkit-slider-thumb {
