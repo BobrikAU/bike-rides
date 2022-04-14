@@ -10,6 +10,7 @@ const arrowsInButtons = document.querySelectorAll('.slider-roads__icon');
 const ranges = document.querySelectorAll('.switch__range');
 const iconTheme = document.querySelector('.footer__icon-theme');
 const popupLink = document.querySelectorAll('.popup__link');
+let listRoadsTitle = document.querySelector('.bikes__choice-tite');
 
 //открытие и закрытие попапа
 function openPopup() {
@@ -54,6 +55,9 @@ function changeTheme() {
       item.value = '10';
     });
     iconTheme.style.stroke = '#fff';
+    listRoadsTitle.classList.add('bikes__choice-tite_theme_dark');
+    listRoadsTitle = document.querySelector('.bikes__choice-tite_theme_dark');
+    listRoadsTitle.classList.remove('bikes__choice-tite');
     numberTheme = 1;
   } else {
     iconThemeLight.setAttribute('fill', '#cfcfcf');
@@ -79,6 +83,9 @@ function changeTheme() {
       item.value = '0';
     });
     iconTheme.style.stroke = '#151515';
+    listRoadsTitle.classList.add('bikes__choice-tite');
+    listRoadsTitle = document.querySelector('.bikes__choice-tite');
+    listRoadsTitle.classList.remove('bikes__choice-tite_theme_dark');
     numberTheme = 0;
   }
 }
@@ -142,7 +149,6 @@ window.addEventListener('resize', function () {
 
 // логика работы раздела о велосипедах
 const inputsRadioRoads = document.querySelectorAll('.bikes__choice');
-const listRoadsTitle = document.querySelector('.bikes__choice-tite');
 let bikesCardsActive = document.querySelectorAll('.bikes__cards')[0];
 let bikeCardActive;
 const roadLinks = document.querySelectorAll('.bikes__road-type');
