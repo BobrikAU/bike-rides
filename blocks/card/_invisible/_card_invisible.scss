@@ -1,4 +1,4 @@
-.card_invisible {
+.bikes__choice:checked + .bikes__cards >.card.card_invisible {
   visibility: hidden;
   transition: visibility 0s .4s;
 

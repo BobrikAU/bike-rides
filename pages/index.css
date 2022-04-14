@@ -395,6 +395,7 @@ template {
   --fieldsetBorderFocus: rgba(199, 199, 199, 1);
   --fieldsetBorder: rgba(199, 199, 199, .5);
   --backgroundColorRange: #fff;
+  --pointCardInactiveColor: #cacaca;
 }
 
 .header {
@@ -1255,7 +1256,6 @@ template {
 }
 @media screen and (max-width: 850px) {
   .bikes__cards {
-    display: none;
     flex-wrap: nowrap;
     overflow: hidden;
     position: relative;
@@ -1263,7 +1263,6 @@ template {
   }
 }
 .bikes__choice:checked + .bikes__cards {
-  display: flex;
   visibility: visible;
   opacity: 1;
 }
@@ -1283,8 +1282,11 @@ template {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
-  visibility: visible;
+  visibility: hidden;
   transition: visibility 0s 0.4s;
+}
+.bikes__choice:checked + .bikes__cards > .card {
+  visibility: visible;
 }
 @media screen and (max-width: 850px) {
   .card {
@@ -1317,7 +1319,7 @@ template {
 }
 @media screen and (max-width: 850px) {
   .card.card_invisible::after {
-    background-color: rgba(244, 244, 244, 0);
+    background-color: rgb(244, 244, 244);
   }
 }
 
@@ -1354,7 +1356,7 @@ template {
   }
 }
 
-.card_invisible {
+.bikes__choice:checked + .bikes__cards > .card.card_invisible {
   visibility: hidden;
   transition: visibility 0s 0.4s;
 }
@@ -1373,7 +1375,7 @@ template {
     transition: 0.4s;
   }
   .card_position_left.card_invisible::before {
-    background-color: #cacaca;
+    background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
@@ -1397,7 +1399,7 @@ template {
     transition: 0.4s;
   }
   .card_position_center.card_invisible::before {
-    background-color: #cacaca;
+    background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
@@ -1421,7 +1423,7 @@ template {
     transition: 0.4s;
   }
   .card_position_rigth.card_invisible::before {
-    background-color: #cacaca;
+    background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
