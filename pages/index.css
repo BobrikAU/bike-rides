@@ -543,6 +543,7 @@ template {
   height: 24px;
   border-radius: 9999px;
   background-color: var(--backgroundColorRange);
+  cursor: url("../images/pointer.svg"), auto;
 }
 
 .switch__range::-moz-range-track {
@@ -1809,6 +1810,7 @@ template {
   grid-row-start: 3;
   grid-row-end: 4;
   align-self: end;
+  cursor: url("../images/pointer.svg"), auto;
 }
 @media screen and (max-width: 615px) {
   .footer__icon-theme {
