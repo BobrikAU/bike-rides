@@ -545,6 +545,9 @@ template {
   background-color: var(--backgroundColorRange);
   cursor: url("../images/pointer.svg"), auto;
 }
+.switch__range:hover {
+  opacity: 0.75;
+}
 
 .switch__range::-moz-range-track {
   -moz-appearance: none;
@@ -553,6 +556,10 @@ template {
   height: 24px;
   border-radius: 9999px;
   background-color: var(--backgroundColorRange);
+  cursor: url("../images/pointer.svg"), auto;
+}
+.switch__range::-moz-range-track:hover {
+  opacity: 0.75;
 }
 
 .switch__range::-webkit-slider-thumb {
@@ -1811,6 +1818,9 @@ template {
   grid-row-end: 4;
   align-self: end;
   cursor: url("../images/pointer.svg"), auto;
+}
+.footer__icon-theme:hover {
+  opacity: 0.75;
 }
 @media screen and (max-width: 615px) {
   .footer__icon-theme {

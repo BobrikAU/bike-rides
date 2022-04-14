@@ -7,6 +7,10 @@
   align-self: end;
   cursor: $cusor;
 
+  &:hover {
+    opacity: .75;
+  }
+
 
   @media screen and (max-width: 615px) {
     display: block;
