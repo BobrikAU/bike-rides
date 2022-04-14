@@ -6,8 +6,12 @@
   display: flex;
   flex-direction: column;
   width: min-content;
-  visibility: visible;
+  visibility: hidden;
   transition: visibility 0s .4s;
+
+  .bikes__choice:checked + .bikes__cards > & {
+    visibility: visible;
+  }
 
   @media screen and (max-width: 850px) {
     padding-top: 0;
@@ -37,7 +41,7 @@
     }
 
     &.card_invisible::after{
-      background-color: rgba(244, 244, 244, 0);
+      background-color: rgba(244, 244, 244, 1);
     }
   }
 }

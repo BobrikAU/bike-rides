@@ -1,11 +1,11 @@
-@mixin point ($topY, $leftX, $topYY, $leftXX) {
+@mixin point ($topY, $leftX, $topYY, $leftXX, $colorActive: var(--colorTextMain), $colorUnactive: var(--pointCardInactiveColor)) {
   @media screen and (max-width: 850px) {
     &::before{
       content: '';
       width: 4px;
       height: 4px;
       border-radius: 2px;
-      background-color: var(--colorTextMain);
+      background-color: $colorActive;
       position: absolute;
       top: $topY;
       left: $leftX;
@@ -14,7 +14,7 @@
     }
 
     &.card_invisible::before{
-      background-color: #cacaca;
+      background-color: $colorUnactive;
     }
   }
 

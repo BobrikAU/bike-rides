@@ -41,6 +41,7 @@ function changeTheme() {
     root.style.setProperty('--colorTextFooterText', '#565656');
     root.style.setProperty('--fieldsetBorder', 'rgba(125, 125, 125, .5)');
     root.style.setProperty('--fieldsetBorderFocus', 'rgba(125, 125, 125, 1)');
+    root.style.setProperty('--pointCardInactiveColor', '#919191');
     buttonPopupOpen.classList.add('header__button_theme_dark');
     buttonPopupClose.classList.add('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
@@ -65,6 +66,7 @@ function changeTheme() {
     root.style.setProperty('--colorTextFooterText', '#cfcfcf');
     root.style.setProperty('--fieldsetBorder', 'rgba(199, 199, 199, .5)');
     root.style.setProperty('--fieldsetBorderFocus', 'rgba(199, 199, 199, 1)');
+    root.style.setProperty('--pointCardInactiveColor', '#cacaca');
     buttonPopupOpen.classList.remove('header__button_theme_dark');
     buttonPopupClose.classList.remove('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
