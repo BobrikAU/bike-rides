@@ -926,13 +926,9 @@ template {
     padding-left: 18px;
   }
 }
-@media screen and (max-width: 780px) {
-  .slider-roads {
-    padding-top: 38px;
-  }
-}
 @media screen and (max-width: 750px) {
   .slider-roads {
+    padding-top: 38px;
     min-height: 503px;
   }
 }
