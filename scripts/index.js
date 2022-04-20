@@ -32,6 +32,9 @@ let numberTheme = 0;
 
 function changeTheme() {
   if (numberTheme === 0) {
+    root.style.setProperty('--colorTextMainRGB', '255, 255, 255');
+
+
     iconThemeLight.setAttribute('fill', '#676767');
     iconThemeDark.setAttribute('fill', '#676767');
     root.style.setProperty('--backgroundColor', '#333');
@@ -60,6 +63,9 @@ function changeTheme() {
     listRoadsTitle.classList.remove('bikes__choice-tite');
     numberTheme = 1;
   } else {
+    root.style.setProperty('--colorTextMainRGB', '21, 21, 21');
+
+
     iconThemeLight.setAttribute('fill', '#cfcfcf');
     iconThemeDark.setAttribute('fill', '#cfcfcf');
     root.style.setProperty('--backgroundColor', '#f4f4f4');

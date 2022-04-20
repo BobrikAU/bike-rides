@@ -383,6 +383,8 @@ template {
 }
 
 :root {
+  --colorTextMainRGB: 21, 21, 21;
+  --colorTextMainPointing: .7;
   --colorTextMain: #151515;
   --inputTextInactive: #222;
   --colorTextFooterText: #cfcfcf;
@@ -1809,10 +1811,11 @@ template {
   opacity: 0;
   position: relative;
   left: 100%;
-  transition: opacity 0.4s 0s, left 0s 0.4s;
+  transition: opacity 0.4s 0s, left 0s 0.4s, color 0.4s 0s;
 }
 .footer__button:hover {
   cursor: url("../images/pointer.svg"), auto;
+  color: rgba(var(--colorTextMainRGB), var(--colorTextMainPointing));
 }
 
 .footer__button_visible {
