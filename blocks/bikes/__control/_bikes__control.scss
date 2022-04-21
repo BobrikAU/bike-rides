@@ -8,9 +8,8 @@
   position: relative;
 
   @media screen and (max-width: $media850) {
-    position: absolute;
-    top: 41px;
-    left: 0px;
+    grid-area: control;
+    justify-self: start;
     padding-top: 0;
   }
 }

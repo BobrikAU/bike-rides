@@ -5,6 +5,7 @@
   letter-spacing: -0.5px;
 
   @media screen and (max-width: $media850) {
+    grid-area: title;
     margin-bottom: 0;
   }
 

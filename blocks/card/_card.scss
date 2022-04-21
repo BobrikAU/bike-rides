@@ -12,14 +12,17 @@
   }
 
   @media screen and (max-width: $media850) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: start;
     padding-top: 0;
-    margin-top: 90px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-top: 21px;
     font-size: 14px;
     line-height: 18px;
     color: $colorTextMain;
+    position: relative;
 
     &::after {
       content: '';

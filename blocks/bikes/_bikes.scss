@@ -17,16 +17,14 @@
 
   @media screen and (max-width: $media850) {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: minmax(80px, auto) auto auto;
     grid-template-areas:
     "title"
     "control"
     "cards";
-    position: relative;
   }
 
   @media screen and (max-width: $media750) {
-
     padding-top: 40px;
   }
 

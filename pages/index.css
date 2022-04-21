@@ -1076,9 +1076,8 @@ template {
 @media screen and (max-width: 850px) {
   .bikes {
     grid-template-columns: 100%;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: minmax(80px, auto) auto auto;
     grid-template-areas: "title" "control" "cards";
-    position: relative;
   }
 }
 @media screen and (max-width: 750px) {
@@ -1105,6 +1104,7 @@ template {
 }
 @media screen and (max-width: 850px) {
   .bikes__title {
+    grid-area: title;
     margin-bottom: 0;
   }
 }
@@ -1126,9 +1126,8 @@ template {
 }
 @media screen and (max-width: 850px) {
   .bikes__control {
-    position: absolute;
-    top: 41px;
-    left: 0px;
+    grid-area: control;
+    justify-self: start;
     padding-top: 0;
   }
 }
@@ -1315,10 +1314,12 @@ template {
 }
 @media screen and (max-width: 850px) {
   .bikes__cards {
-    flex-wrap: nowrap;
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-template-rows: minmax(100px, auto);
+    min-height: 429px;
     overflow: hidden;
-    position: relative;
-    min-height: 500px;
   }
 }
 .bikes__choice:checked + .bikes__cards {
@@ -1349,14 +1350,17 @@ template {
 }
 @media screen and (max-width: 850px) {
   .card {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: start;
     padding-top: 0;
-    margin-top: 90px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin-top: 21px;
     font-size: 14px;
     line-height: 18px;
     color: #151515;
+    position: relative;
   }
   .card::after {
     content: "";
@@ -1439,7 +1443,7 @@ template {
 }
 @media screen and (max-width: 450px) {
   .card_position_left::before {
-    top: 326px;
+    top: 325px;
     left: 131px;
   }
 }
@@ -1463,7 +1467,7 @@ template {
 }
 @media screen and (max-width: 450px) {
   .card_position_center::before {
-    top: 326px;
+    top: 325px;
     left: 140px;
   }
 }
@@ -1487,7 +1491,7 @@ template {
 }
 @media screen and (max-width: 450px) {
   .card_position_rigth::before {
-    top: 326px;
+    top: 325px;
     left: 149px;
   }
 }
