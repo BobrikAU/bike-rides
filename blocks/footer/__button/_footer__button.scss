@@ -1,5 +1,3 @@
-@import '../../../mixins/text';
-
 .footer__button {
   padding: 0 22px 0 0;
   border: none;
@@ -12,6 +10,6 @@
 
   &:hover{
     cursor: $cusor;
-    color: rgba(var(--colorTextMainRGB), var(--colorTextMainPointing));
+    color: rgba(var(--colorTextMainRGB), var(--RGBAlfaHover));
   }
 }

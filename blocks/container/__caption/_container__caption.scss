@@ -1,5 +1,3 @@
-@import '../../../mixins/text';
-
 .container__caption {
   margin: 0;
   max-width: 460px;
@@ -8,7 +6,7 @@
   letter-spacing: -0.5px;
   padding-top: 63px;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     padding-top: 25px;
     max-width: 284px;
     font-size: 32px;

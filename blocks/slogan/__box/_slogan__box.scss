@@ -5,19 +5,19 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media screen and (max-width: 1420px) {
+  @media screen and (max-width: $media1420) {
     margin-right: calc(155px + (100% - 1420px));
   }
 
-  @media screen and (max-width: 1285px) {
+  @media screen and (max-width: $media1285) {
     margin-right: 20px;
   }
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: $media780) {
     width: calc(435px + (100% - 780px));
   }
 
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: $media630) {
     margin-right: 0;
     width: 284px;
     padding-bottom: 80px;

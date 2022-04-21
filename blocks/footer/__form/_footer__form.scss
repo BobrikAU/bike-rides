@@ -2,9 +2,9 @@
   grid-column-start: 1;
   grid-row-start: 2;
   max-width: 360px;
-  height: 50px;
 
-  @media screen and (max-width: 615px) {
+  @media screen and (max-width: $media615) {
     max-width: 284px;
+    grid-column-end: 3;
   }
 }

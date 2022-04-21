@@ -1,5 +1,3 @@
-@import '../../../../mixins/text';
-
 .bikes__road-type_open {
   @include text (var(--colorTextMain), 18px, 600, 1.5556);
   opacity: 1;

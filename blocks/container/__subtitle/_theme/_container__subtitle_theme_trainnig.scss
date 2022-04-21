@@ -1,7 +1,7 @@
 .container__subtitle_theme_trainnig {
   flex-grow: 1;
 
-  @media screen and (max-width: 785px) {
+  @media screen and (max-width: $media785) {
     flex-grow: 0;
   }
 }

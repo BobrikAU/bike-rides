@@ -30,7 +30,7 @@
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: #24b47e;
+  background-color: $colorLightGreen;
 }
 
 .switch__range::-moz-range-thumb {
@@ -38,5 +38,5 @@
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: #24b47e;
+  background-color: $colorLightGreen;
 }

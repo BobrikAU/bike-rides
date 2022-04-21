@@ -1,5 +1,3 @@
-@import '../mixins/text';
-
 @mixin link ($colorLink: var(--colorTextMain), $fontSize: 14px, $fontWeight: 500, $lineHeight: 1.0624) {
   text-decoration: none;
   @include text ($colorLink, $fontSize, $fontWeight, $lineHeight);

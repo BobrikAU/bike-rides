@@ -6,7 +6,7 @@
   box-sizing: border-box;
   background-color: var(--backgroundColor);
   margin: auto;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-family: $fonts;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;

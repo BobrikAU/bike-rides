@@ -7,15 +7,15 @@
   "title control"
   "cards cards";
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: $media1050) {
     padding-left: calc(123px + (100% - 1050px));
   }
 
-  @media screen and (max-width: 945px) {
+  @media screen and (max-width: $media945) {
     padding-left: 18px;
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     grid-template-columns: 100%;
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
@@ -25,13 +25,13 @@
     position: relative;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
 
     padding-top: 40px;
   }
 
-  @media screen and (max-width: 615px) {
-    border-top: 1px solid #e3e3e3;
+  @media screen and (max-width: $media615) {
+    border-top: 1px solid $colorBorderSectionMobilVer;
     padding-right: 18px;
   }
 }

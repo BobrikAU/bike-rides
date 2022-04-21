@@ -6,21 +6,21 @@
   overflow: hidden;
   position: relative;
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: $media1050) {
     padding-left: calc(120px + (100% - 1050px));
   }
 
-  @media screen and (max-width: 948px) {
+  @media screen and (max-width: $media950) {
     padding-left: 18px;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     padding-top: 38px;
     min-height: 503px;
   }
 
-  @media screen and (max-width: 615px) {
-    border-top: 1px solid #e3e3e3;
+  @media screen and (max-width: $media615) {
+    border-top: 1px solid $colorBorderSectionMobilVer;
   }
 
 }

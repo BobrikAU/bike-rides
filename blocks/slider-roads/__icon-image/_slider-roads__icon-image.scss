@@ -4,7 +4,7 @@
   bottom: 17px;
   z-index: 5;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     width: 68px;
     bottom: 8px;
   }

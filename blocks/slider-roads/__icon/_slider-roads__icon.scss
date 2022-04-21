@@ -6,7 +6,7 @@
   opacity: 1;
   transition: .4s;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     width: 4.5px;
     height: 10px;
   }

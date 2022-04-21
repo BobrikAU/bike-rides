@@ -10,31 +10,31 @@
   display: flex;
   justify-content: flex-end;
 
-  @media screen and (max-width: 1250px) {
+  @media screen and (max-width: $media1250) {
     background-size: 450px;
     min-height: 450px;
   }
 
-  @media screen and (max-width: 1050px) {
+  @media screen and (max-width: $media1050) {
     background-position: left calc(120px + (100% - 600px)) top 120px;
   }
 
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: $media950) {
     background-position: left 20px top 120px;
     background-size: 284px;
     min-height: 353px;
   }
 
-  @media screen and (max-width: 630px) {
+  @media screen and (max-width: $media630) {
     background-position: top 120px center;
     justify-content: center;
     align-items: flex-end;
     min-height: 632px;
   }
 
-  @media screen and (max-width: 615px) {
+  @media screen and (max-width: $media615) {
     background-position: top 20px center;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid $colorBorderSectionMobilVer;
     min-height: 516px;
   }
 }

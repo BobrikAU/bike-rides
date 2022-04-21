@@ -1,5 +1,5 @@
 @mixin point ($topY, $leftX, $topYY, $leftXX, $colorActive: var(--colorTextMain), $colorUnactive: var(--pointCardInactiveColor)) {
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     &::before{
       content: '';
       width: 4px;
@@ -18,7 +18,7 @@
     }
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: $media450) {
     &::before{
       top: $topYY;
       left: $leftXX;

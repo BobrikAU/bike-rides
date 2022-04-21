@@ -2,7 +2,7 @@
   display: flex;
   margin-top: 751px;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     margin-top: 7px;
     margin-left: 226px;
   }

@@ -1,11 +1,9 @@
-@import '../../../mixins/text';
-
 .slider-roads__title {
   margin: 0;
   @include text (var(--colorTextMain), 55px, 700, 1.091);
   letter-spacing: -0.5px;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     font-size: 32px;
     line-height: 1.25;
   }

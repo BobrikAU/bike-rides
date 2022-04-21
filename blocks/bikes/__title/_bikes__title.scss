@@ -1,16 +1,14 @@
-@import '../../../mixins/text';
-
 .bikes__title {
   margin: 0 0 88px 0;
   grid-area: title;
   @include text (var(--colorTextMain), 55px, 700, 1.091);
   letter-spacing: -0.5px;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     margin-bottom: 0;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     font-size: 32px;
     line-height: 40px;
   }

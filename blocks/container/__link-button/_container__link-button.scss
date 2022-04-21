@@ -1,7 +1,5 @@
-@import '../../../mixins/link';
-
 .container__link-button {
-  @include link (#fff, 14px, 600, 1.0624) {
+  @include link ($colorWhite, 14px, 600, 1.0624) {
     letter-spacing: 1px;
     display: flex;
     justify-content: center;
@@ -9,7 +7,7 @@
     width: 180px;
     height: 50px;
     border-radius: 4px;
-    background-color: rgba(36, 180, 126, 1);
+    background-color: $colorLightGreen;
     position: relative;
     z-index: 10;
     overflow: hidden;
@@ -21,7 +19,7 @@
     width: 180px;
     height: 50px;
     border-radius: 4px;
-    background-color: rgba(49, 158, 117, 1);
+    background-color: $colorGreen;
     position: absolute;
     z-index: -10;
     top: 0;
@@ -32,12 +30,12 @@
     transform: translate(180px, 0);
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     font-size: 13px;
     line-height: 1.46;
   }
 
-  @media screen and (max-width: 615px) {
+  @media screen and (max-width: $media615) {
     margin: 40px auto 0px;
     width: 284px;
     height: 46px;

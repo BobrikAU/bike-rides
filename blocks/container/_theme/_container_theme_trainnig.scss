@@ -8,30 +8,30 @@
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 1439px) {
+  @media screen and (max-width: $media1439) {
     background-position: right calc(119px + (100% - 859px)) top 208px;
   }
 
-  @media screen and (max-width: 1338px) {
+  @media screen and (max-width: $media1338) {
     background-position: right 18px top 208px;
   }
 
-  @media screen and (max-width: 1180px) {
+  @media screen and (max-width: $media1180) {
     background-size: calc(580px + (100% - 1180px));
   }
 
-  @media screen and (max-width: 884px) {
+  @media screen and (max-width: $media884) {
     background-size: 284px
   }
 
-  @media screen and (max-width: 750px){
+  @media screen and (max-width: $media750){
     padding-top: 40px;
     background-position: right 18px top 120px;
     min-height: 658px;
   }
 
-  @media screen and (max-width: 615px) {
-    border-top: 1px solid #e3e3e3;
+  @media screen and (max-width: $media615) {
+    border-top: 1px solid $colorBorderSectionMobilVer;
     min-height: 596px;
     padding-bottom: 62px
   }

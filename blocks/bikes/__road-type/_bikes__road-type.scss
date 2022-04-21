@@ -1,5 +1,3 @@
-@import '../../../mixins/text';
-
 .bikes__road-type {
   margin: 0;
   height: 22px;
@@ -13,7 +11,7 @@
     opacity: .6;
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     font-size: 11px;
     line-height: 21px;
     display: block;

@@ -5,7 +5,7 @@
   flex-wrap: nowrap;
   position: relative;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     top: -179px;
   }
 }

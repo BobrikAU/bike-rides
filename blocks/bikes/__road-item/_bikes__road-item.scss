@@ -6,7 +6,7 @@
     margin-right: 0;
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     display: list-item;
   }
 }

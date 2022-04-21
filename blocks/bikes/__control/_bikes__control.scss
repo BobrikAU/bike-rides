@@ -7,7 +7,7 @@
   flex-direction: column;
   position: relative;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     position: absolute;
     top: 41px;
     left: 0px;

@@ -1,11 +1,17 @@
 :root {
   --colorTextMainRGB: 21, 21, 21;
-  --colorTextMainPointing: .7;
+  --backgroundColorRGBA: 244, 244, 244;
+  --colorGrey: 67, 67, 67;
+  --colorGreyButton:235, 235, 235;
+  --RGBAlfaHover: .7;
+  --RGBAlfaStrongHover: .6;
+  --RGBAlfaFull: 1;
+  --RGBAlfaTransparent: 0;
+
 
   --colorTextMain: #151515;
   --inputTextInactive: #222; //цвет текста placeholder без hover
   --colorTextFooterText: #cfcfcf;
-  --cardPseudoShadowHover: .11;
   --backgroundColor: #f4f4f4;
   --backgroundColorFooter: #efefef;
   --opacityLinkHeaderHover: 75%;
@@ -20,3 +26,33 @@
 $colorTextMain: #151515; //основной цвет текста сайта
 $colorTextMainDarkTheme: #fff; //основной цвет текста сайта для темной темы
 $cusor: url('../images/pointer.svg'), auto; //внешний вид курсора
+
+
+$media1439: 1439px;
+$media1420: 1420px;
+$media1338: 1338px;
+$media1285: 1285px;
+$media1280: 1280px;
+$media1250: 1250px;
+$media1200: 1200px;
+$media1180: 1180px;
+$media1050: 1050px;
+$media950: 950px;
+$media945: 945px;
+$media884: 884px;
+$media850: 850px;
+$media785: 785px;
+$media780: 780px;
+$media750: 750px;
+$media630: 630px;
+$media615: 615px;
+$media450: 450px;
+$colorBorderBikesChoiceTite: rgba(227, 227, 227, 1);
+$colorBorderSectionMobilVer: #e3e3e3;
+$colorWhite: #fff;
+$colorLightGreen: rgba(36, 180, 126, 1);
+$colorGreen: rgba(49, 158, 117, 1);
+$shadowCardImage: rgba(0, 0, 0, .06);
+$shadowCardImageHover: rgba(0, 0, 0, .11);
+$shadowCardSticky: rgba(0, 0, 0, .2);
+$fonts: 'Inter', Arial, Helvetica, sans-serif;

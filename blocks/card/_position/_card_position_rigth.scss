@@ -1,5 +1,3 @@
-@import '../../../mixins/point-card';
-
 .card_position_rigth {
   @include point (401px, 198px, 326px, 149px);
 }

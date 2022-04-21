@@ -12,7 +12,7 @@
   z-index: 100;
   background-color: var(--backgroundColor);
 
-  @media screen and (max-width: 615px) {
+  @media screen and (max-width: $media615) {
     padding: 24px 18px 46px 0;
     min-height: 74px;
   }

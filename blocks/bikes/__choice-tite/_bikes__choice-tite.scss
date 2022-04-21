@@ -1,9 +1,7 @@
-@import '../../../mixins/text';
-
 .bikes__choice-tite {
   display: none;
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: $media850) {
     display: block;
     margin: 0;
     @include text (var(--colorTextMain), 18px, 600, 1.5556);
@@ -12,7 +10,7 @@
     width: 114px;
     padding-left: 10px;
     height: 30px;
-    border: 1px solid rgba(227, 227, 227, 1);
+    border: 1px solid $colorBorderBikesChoiceTite;
     border-radius: 2px;
     position: relative;
     z-index: 10;
@@ -36,7 +34,7 @@
     }
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     font-size: 11px;
     line-height: 14px;
     padding-top: 7px;

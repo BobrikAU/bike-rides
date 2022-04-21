@@ -4,15 +4,15 @@
   border-radius: 20px;
   object-position: -1px -1px;
   padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+  background-color: $colorWhite;
+  box-shadow: 0 20px 140px $shadowCardImage;
   transition: .4s;
 
   .card:hover & {
-    box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+    box-shadow: 0 20px 140px $shadowCardImageHover;
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: $media450) {
     width: 254px;
     padding: 15px 15px 37px 15px;
   }

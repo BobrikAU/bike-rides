@@ -338,6 +338,29 @@ template {
   display: none;
 }
 
+:root {
+  --colorTextMainRGB: 21, 21, 21;
+  --backgroundColorRGBA: 244, 244, 244;
+  --colorGrey: 67, 67, 67;
+  --colorGreyButton:235, 235, 235;
+  --RGBAlfaHover: .7;
+  --RGBAlfaStrongHover: .6;
+  --RGBAlfaFull: 1;
+  --RGBAlfaTransparent: 0;
+  --colorTextMain: #151515;
+  --inputTextInactive: #222;
+  --colorTextFooterText: #cfcfcf;
+  --backgroundColor: #f4f4f4;
+  --backgroundColorFooter: #efefef;
+  --opacityLinkHeaderHover: 75%;
+  --opacityLinkHover: 75%;
+  --opacityLinkClosedSlideHover: 60%;
+  --fieldsetBorderFocus: rgba(199, 199, 199, 1);
+  --fieldsetBorder: rgba(199, 199, 199, .5);
+  --backgroundColorRange: #fff;
+  --pointCardInactiveColor: #cacaca;
+}
+
 @font-face {
   font-family: "Inter";
   src: url(../vendor/fonts/inter/Inter-SemiBold.woff2) format("woff2"), url(../vendor/fonts/inter/Inter-SemiBold.woff) format("woff"), url(../vendor/fonts/inter/Inter-SemiBold.ttf) format("truetype");
@@ -380,24 +403,6 @@ template {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-}
-
-:root {
-  --colorTextMainRGB: 21, 21, 21;
-  --colorTextMainPointing: .7;
-  --colorTextMain: #151515;
-  --inputTextInactive: #222;
-  --colorTextFooterText: #cfcfcf;
-  --cardPseudoShadowHover: .11;
-  --backgroundColor: #f4f4f4;
-  --backgroundColorFooter: #efefef;
-  --opacityLinkHeaderHover: 75%;
-  --opacityLinkHover: 75%;
-  --opacityLinkClosedSlideHover: 60%;
-  --fieldsetBorderFocus: rgba(199, 199, 199, 1);
-  --fieldsetBorder: rgba(199, 199, 199, .5);
-  --backgroundColorRange: #fff;
-  --pointCardInactiveColor: #cacaca;
 }
 
 .header {
@@ -569,7 +574,7 @@ template {
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: #24b47e;
+  background-color: rgb(36, 180, 126);
 }
 
 .switch__range::-moz-range-thumb {
@@ -577,7 +582,7 @@ template {
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: #24b47e;
+  background-color: rgb(36, 180, 126);
 }
 
 .container {
@@ -817,7 +822,7 @@ template {
 @media screen and (max-width: 615px) {
   .slogan {
     background-position: top 20px center;
-    border-top: 1px solid #e4e4e4;
+    border-top: 1px solid #e3e3e3;
     min-height: 516px;
   }
 }
@@ -880,7 +885,7 @@ template {
   font-weight: 500;
   line-height: 1.6;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 785px) {
   .slogan__author {
     font-size: 14px;
     line-height: 1.57;
@@ -896,7 +901,7 @@ template {
   line-height: 1.75;
   opacity: 0.7;
 }
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 785px) {
   .slogan__about-author {
     font-size: 10px;
     line-height: 1.6;
@@ -921,7 +926,7 @@ template {
     padding-left: calc(120px + 100% - 1050px);
   }
 }
-@media screen and (max-width: 948px) {
+@media screen and (max-width: 950px) {
   .slider-roads {
     padding-left: 18px;
   }
@@ -1234,14 +1239,15 @@ template {
     z-index: 5;
     top: 28px;
     left: 1px;
-    height: 90px;
-    max-height: 0;
+    height: 0;
     width: 100px;
     overflow: hidden;
     transition: 0.3s 0.3s;
   }
   .bikes__control:focus .bikes__roads-list {
-    max-height: 90px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 
@@ -1360,7 +1366,7 @@ template {
     top: 0;
     left: 0;
     border-radius: 20px;
-    background-color: rgba(244, 244, 244, 0);
+    background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaTransparent));
     transition: background-color 0.4s;
   }
 }
@@ -1372,7 +1378,7 @@ template {
 }
 @media screen and (max-width: 850px) {
   .card.card_invisible::after {
-    background-color: rgb(244, 244, 244);
+    background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaFull));
   }
 }
 
@@ -1388,7 +1394,7 @@ template {
   transition: 0.4s;
 }
 .card:hover .card__image {
-  box-shadow: 0 20px 140px rgba(0, 0, 0, var(--cardPseudoShadowHover));
+  box-shadow: 0 20px 140px rgba(0, 0, 0, 0.11);
 }
 @media screen and (max-width: 450px) {
   .card__image {
@@ -1493,7 +1499,7 @@ template {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  background-color: rgb(235, 235, 235);
+  background-color: rgba(var(--colorGreyButton), var(--RGBAlfaFull));
   display: flex;
   transition: 0.4s;
   margin-right: 20px;
@@ -1502,7 +1508,7 @@ template {
   margin-right: 0;
 }
 .slider-roads__batton-left-right:hover {
-  background-color: rgba(235, 235, 235, 0.6);
+  background-color: rgba(var(--colorGreyButton), --RGBAlfaStrongHover);
 }
 @media screen and (max-width: 750px) {
   .slider-roads__batton-left-right {
@@ -1544,10 +1550,10 @@ template {
 }
 
 .slider-roads__batton-left-right_theme_dark {
-  background-color: rgb(67, 67, 67);
+  background-color: rgba(var(--colorGrey), var(--RGBAlfaFull));
 }
 .slider-roads__batton-left-right_theme_dark:hover {
-  background-color: rgba(67, 67, 67, 0.6);
+  background-color: rgba(var(--colorGrey), var(--RGBAlfaStrongHover));
 }
 
 .container_theme_trainnig {
@@ -1646,14 +1652,14 @@ template {
   padding: 80px 120px 60px;
   display: grid;
   grid-template-columns: 1fr 136px;
-  grid-template-rows: 114px 100px 1fr;
+  grid-template-rows: minmax(114px, auto) minmax(100px, auto) 1fr;
 }
 @media screen and (max-width: 1439px) {
   .footer {
     padding-right: calc(120px + 100% - 1439px);
   }
 }
-@media screen and (max-width: 1337px) {
+@media screen and (max-width: 1338px) {
   .footer {
     padding-right: 18px;
   }
@@ -1663,7 +1669,7 @@ template {
     padding-left: calc(120px - (1050px - 100%));
   }
 }
-@media screen and (max-width: 948px) {
+@media screen and (max-width: 950px) {
   .footer {
     padding-left: 18px;
   }
@@ -1671,7 +1677,7 @@ template {
 @media screen and (max-width: 615px) {
   .footer {
     grid-template-columns: 1fr 32px;
-    grid-template-rows: 102px 100px 1fr;
+    grid-template-rows: minmax(102px, auto) 1fr 32px;
     padding-top: 60px;
     padding-bottom: 20px;
     min-height: 358px;
@@ -1694,11 +1700,11 @@ template {
   grid-column-start: 1;
   grid-row-start: 2;
   max-width: 360px;
-  height: 50px;
 }
 @media screen and (max-width: 615px) {
   .footer__form {
     max-width: 284px;
+    grid-column-end: 3;
   }
 }
 
@@ -1706,11 +1712,9 @@ template {
   margin: 0;
   padding: 0;
   display: flex;
-  box-sizing: border-box;
   border: 1px solid var(--fieldsetBorder);
   border-radius: 4px;
   width: 100%;
-  height: 100%;
   overflow: hidden;
 }
 
@@ -1719,7 +1723,7 @@ template {
   background-color: inherit;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  height: 48px;
   border: none;
   color: var(--colorTextMain);
   font-family: inherit;
@@ -1811,7 +1815,7 @@ template {
 }
 .footer__button:hover {
   cursor: url("../images/pointer.svg"), auto;
-  color: rgba(var(--colorTextMainRGB), var(--colorTextMainPointing));
+  color: rgba(var(--colorTextMainRGB), var(--RGBAlfaHover));
 }
 
 .footer__button_visible {

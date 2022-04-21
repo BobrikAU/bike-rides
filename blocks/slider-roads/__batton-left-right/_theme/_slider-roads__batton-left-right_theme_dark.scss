@@ -1,7 +1,7 @@
 .slider-roads__batton-left-right_theme_dark {
-  background-color: rgba(67, 67, 67, 1);
+  background-color: rgba(var(--colorGrey), var(--RGBAlfaFull));
 
   &:hover {
-    background-color: rgba(67, 67, 67, .6);
+    background-color: rgba(var(--colorGrey), var(--RGBAlfaStrongHover));
   }
 }
