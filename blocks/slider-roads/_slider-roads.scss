@@ -4,7 +4,6 @@
   box-sizing: border-box;
   padding: 122px 0 0 120px;
   overflow: hidden;
-  position: relative;
 
   @media screen and (max-width: $media1050) {
     padding-left: calc(120px + (100% - 1050px));

@@ -919,7 +919,6 @@ template {
   box-sizing: border-box;
   padding: 122px 0 0 120px;
   overflow: hidden;
-  position: relative;
 }
 @media screen and (max-width: 1050px) {
   .slider-roads {
@@ -943,17 +942,34 @@ template {
   }
 }
 
+.slider-roads__container {
+  width: 4160px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: -1470px;
+}
+
 .slider-roads__box {
-  width: calc(100% - 120px);
+  width: 1320px;
   overflow: hidden;
-  position: absolute;
   transition: 0.4s;
   z-index: -5;
 }
-@media screen and (max-width: 1050px) {
-  .slider-roads__box {
-    width: 100%;
-  }
+
+.slider-roads__highway {
+  position: relative;
+  left: 1470px;
+}
+
+.slider-roads__gravel {
+  position: relative;
+  left: 1620px;
+}
+
+.slider-roads__plain {
+  position: relative;
+  left: -2640px;
 }
 
 .slider-roads__title {
@@ -997,7 +1013,7 @@ template {
   width: 650px;
   margin-right: 40px;
 }
-.slider-roads__image:last-child {
+.slider-roads__image:last-of-type {
   margin-right: 0;
 }
 @media screen and (max-width: 750px) {
@@ -1021,12 +1037,14 @@ template {
 
 .slider-roads__buttons {
   display: flex;
-  margin-top: 751px;
+  margin-top: 49px;
 }
 @media screen and (max-width: 750px) {
   .slider-roads__buttons {
-    margin-top: 7px;
-    margin-left: 226px;
+    margin-top: 0;
+    position: relative;
+    left: 226px;
+    top: -427px;
   }
 }
 

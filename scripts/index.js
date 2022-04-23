@@ -103,55 +103,38 @@ iconTheme.addEventListener('click', changeTheme);
 
 
 //позиционирование и перелистывание отделов о типах дорог
-let left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
-let center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
-let right = getComputedStyle(document.querySelector('.slider-roads')).width;
 const highway = document.querySelector('.slider-roads__highway');
 const gravel = document.querySelector('.slider-roads__gravel');
 const plain = document.querySelector('.slider-roads__plain');
 const buttonRight = document.querySelector('.slider-roads__right');
 const buttonLeft = document.querySelector('.slider-roads__left');
 const listRoads = [plain, highway, gravel];
-let movableElement;
 
-highway.style.left = center;
-gravel.style.left = right;
 gravel.style.visibility = 'hidden';
-plain.style.left = left;
 plain.style.visibility = 'hidden';
 
 function moveFromRight () {
-  left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
-  center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
-  right = getComputedStyle(document.querySelector('.slider-roads')).width;
-  listRoads[1].style.left = left;
   listRoads[2].style.visibility = 'visible';
-  listRoads[2].style.left = center;
-  listRoads[0].style.left = right;
+  listRoads[1].style.left = parseInt(getComputedStyle(listRoads[1]).left, 10) - 1470 + 'px';
+  listRoads[2].style.left = parseInt(getComputedStyle(listRoads[2]).left, 10) - 1470 + 'px';
   listRoads[1].style.visibility = 'hidden';
-  movableElement = listRoads.shift();
+  listRoads[0].style.left = parseInt(getComputedStyle(listRoads[0]).left, 10) + 2940 + 'px';
+  const movableElement = listRoads.shift();
   listRoads.push(movableElement);
 }
 
 function moveFromLeft () {
-  left = '-' + getComputedStyle(document.querySelector('.slider-roads')).width;
-  center = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
-  right = getComputedStyle(document.querySelector('.slider-roads')).width;
-  listRoads[1].style.left = right;
   listRoads[0].style.visibility = 'visible';
-  listRoads[0].style.left = center;
-  listRoads[2].style.left = left;
+  listRoads[1].style.left = parseInt(getComputedStyle(listRoads[1]).left, 10) + 1470 + 'px';
+  listRoads[0].style.left = parseInt(getComputedStyle(listRoads[0]).left, 10) + 1470 + 'px';
   listRoads[1].style.visibility = 'hidden';
-  movableElement = listRoads.pop();
+  listRoads[2].style.left = parseInt(getComputedStyle(listRoads[2]).left, 10) - 2940 + 'px';
+  const movableElement = listRoads.pop();
   listRoads.unshift(movableElement);
 }
 
-buttonLeft.addEventListener('click', moveFromLeft);
 buttonRight.addEventListener('click', moveFromRight);
-
-window.addEventListener('resize', function () {
-  listRoads[1].style.left = getComputedStyle(document.querySelector('.slider-roads')).paddingLeft;
-});
+buttonLeft.addEventListener('click', moveFromLeft);
 
 // логика работы раздела о велосипедах
 const inputsRadioRoads = document.querySelectorAll('.bikes__choice');

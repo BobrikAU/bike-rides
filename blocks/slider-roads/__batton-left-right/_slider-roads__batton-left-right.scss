@@ -18,7 +18,7 @@
     background-color: rgba(var(--colorGreyButton), --RGBAlfaStrongHover);
   }
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: $media750) {
     width: 24px;
     height: 24px;
     border-radius: 30px;

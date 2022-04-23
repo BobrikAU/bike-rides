@@ -1,9 +1,11 @@
 .slider-roads__buttons {
   display: flex;
-  margin-top: 751px;
+  margin-top: 49px;
 
   @media screen and (max-width: $media750) {
-    margin-top: 7px;
-    margin-left: 226px;
+    margin-top: 0;
+    position: relative;
+    left: 226px;
+    top: -427px;
   }
 }
