@@ -19,6 +19,8 @@
 @import '../blocks/popup/__menu/popup__menu';
 @import '../blocks/popup/__link/popup__link';
 @import '../blocks/switch/switch';
+@import '../blocks/switch/__icon-light/switch__icon-light';
+@import '../blocks/switch/__icon-dark/switch__icon-dark';
 @import '../blocks/popup/__switch/popup__switch';
 @import '../blocks/switch/__range/switch__range';
 @import '../blocks/container/container';
@@ -45,7 +47,9 @@
 @import '../blocks/slider-roads/__images/slider-roads__images';
 @import '../blocks/slider-roads/__buttons/slider-roads__buttons';
 @import '../blocks/slider-roads/__icon-image/slider-roads__icon-image';
-@import '../blocks/slider-roads/__icon-image/_position/slider-roads__icon-image_position_inside';
+@import '../blocks/slider-roads/__icon-highway/slider-roads__icon-highway';
+@import '../blocks/slider-roads/__icon-gravel/slider-roads__icon-gravel';
+@import '../blocks/slider-roads/__icon-plain/slider-roads__icon-plain';
 @import '../blocks/bikes/bikes';
 @import '../blocks/bikes/__title/bikes__title';
 @import '../blocks/bikes/__control/bikes__control';

@@ -1,0 +1,8 @@
+.switch__icon-light {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  mask: url(../images/icon-theme-light.svg);
+  mask-size: cover;
+  background-color: var(--colorIconTheme);
+}

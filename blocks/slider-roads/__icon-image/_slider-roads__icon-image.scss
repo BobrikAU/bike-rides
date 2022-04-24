@@ -1,4 +1,10 @@
 .slider-roads__icon-image {
+  display: inline-block;
+  width: 98px;
+  height: 40px;
+  mask: url(../images/icon-rectangle.svg);
+  background-color: var(--colorRectangleInSlider);
+  mask-size: contain;
   position: absolute;
   left: 0px;
   bottom: 17px;
@@ -6,6 +12,7 @@
 
   @media screen and (max-width: $media750) {
     width: 68px;
-    bottom: 8px;
+    height: 28px;
+    bottom: 13px;
   }
 }

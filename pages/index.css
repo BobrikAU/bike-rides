@@ -347,6 +347,9 @@ template {
   --RGBAlfaStrongHover: .6;
   --RGBAlfaFull: 1;
   --RGBAlfaTransparent: 0;
+  --colorLineInContainer: #d7d4d4;
+  --colorRectangleInSlider: #24B47E;
+  --colorIconTheme: #cfcfcf;
   --colorTextMain: #151515;
   --inputTextInactive: #222;
   --colorTextFooterText: #cfcfcf;
@@ -508,7 +511,7 @@ template {
 }
 
 .popup__menu {
-  margin: 100px 0 0;
+  margin: 103px 0 0;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -536,6 +539,28 @@ template {
   width: 136px;
   display: flex;
   align-items: center;
+}
+
+.switch__icon-light {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  -webkit-mask: url(../images/icon-theme-light.svg#star);
+          mask: url(../images/icon-theme-light.svg#star);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: var(--colorIconTheme);
+}
+
+.switch__icon-dark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-mask: url(../images/icon-theme-dark.svg);
+          mask: url(../images/icon-theme-dark.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: var(--colorIconTheme);
 }
 
 .popup__switch {
@@ -772,8 +797,15 @@ template {
 }
 
 .container__line {
-  margin-left: 25px;
-  padding-bottom: 5px;
+  -webkit-mask: url(../images/line-gray.svg);
+          mask: url(../images/line-gray.svg);
+  display: inline-block;
+  height: 2px;
+  width: 132px;
+  margin: 0 0 5px 25px;
+  background-color: var(--colorLineInContainer);
+  -webkit-mask-size: cover;
+          mask-size: cover;
 }
 @media screen and (max-width: 1200px) {
   .container__line {
@@ -1049,6 +1081,14 @@ template {
 }
 
 .slider-roads__icon-image {
+  display: inline-block;
+  width: 98px;
+  height: 40px;
+  -webkit-mask: url(../images/icon-rectangle.svg);
+          mask: url(../images/icon-rectangle.svg);
+  background-color: var(--colorRectangleInSlider);
+  -webkit-mask-size: contain;
+          mask-size: contain;
   position: absolute;
   left: 0px;
   bottom: 17px;
@@ -1057,20 +1097,77 @@ template {
 @media screen and (max-width: 750px) {
   .slider-roads__icon-image {
     width: 68px;
-    bottom: 8px;
+    height: 28px;
+    bottom: 13px;
   }
 }
 
-.slider-roads__icon-image_position_inside {
-  left: 16px;
+.slider-roads__icon-highway {
+  display: inline-block;
+  width: 51px;
+  height: 16px;
+  -webkit-mask: url(../images/icon-highway.svg);
+          mask: url(../images/icon-highway.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: #fff;
+  position: absolute;
+  left: 15px;
   bottom: 28px;
   z-index: 10;
 }
 @media screen and (max-width: 750px) {
-  .slider-roads__icon-image_position_inside {
+  .slider-roads__icon-highway {
     width: 35px;
-    bottom: 19px;
-    left: 11px;
+    height: 12px;
+    bottom: 21px;
+    left: 10px;
+  }
+}
+
+.slider-roads__icon-gravel {
+  display: inline-block;
+  width: 50px;
+  height: 7px;
+  -webkit-mask: url(../images/icon-gravel.svg);
+          mask: url(../images/icon-gravel.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: #fff;
+  position: absolute;
+  left: 15px;
+  bottom: 30px;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon-gravel {
+    width: 35px;
+    height: 5px;
+    bottom: 23px;
+    left: 10px;
+  }
+}
+
+.slider-roads__icon-plain {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  -webkit-mask: url(../images/icon-plain.svg);
+          mask: url(../images/icon-plain.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: #fff;
+  position: absolute;
+  left: 15px;
+  bottom: 30px;
+  z-index: 10;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon-plain {
+    width: 35px;
+    height: 1.4px;
+    bottom: 23px;
+    left: 10px;
   }
 }
 
@@ -1542,17 +1639,25 @@ template {
 }
 
 .slider-roads__icon {
+  display: inline-block;
   width: 10px;
   height: 18px;
   margin: auto;
-  padding: 0 3px 0 0;
   opacity: 1;
   transition: 0.4s;
+  -webkit-mask: url(../images/arrow-left.svg);
+          mask: url(../images/arrow-left.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: #151515;
+  position: relative;
+  left: -2px;
 }
 @media screen and (max-width: 750px) {
   .slider-roads__icon {
-    width: 4.5px;
-    height: 10px;
+    width: 6px;
+    height: 12px;
+    left: -1px;
   }
 }
 
@@ -1561,11 +1666,20 @@ template {
 }
 
 .slider-roads__icon_direction_to-right {
-  padding: 0 0 0 4px;
+  left: 2px;
+  -webkit-mask: url(../images/arrow-right.svg);
+          mask: url(../images/arrow-right.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+}
+@media screen and (max-width: 750px) {
+  .slider-roads__icon_direction_to-right {
+    left: 1px;
+  }
 }
 
 .slider-roads__icon_theme_dark {
-  stroke: #fff;
+  background-color: #fff;
 }
 .slider-roads__batton-left-right_theme_dark:hover .slider-roads__icon_theme_dark {
   opacity: 0.6;
@@ -1884,6 +1998,13 @@ template {
 
 .footer__icon-theme {
   display: none;
+  width: 32px;
+  height: 32px;
+  -webkit-mask: url(../images/logo-color.svg);
+          mask: url(../images/logo-color.svg);
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background-color: var(--colorTextMain);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -1896,6 +2017,6 @@ template {
 }
 @media screen and (max-width: 615px) {
   .footer__icon-theme {
-    display: block;
+    display: inline-block;
   }
 }/*# sourceMappingURL=index.css.map */

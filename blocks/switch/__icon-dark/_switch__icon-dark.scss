@@ -1,0 +1,8 @@
+.switch__icon-dark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  mask: url(../images/icon-theme-dark.svg);
+  mask-size: cover;
+  background-color: var(--colorIconTheme);
+}

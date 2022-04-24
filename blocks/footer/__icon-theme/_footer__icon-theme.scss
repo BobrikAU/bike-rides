@@ -1,5 +1,10 @@
 .footer__icon-theme {
   display: none;
+  width: 32px;
+  height: 32px;
+  mask: url(../images/logo-color.svg);
+  mask-size: cover;
+  background-color: var(--colorTextMain);
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -13,6 +18,6 @@
 
 
   @media screen and (max-width: $media615) {
-    display: block;
+    display: inline-block;
   }
 }

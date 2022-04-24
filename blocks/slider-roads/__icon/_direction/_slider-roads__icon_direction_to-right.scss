@@ -1,3 +1,9 @@
 .slider-roads__icon_direction_to-right {
-  padding: 0 0 0 4px;
+  left: 2px;
+  mask: url(../images/arrow-right.svg);
+  mask-size: cover;
+
+  @media screen and (max-width: $media750) {
+    left: 1px;
+  }
 }

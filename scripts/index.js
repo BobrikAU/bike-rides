@@ -33,10 +33,7 @@ let numberTheme = 0;
 function changeTheme() {
   if (numberTheme === 0) {
     root.style.setProperty('--colorTextMainRGB', '255, 255, 255');
-
-
-    iconThemeLight.setAttribute('fill', '#676767');
-    iconThemeDark.setAttribute('fill', '#676767');
+    root.style.setProperty('--colorIconTheme', '#676767');
     root.style.setProperty('--backgroundColor', '#333');
     root.style.setProperty('--backgroundColorRange', '#545454');
     root.style.setProperty('--colorTextMain', '#fff');
@@ -45,6 +42,9 @@ function changeTheme() {
     root.style.setProperty('--colorTextFooterText', '#565656');
     root.style.setProperty('--fieldsetBorder', 'rgba(125, 125, 125, .5)');
     root.style.setProperty('--fieldsetBorderFocus', 'rgba(125, 125, 125, 1)');
+    root.style.setProperty('--colorLineInContainer', '#707070');
+
+
     root.style.setProperty('--pointCardInactiveColor', '#919191');
     buttonPopupOpen.classList.add('header__button_theme_dark');
     buttonPopupClose.classList.add('popup__button_theme_dark');
@@ -64,10 +64,7 @@ function changeTheme() {
     numberTheme = 1;
   } else {
     root.style.setProperty('--colorTextMainRGB', '21, 21, 21');
-
-
-    iconThemeLight.setAttribute('fill', '#cfcfcf');
-    iconThemeDark.setAttribute('fill', '#cfcfcf');
+    root.style.setProperty('--colorIconTheme', '#cfcfcf');
     root.style.setProperty('--backgroundColor', '#f4f4f4');
     root.style.setProperty('--backgroundColorRange', '#fff');
     root.style.setProperty('--colorTextMain', '#151515');
@@ -76,6 +73,9 @@ function changeTheme() {
     root.style.setProperty('--colorTextFooterText', '#cfcfcf');
     root.style.setProperty('--fieldsetBorder', 'rgba(199, 199, 199, .5)');
     root.style.setProperty('--fieldsetBorderFocus', 'rgba(199, 199, 199, 1)');
+    root.style.setProperty('--colorLineInContainer', '#d7d4d4');
+
+
     root.style.setProperty('--pointCardInactiveColor', '#cacaca');
     buttonPopupOpen.classList.remove('header__button_theme_dark');
     buttonPopupClose.classList.remove('popup__button_theme_dark');

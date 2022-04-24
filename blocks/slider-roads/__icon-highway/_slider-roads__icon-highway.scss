@@ -1,0 +1,19 @@
+.slider-roads__icon-highway {
+  display: inline-block;
+  width: 51px;
+  height: 16px;
+  mask: url(../images/icon-highway.svg);
+  mask-size: cover;
+  background-color: $colorWhite;
+  position: absolute;
+  left: 15px;
+  bottom: 28px;
+  z-index: 10;
+
+  @media screen and (max-width: $media750) {
+    width: 35px;
+    height: 12px;
+    bottom: 21px;
+    left: 10px;
+  }
+}
