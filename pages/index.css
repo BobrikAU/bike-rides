@@ -1443,7 +1443,7 @@ template {
 }
 
 @media screen and (max-width: 850px) {
-  .card_position_left::before {
+  .card_deck_now::before {
     content: "";
     width: 4px;
     height: 4px;
@@ -1455,19 +1455,19 @@ template {
     visibility: visible;
     transition: 0.4s;
   }
-  .card_position_left.card_invisible::before {
+  .card_deck_now.card_invisible::before {
     background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
-  .card_position_left::before {
+  .card_deck_now::before {
     top: 325px;
     left: 131px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .card_position_center::before {
+  .card_deck_then::before {
     content: "";
     width: 4px;
     height: 4px;
@@ -1479,19 +1479,19 @@ template {
     visibility: visible;
     transition: 0.4s;
   }
-  .card_position_center.card_invisible::before {
+  .card_deck_then.card_invisible::before {
     background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
-  .card_position_center::before {
+  .card_deck_then::before {
     top: 325px;
     left: 140px;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .card_position_rigth::before {
+  .card_deck_further::before {
     content: "";
     width: 4px;
     height: 4px;
@@ -1503,18 +1503,18 @@ template {
     visibility: visible;
     transition: 0.4s;
   }
-  .card_position_rigth.card_invisible::before {
+  .card_deck_further.card_invisible::before {
     background-color: var(--pointCardInactiveColor);
   }
 }
 @media screen and (max-width: 450px) {
-  .card_position_rigth::before {
+  .card_deck_further::before {
     top: 325px;
     left: 149px;
   }
 }
 
-.slider-roads__batton-left-right {
+.slider-roads__batton {
   padding: 0;
   border: none;
   cursor: url("../images/pointer.svg"), auto;
@@ -1526,14 +1526,14 @@ template {
   transition: 0.4s;
   margin-right: 20px;
 }
-.slider-roads__batton-left-right:last-child {
+.slider-roads__batton:last-child {
   margin-right: 0;
 }
-.slider-roads__batton-left-right:hover {
+.slider-roads__batton:hover {
   background-color: rgba(var(--colorGreyButton), --RGBAlfaStrongHover);
 }
 @media screen and (max-width: 750px) {
-  .slider-roads__batton-left-right {
+  .slider-roads__batton {
     width: 24px;
     height: 24px;
     border-radius: 30px;
@@ -1571,10 +1571,10 @@ template {
   opacity: 0.6;
 }
 
-.slider-roads__batton-left-right_theme_dark {
+.slider-roads__batton_theme_dark {
   background-color: rgba(var(--colorGrey), var(--RGBAlfaFull));
 }
-.slider-roads__batton-left-right_theme_dark:hover {
+.slider-roads__batton_theme_dark:hover {
   background-color: rgba(var(--colorGrey), var(--RGBAlfaStrongHover));
 }
 

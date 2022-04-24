@@ -5,7 +5,7 @@ const buttonPopupClose = document.querySelector('.popup__button');
 const iconThemeLight = document.querySelector('.switch__icon-light');
 const iconThemeDark = document.querySelector('.switch__icon-dark');
 const root = document.querySelector(':root');
-const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton-left-right');
+const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton');
 const arrowsInButtons = document.querySelectorAll('.slider-roads__icon');
 const ranges = document.querySelectorAll('.switch__range');
 const iconTheme = document.querySelector('.footer__icon-theme');
@@ -49,7 +49,7 @@ function changeTheme() {
     buttonPopupOpen.classList.add('header__button_theme_dark');
     buttonPopupClose.classList.add('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
-      item.classList.add('slider-roads__batton-left-right_theme_dark');
+      item.classList.add('slider-roads__batton_theme_dark');
     });
     arrowsInButtons.forEach(function (item) {
       item.classList.add('slider-roads__icon_theme_dark');
@@ -80,7 +80,7 @@ function changeTheme() {
     buttonPopupOpen.classList.remove('header__button_theme_dark');
     buttonPopupClose.classList.remove('popup__button_theme_dark');
     buttonsLeftRight.forEach(function (item) {
-      item.classList.remove('slider-roads__batton-left-right_theme_dark');
+      item.classList.remove('slider-roads__batton_theme_dark');
     });
     arrowsInButtons.forEach(function (item) {
       item.classList.remove('slider-roads__icon_theme_dark');
@@ -106,8 +106,8 @@ iconTheme.addEventListener('click', changeTheme);
 const highway = document.querySelector('.slider-roads__highway');
 const gravel = document.querySelector('.slider-roads__gravel');
 const plain = document.querySelector('.slider-roads__plain');
-const buttonRight = document.querySelector('.slider-roads__right');
-const buttonLeft = document.querySelector('.slider-roads__left');
+const buttonRight = document.querySelector('.slider-roads__movement-to-right');
+const buttonLeft = document.querySelector('.slider-roads__movement-to-left');
 const listRoads = [plain, highway, gravel];
 
 gravel.style.visibility = 'hidden';
