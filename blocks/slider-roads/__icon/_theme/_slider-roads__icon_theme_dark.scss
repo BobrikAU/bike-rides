@@ -1,7 +1,7 @@
 .slider-roads__icon_theme_dark {
-  background-color: $colorWhite;
+  background-image: url(../images/arrow-left_theme_dark.svg);
 
-  .slider-roads__batton-left-right_theme_dark:hover & {
+  .slider-roads__batton_theme_dark:hover & {
     opacity: .6;
   }
 }

@@ -347,9 +347,6 @@ template {
   --RGBAlfaStrongHover: .6;
   --RGBAlfaFull: 1;
   --RGBAlfaTransparent: 0;
-  --colorLineInContainer: #d7d4d4;
-  --colorRectangleInSlider: #24B47E;
-  --colorIconTheme: #cfcfcf;
   --colorTextMain: #151515;
   --inputTextInactive: #222;
   --colorTextFooterText: #cfcfcf;
@@ -545,22 +542,24 @@ template {
   display: inline-block;
   width: 28px;
   height: 28px;
-  -webkit-mask: url(../images/icon-theme-light.svg#star);
-          mask: url(../images/icon-theme-light.svg#star);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: var(--colorIconTheme);
+  background-image: url(../images/icon-theme-light.svg);
+  background-size: cover;
+}
+
+.switch__icon-light_theme_dark {
+  background-image: url(../images/icon-theme-light_theme_dark.svg);
 }
 
 .switch__icon-dark {
   display: inline-block;
   width: 20px;
   height: 20px;
-  -webkit-mask: url(../images/icon-theme-dark.svg);
-          mask: url(../images/icon-theme-dark.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: var(--colorIconTheme);
+  background-image: url(../images/icon-theme-dark.svg);
+  background-size: cover;
+}
+
+.switch__icon-dark_theme_dark {
+  background-image: url(../images/icon-theme-dark_theme_dark.svg);
 }
 
 .popup__switch {
@@ -797,20 +796,21 @@ template {
 }
 
 .container__line {
-  -webkit-mask: url(../images/line-gray.svg);
-          mask: url(../images/line-gray.svg);
   display: inline-block;
   height: 2px;
   width: 132px;
   margin: 0 0 5px 25px;
-  background-color: var(--colorLineInContainer);
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  background-image: url(../images/line-gray.svg);
+  background-size: cover;
 }
 @media screen and (max-width: 1200px) {
   .container__line {
     display: none;
   }
+}
+
+.container__line_theme_dark {
+  background-image: url(../images/line-gray_theme-dark.svg);
 }
 
 .slogan {
@@ -1084,11 +1084,8 @@ template {
   display: inline-block;
   width: 98px;
   height: 40px;
-  -webkit-mask: url(../images/icon-rectangle.svg);
-          mask: url(../images/icon-rectangle.svg);
-  background-color: var(--colorRectangleInSlider);
-  -webkit-mask-size: contain;
-          mask-size: contain;
+  background-image: url(../images/icon-rectangle.svg);
+  background-size: contain;
   position: absolute;
   left: 0px;
   bottom: 17px;
@@ -1106,11 +1103,8 @@ template {
   display: inline-block;
   width: 51px;
   height: 16px;
-  -webkit-mask: url(../images/icon-highway.svg);
-          mask: url(../images/icon-highway.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: #fff;
+  background-image: url(../images/icon-highway.svg);
+  background-size: cover;
   position: absolute;
   left: 15px;
   bottom: 28px;
@@ -1129,11 +1123,8 @@ template {
   display: inline-block;
   width: 50px;
   height: 7px;
-  -webkit-mask: url(../images/icon-gravel.svg);
-          mask: url(../images/icon-gravel.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: #fff;
+  background-image: url(../images/icon-gravel.svg);
+  background-size: cover;
   position: absolute;
   left: 15px;
   bottom: 30px;
@@ -1152,11 +1143,8 @@ template {
   display: inline-block;
   width: 50px;
   height: 2px;
-  -webkit-mask: url(../images/icon-plain.svg);
-          mask: url(../images/icon-plain.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: #fff;
+  background-image: url(../images/icon-plain.svg);
+  background-size: cover;
   position: absolute;
   left: 15px;
   bottom: 30px;
@@ -1627,7 +1615,7 @@ template {
   margin-right: 0;
 }
 .slider-roads__batton:hover {
-  background-color: rgba(var(--colorGreyButton), --RGBAlfaStrongHover);
+  background-color: rgba(var(--colorGreyButton), var(--RGBAlfaStrongHover));
 }
 @media screen and (max-width: 750px) {
   .slider-roads__batton {
@@ -1645,11 +1633,9 @@ template {
   margin: auto;
   opacity: 1;
   transition: 0.4s;
-  -webkit-mask: url(../images/arrow-left.svg);
-          mask: url(../images/arrow-left.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: #151515;
+  background-image: url(../images/arrow-left.svg);
+  background-size: cover;
+  background-color: inherit;
   position: relative;
   left: -2px;
 }
@@ -1661,16 +1647,14 @@ template {
   }
 }
 
-.slider-roads__batton-left-right:hover .slider-roads__icon {
+.slider-roads__movement-to-left:hover .slider-roads__icon {
   opacity: 0.75;
 }
 
 .slider-roads__icon_direction_to-right {
   left: 2px;
-  -webkit-mask: url(../images/arrow-right.svg);
-          mask: url(../images/arrow-right.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
+  background-image: url(../images/arrow-right.svg);
+  background-size: cover;
 }
 @media screen and (max-width: 750px) {
   .slider-roads__icon_direction_to-right {
@@ -1678,10 +1662,21 @@ template {
   }
 }
 
-.slider-roads__icon_theme_dark {
-  background-color: #fff;
+.slider-roads__movement-to-right:hover .slider-roads__icon_direction_to-right {
+  opacity: 0.75;
 }
-.slider-roads__batton-left-right_theme_dark:hover .slider-roads__icon_theme_dark {
+
+.slider-roads__icon_theme_dark {
+  background-image: url(../images/arrow-left_theme_dark.svg);
+}
+.slider-roads__batton_theme_dark:hover .slider-roads__icon_theme_dark {
+  opacity: 0.6;
+}
+
+.slider-roads__icon_theme_dark-other-direction {
+  background-image: url(../images/arrow-right_theme_dark.svg);
+}
+.slider-roads__batton_theme_dark:hover .slider-roads__icon_theme_dark-other-direction {
   opacity: 0.6;
 }
 
@@ -2000,11 +1995,8 @@ template {
   display: none;
   width: 32px;
   height: 32px;
-  -webkit-mask: url(../images/logo-color.svg);
-          mask: url(../images/logo-color.svg);
-  -webkit-mask-size: cover;
-          mask-size: cover;
-  background-color: var(--colorTextMain);
+  background-image: url(../images/logo-color.svg);
+  background-size: cover;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;
@@ -2019,4 +2011,8 @@ template {
   .footer__icon-theme {
     display: inline-block;
   }
+}
+
+.footer__icon-theme_theme_dark {
+  background-image: url(../images/logo-color_theme_dark.svg);
 }/*# sourceMappingURL=index.css.map */

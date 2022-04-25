@@ -2,9 +2,8 @@
   display: none;
   width: 32px;
   height: 32px;
-  mask: url(../images/logo-color.svg);
-  mask-size: cover;
-  background-color: var(--colorTextMain);
+  background-image: url(../images/logo-color.svg);
+  background-size: cover;
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 3;

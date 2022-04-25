@@ -20,7 +20,9 @@
 @import '../blocks/popup/__link/popup__link';
 @import '../blocks/switch/switch';
 @import '../blocks/switch/__icon-light/switch__icon-light';
+@import '../blocks/switch/__icon-light/_theme/switch__icon-light_theme_dark';
 @import '../blocks/switch/__icon-dark/switch__icon-dark';
+@import '../blocks/switch/__icon-dark/_theme/switch__icon-dark_theme_dark';
 @import '../blocks/popup/__switch/popup__switch';
 @import '../blocks/switch/__range/switch__range';
 @import '../blocks/container/container';
@@ -30,6 +32,7 @@
 @import '../blocks/container/__image/container__image';
 @import '../blocks/container/__name/container__name';
 @import '../blocks/container/__line/container__line';
+@import '../blocks/container/__line/_theme/container__line_theme_dark';
 @import '../blocks/slogan/slogan';
 @import '../blocks/slogan/__box/slogan__box';
 @import '../blocks/slogan/__text/slogan__text';
@@ -72,6 +75,7 @@
 @import '../blocks/slider-roads/__icon/slider-roads__icon';
 @import '../blocks/slider-roads/__icon/_direction/slider-roads__icon_direction_to-right';
 @import '../blocks/slider-roads/__icon/_theme/slider-roads__icon_theme_dark';
+@import '../blocks/slider-roads/__icon/_theme/slider-roads__icon_theme_dark-other-direction';
 @import '../blocks/slider-roads/__batton/_theme/slider-roads__batton_theme_dark';
 @import '../blocks/container/_theme/container_theme_trainnig';
 @import '../blocks/container/__link/container__link';
@@ -89,3 +93,4 @@
 @import '../blocks/footer/__text/footer__text';
 @import '../blocks/footer/__switch/footer__switch';
 @import '../blocks/footer/__icon-theme/footer__icon-theme';
+@import '../blocks/footer/__icon-theme/_theme/footer__icon-theme_theme_dark';

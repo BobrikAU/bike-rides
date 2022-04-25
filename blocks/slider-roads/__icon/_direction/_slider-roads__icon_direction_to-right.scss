@@ -1,9 +1,13 @@
 .slider-roads__icon_direction_to-right {
   left: 2px;
-  mask: url(../images/arrow-right.svg);
-  mask-size: cover;
+  background-image: url(../images/arrow-right.svg);
+  background-size: cover;
 
-  @media screen and (max-width: $media750) {
+    @media screen and (max-width: $media750) {
     left: 1px;
   }
+}
+
+.slider-roads__movement-to-right:hover .slider-roads__icon_direction_to-right {
+  opacity: .75;
 }

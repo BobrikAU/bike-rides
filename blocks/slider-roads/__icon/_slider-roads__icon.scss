@@ -5,9 +5,9 @@
   margin: auto;
   opacity: 1;
   transition: .4s;
-  mask: url(../images/arrow-left.svg);
-  mask-size: cover;
-  background-color: $colorTextMain;
+  background-image: url(../images/arrow-left.svg);
+  background-size: cover;
+  background-color: inherit;
   position: relative;
   left: -2px;
 
@@ -18,6 +18,6 @@
   }
 }
 
-.slider-roads__batton-left-right:hover .slider-roads__icon {
+.slider-roads__movement-to-left:hover .slider-roads__icon {
   opacity: .75;
 }

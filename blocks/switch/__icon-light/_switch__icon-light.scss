@@ -2,7 +2,6 @@
   display: inline-block;
   width: 28px;
   height: 28px;
-  mask: url(../images/icon-theme-light.svg);
-  mask-size: cover;
-  background-color: var(--colorIconTheme);
+  background-image: url(../images/icon-theme-light.svg);
+  background-size: cover;
 }

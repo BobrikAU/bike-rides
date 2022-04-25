@@ -2,9 +2,8 @@
   display: inline-block;
   width: 98px;
   height: 40px;
-  mask: url(../images/icon-rectangle.svg);
-  background-color: var(--colorRectangleInSlider);
-  mask-size: contain;
+  background-image: url(../images/icon-rectangle.svg);
+  background-size: contain;
   position: absolute;
   left: 0px;
   bottom: 17px;

@@ -2,9 +2,8 @@
   display: inline-block;
   width: 50px;
   height: 7px;
-  mask: url(../images/icon-gravel.svg);
-  mask-size: cover;
-  background-color: $colorWhite;
+  background-image: url(../images/icon-gravel.svg);
+  background-size: cover;
   position: absolute;
   left: 15px;
   bottom: 30px;

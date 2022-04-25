@@ -1,11 +1,10 @@
 .container__line {
-  mask: url(../images/line-gray.svg);
   display: inline-block;
   height: 2px;
   width: 132px;
   margin: 0 0 5px 25px;
-  background-color: var(--colorLineInContainer);
-  mask-size: cover;
+  background-image: url(../images/line-gray.svg);
+  background-size: cover;
 
   @media screen and (max-width: $media1200) {
     display: none;

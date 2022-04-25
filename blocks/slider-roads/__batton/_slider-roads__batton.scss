@@ -15,7 +15,7 @@
   }
 
   &:hover{
-    background-color: rgba(var(--colorGreyButton), --RGBAlfaStrongHover);
+    background-color: rgba(var(--colorGreyButton), var(--RGBAlfaStrongHover));
   }
 
   @media screen and (max-width: $media750) {
