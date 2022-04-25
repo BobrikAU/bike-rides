@@ -1,0 +1,7 @@
+.slider-roads__icon_theme_dark {
+  background-image: url(../images/arrow-left_theme_dark.svg);
+
+  .slider-roads__batton_theme_dark:hover & {
+    opacity: .6;
+  }
+}

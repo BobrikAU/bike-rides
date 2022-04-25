@@ -1,0 +1,9 @@
+.popup__link {
+  @include link (var(--colorTextMain), 18px, 500, 1);
+  margin-bottom: 32px;
+  transition: 0s;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

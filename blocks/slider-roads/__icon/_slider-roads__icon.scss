@@ -1,0 +1,23 @@
+.slider-roads__icon {
+  display: inline-block;
+  width: 10px;
+  height: 18px;
+  margin: auto;
+  opacity: 1;
+  transition: .4s;
+  background-image: url(../images/arrow-left.svg);
+  background-size: cover;
+  background-color: inherit;
+  position: relative;
+  left: -2px;
+
+  @media screen and (max-width: $media750) {
+    width: 6px;
+    height: 12px;
+    left: -1px;
+  }
+}
+
+.slider-roads__movement-to-left:hover .slider-roads__icon {
+  opacity: .75;
+}

@@ -1,0 +1,8 @@
+.slogan__author {
+  @include text (var(--colorTextMain), 20px, 500, 1.6);
+
+  @media screen and (max-width: $media785) {
+    font-size: 14px;
+    line-height: 1.57;
+  }
+}

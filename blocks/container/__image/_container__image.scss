@@ -1,0 +1,41 @@
+.container__image {
+  display: block;
+  width: 340px;
+  height: 260px;
+  padding: 20px 50px;
+  background-color: $colorWhite;
+  object-fit: cover;
+  position: sticky;
+  float: right;
+  margin: 140px 370px 79px 20px;
+  top: 200px;
+  border-radius: 20px;
+  box-shadow: -20px 60px 220px $shadowCardSticky;
+
+  @media screen and (max-width: $media1420) {
+    margin-right: calc(370px + (100% - 1300px));
+  }
+
+  @media screen and (max-width: $media1280) {
+    margin-right: 230px;
+  }
+
+  @media screen and (max-width: $media950) {
+    margin-top: 10px;
+    margin-right: 160px;
+    width: 180px;
+    height: 138px;
+    padding: 11px 27px;
+  }
+
+  @media screen and (max-width: $media750) {
+    margin-top: 115px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: $media615) {
+    margin: 191px 0 31px 0;
+    float: none;
+    position: static;
+  }
+}

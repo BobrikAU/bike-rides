@@ -1,0 +1,11 @@
+
+@mixin font($name, $weight) {
+  @font-face {
+    font-family: 'Inter';
+    src: url(../vendor/fonts/inter/Inter-#{$name}.woff2) format('woff2'),
+         url(../vendor/fonts/inter/Inter-#{$name}.woff) format('woff'),
+         url(../vendor/fonts/inter/Inter-#{$name}.ttf) format('truetype');
+    font-style: normal;
+    font-weight: $weight;
+  }
+}

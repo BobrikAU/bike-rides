@@ -1,0 +1,10 @@
+.card__text {
+  display: block;
+  padding-top: 22px;
+  padding-left: 6px;
+
+  @media screen and (max-width: $media850) {
+    padding: 0;
+    margin: -34px auto 0;
+  }
+}

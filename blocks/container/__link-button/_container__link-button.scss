@@ -1,0 +1,43 @@
+.container__link-button {
+  @include link ($colorWhite, 14px, 600, 1.0624) {
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $colorLightGreen;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 52px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: $colorGreen;
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    left: -180px;
+    transition: .4s ease-in-out;
+  }
+  &:hover::before{
+    transform: translate(180px, 0);
+  }
+
+  @media screen and (max-width: $media750) {
+    font-size: 13px;
+    line-height: 1.46;
+  }
+
+  @media screen and (max-width: $media615) {
+    margin: 40px auto 0px;
+    width: 284px;
+    height: 46px;
+  }
+}

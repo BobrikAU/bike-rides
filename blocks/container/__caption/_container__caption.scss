@@ -1,0 +1,16 @@
+.container__caption {
+  margin: 0;
+  max-width: 460px;
+  width: 100%;
+  @include text (var(--colorTextMain), 55px, 700, 60px);
+  letter-spacing: -0.5px;
+  padding-top: 63px;
+
+  @media screen and (max-width: $media750) {
+    padding-top: 25px;
+    max-width: 284px;
+    font-size: 32px;
+    line-height: 1.25;
+  }
+}
+

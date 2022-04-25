@@ -1,0 +1,15 @@
+.bikes__control {
+  grid-area: control;
+  padding-top: 26px;
+  justify-self: end;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @media screen and (max-width: $media850) {
+    grid-area: control;
+    justify-self: start;
+    padding-top: 0;
+  }
+}
