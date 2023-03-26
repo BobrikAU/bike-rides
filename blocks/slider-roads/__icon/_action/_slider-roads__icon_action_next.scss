@@ -1,4 +1,4 @@
-.slider-roads__icon_direction_to-right {
+.slider-roads__icon_action_next {
   left: 2px;
   background-image: url(../images/arrow-right.svg);
   background-size: cover;
@@ -8,6 +8,6 @@
   }
 }
 
-.slider-roads__movement-to-right:hover .slider-roads__icon_direction_to-right {
+.slider-roads_action_next:hover .slider-roads__icon_action_next {
   opacity: .75;
 }

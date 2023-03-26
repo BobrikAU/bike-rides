@@ -7,7 +7,7 @@ const iconThemeDark = document.querySelector('.switch__icon-dark');
 const root = document.querySelector(':root');
 const buttonsLeftRight = document.querySelectorAll('.slider-roads__batton');
 const arrowLeftInButton = document.querySelector('.slider-roads__icon');
-const arrowRightInButton = document.querySelector('.slider-roads__icon_direction_to-right');
+const arrowRightInButton = document.querySelector('.slider-roads__icon_action_next');
 const ranges = document.querySelectorAll('.switch__range');
 const iconTheme = document.querySelector('.footer__icon-theme');
 const popupLink = document.querySelectorAll('.popup__link');
@@ -66,8 +66,8 @@ function changeTheme() {
       item.classList.add('switch__icon-dark_theme_dark');
     });
     iconTheme.classList.add('footer__icon-theme_theme_dark');
-    
-    
+
+
 
 
     numberTheme = 1;
@@ -122,8 +122,8 @@ iconTheme.addEventListener('click', changeTheme);
 const highway = document.querySelector('.slider-roads__highway');
 const gravel = document.querySelector('.slider-roads__gravel');
 const plain = document.querySelector('.slider-roads__plain');
-const buttonRight = document.querySelector('.slider-roads__movement-to-right');
-const buttonLeft = document.querySelector('.slider-roads__movement-to-left');
+const buttonRight = document.querySelector('.slider-roads_action_next');
+const buttonLeft = document.querySelector('.slider-roads_action_back');
 const listRoads = [plain, highway, gravel];
 
 gravel.style.visibility = 'hidden';
