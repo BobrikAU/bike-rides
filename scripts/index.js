@@ -247,30 +247,33 @@ function findTouchstartX (event) {
 
 function findTouchendX (event) {
   touchendX = event.changedTouches[0].screenX;
-  let lengthMovement = touchstartX > touchendX ? touchstartX - touchendX : touchendX - touchstartX;
-  if (lengthMovement >= 50) {
-    changeCard();
+  let lengthMovement = touchstartX - touchendX;
+  if (lengthMovement >= 50 || lengthMovement <= 50) {
+    changeCard(lengthMovement);
   }
 }
 
-function changeCard() {
+function changeCard(lengthMovement) {
   let indexCardActive;
   bikesCardsActive.querySelectorAll('.card').forEach(function(item, index) {
     if(!item.classList.contains('card_invisible')) {
       indexCardActive = index;
     }
   });
-  bikeCardActive.removeEventListener('touchstart', findTouchstartX);
-  bikeCardActive.removeEventListener('touchend', findTouchendX);
-  bikeCardActive.classList.add('card_invisible');
-  if(indexCardActive === 2) {
-    indexCardActive = 0;
-  } else {
-    indexCardActive++;
+  if ((lengthMovement > 0 && indexCardActive < 2) || (lengthMovement < 0 && indexCardActive > 0)) {
+    bikeCardActive.removeEventListener('touchstart', findTouchstartX);
+    bikeCardActive.removeEventListener('touchend', findTouchendX);
+    bikeCardActive.classList.add('card_invisible');
+    if(lengthMovement < 0 && indexCardActive > 0) {
+      indexCardActive--;
+    }
+    if (lengthMovement > 0 && indexCardActive < 2) {
+      indexCardActive++;
+    }
+    bikeCardActive = bikesCardsActive.querySelectorAll('.card')[indexCardActive];
+    bikeCardActive.classList.remove('card_invisible');
+    watchBikeCardActive();
   }
-  bikeCardActive = bikesCardsActive.querySelectorAll('.card')[indexCardActive];
-  bikeCardActive.classList.remove('card_invisible');
-  watchBikeCardActive();
 }
 
 function watchBikeCardActive() {

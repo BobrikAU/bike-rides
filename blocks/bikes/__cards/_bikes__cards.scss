@@ -4,7 +4,7 @@
   grid-area: cards;
   visibility: hidden;
   opacity: 0;
-  transition: .4s;
+  transition: .4s linear;
 
   @media screen and (max-width: $media850) {
     grid-area: cards;
@@ -18,5 +18,6 @@
   .bikes__choice:checked + & {
     visibility: visible;
     opacity: 1;
+    transition: .4s linear .4s;
   }
 }

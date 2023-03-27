@@ -1381,7 +1381,7 @@ template {
   grid-area: cards;
   visibility: hidden;
   opacity: 0;
-  transition: 0.4s;
+  transition: 0.4s linear;
 }
 @media screen and (max-width: 850px) {
   .bikes__cards {
@@ -1396,6 +1396,7 @@ template {
 .bikes__choice:checked + .bikes__cards {
   visibility: visible;
   opacity: 1;
+  transition: 0.4s linear 0.4s;
 }
 
 .card {
