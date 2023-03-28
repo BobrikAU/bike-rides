@@ -1,0 +1,12 @@
+.container__line {
+  display: inline-block;
+  height: 2px;
+  width: 132px;
+  margin: 0 0 5px 25px;
+  background-image: url(../images/line-gray.svg);
+  background-size: cover;
+
+  @media screen and (max-width: $media1200) {
+    display: none;
+  }
+}

@@ -1,0 +1,13 @@
+.footer__switch {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: end;
+  justify-content: end;
+  margin-bottom: 6px;
+
+  @media screen and (max-width: $media615) {
+    display: none;
+  }
+}

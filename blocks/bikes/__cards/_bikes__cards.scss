@@ -1,0 +1,23 @@
+.bikes__cards {
+  display: flex;
+  flex-wrap: wrap;
+  grid-area: cards;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s linear;
+
+  @media screen and (max-width: $media850) {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: minmax(100px, auto);
+    grid-template-rows: minmax(100px, auto);
+    min-height: 429px;
+    overflow: hidden;
+  }
+
+  .bikes__choice:checked + & {
+    visibility: visible;
+    opacity: 1;
+    transition: .4s linear .4s;
+  }
+}

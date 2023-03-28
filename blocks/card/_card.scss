@@ -1,0 +1,51 @@
+.card {
+  @include link (var(--colorTextMain), 18px, 600, 22px);
+  padding: 30px 30px 0 0;
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+  visibility: hidden;
+  transition: visibility 0s .4s;
+
+  .bikes__choice:checked + .bikes__cards > & {
+    visibility: visible;
+    transition: visibility 0s .4s;
+  }
+
+  @media screen and (max-width: $media850) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-items: start;
+    padding-top: 0;
+    margin-top: 21px;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorTextMain;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 380px;
+      height: 380px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 20px;
+      background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaTransparent));
+      transition: background-color .4s .4s;
+
+      @media screen and (max-width: $media450) {
+        width: 284px;
+        height: 306px;
+      }
+    }
+
+    &.card_invisible::after{
+      background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaFull));
+      transition: background-color .4s 0s;
+    }
+  }
+}
+

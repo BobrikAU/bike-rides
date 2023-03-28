@@ -1,0 +1,17 @@
+.slider-roads__icon-image {
+  display: inline-block;
+  width: 98px;
+  height: 40px;
+  background-image: url(../images/icon-rectangle.svg);
+  background-size: contain;
+  position: absolute;
+  left: 0px;
+  bottom: 17px;
+  z-index: 5;
+
+  @media screen and (max-width: $media750) {
+    width: 68px;
+    height: 28px;
+    bottom: 13px;
+  }
+}

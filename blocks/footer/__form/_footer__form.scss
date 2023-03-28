@@ -1,0 +1,10 @@
+.footer__form {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  max-width: 360px;
+
+  @media screen and (max-width: $media615) {
+    max-width: 284px;
+    grid-column-end: 3;
+  }
+}

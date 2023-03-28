@@ -1,0 +1,15 @@
+.footer__button {
+  padding: 0 22px 0 0;
+  border: none;
+  background-color: inherit;
+  @include text (var(--colorTextMain), 13px, 500, 1.78);
+  opacity: 0;
+  position: relative;
+  left: 100%;
+  transition: opacity .4s 0s, left 0s .4s, color .4s 0s;
+
+  &:hover{
+    cursor: $cusor;
+    color: rgba(var(--colorTextMainRGB), var(--RGBAlfaHover));
+  }
+}

@@ -1,0 +1,24 @@
+.bikes__roads-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: var(--backgroundColor);
+
+  @media screen and (max-width: $media850) {
+    position: absolute;
+     z-index: 5;
+    top: 28px;
+    left: 1px;
+
+    height: 0;
+    width: 100px;
+    overflow: hidden;
+    transition: .3s .3s;
+
+    .bikes__control:focus & {
+      height: max-content;
+    }
+  }
+}
+
+

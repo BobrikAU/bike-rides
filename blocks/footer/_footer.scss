@@ -1,0 +1,33 @@
+.footer {
+  background-color: var(--backgroundColorFooter);
+  min-height: 424px;
+  box-sizing: border-box;
+  padding: 80px 120px 60px;
+  display: grid;
+  grid-template-columns: 1fr 136px;
+  grid-template-rows: minmax(114px, auto) minmax(100px, auto) 1fr;
+
+  @media screen and (max-width: $media1439) {
+    padding-right: calc(120px + (100% - 1439px));
+  }
+
+  @media screen and (max-width: $media1338) {
+    padding-right: 18px;
+  }
+
+  @media screen and (max-width: $media1050) {
+    padding-left: calc(120px - (1050px - 100%));
+  }
+
+  @media screen and (max-width: $media950) {
+    padding-left: 18px;
+  }
+
+  @media screen and (max-width: $media615) {
+    grid-template-columns: 1fr 32px;
+    grid-template-rows: minmax(102px, auto) 1fr 32px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    min-height: 358px;
+  }
+}

@@ -1,0 +1,13 @@
+.slider-roads__icon_action_next {
+  left: 2px;
+  background-image: url(../images/arrow-right.svg);
+  background-size: cover;
+
+    @media screen and (max-width: $media750) {
+    left: 1px;
+  }
+}
+
+.slider-roads_action_next:hover .slider-roads__icon_action_next {
+  opacity: .75;
+}

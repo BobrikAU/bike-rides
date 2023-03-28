@@ -1,0 +1,9 @@
+@mixin text ($colorLink, $fontSize, $fontWeight, $lineHeight) {
+  color: $colorLink;
+  font: {
+    family: inherit;
+    size: $fontSize;
+    weight: $fontWeight;
+  }
+  line-height: $lineHeight;
+}

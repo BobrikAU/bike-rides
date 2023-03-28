@@ -1,0 +1,14 @@
+.popup {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+  z-index: 100;
+  flex-direction: column;
+  transition: visibility 0s 2s, opacity .4s 0s;
+}

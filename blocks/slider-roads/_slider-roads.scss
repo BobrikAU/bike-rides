@@ -1,0 +1,25 @@
+.slider-roads {
+  min-height: 640px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 122px 0 0 120px;
+  overflow: hidden;
+
+  @media screen and (max-width: $media1050) {
+    padding-left: calc(120px + (100% - 1050px));
+  }
+
+  @media screen and (max-width: $media950) {
+    padding-left: 18px;
+  }
+
+  @media screen and (max-width: $media750) {
+    padding-top: 38px;
+    min-height: 503px;
+  }
+
+  @media screen and (max-width: $media615) {
+    border-top: 1px solid $colorBorderSectionMobilVer;
+  }
+
+}

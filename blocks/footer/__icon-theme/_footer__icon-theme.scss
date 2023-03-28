@@ -1,0 +1,22 @@
+.footer__icon-theme {
+  display: none;
+  width: 32px;
+  height: 32px;
+  background-image: url(../images/logo-color.svg);
+  background-size: cover;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  align-self: end;
+  cursor: $cusor;
+
+  &:hover {
+    opacity: .75;
+  }
+
+
+  @media screen and (max-width: $media615) {
+    display: inline-block;
+  }
+}

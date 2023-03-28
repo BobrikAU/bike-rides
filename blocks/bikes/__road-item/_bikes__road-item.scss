@@ -1,0 +1,12 @@
+.bikes__road-item {
+  display: inline-block;
+  margin-right: 27px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: $media850) {
+    display: list-item;
+  }
+}

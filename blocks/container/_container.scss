@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 120px;
+  padding-top: 94px;
+  min-height: 930px;
+  background-image: url(../images/altai-forest.jpg);
+  background-size: 610px;
+  background-repeat: no-repeat;
+  background-position: top 94px right;
+
+  @media screen and (max-width: $media1050) {
+    padding-left: calc(120px - (1050px - 100%));
+  }
+
+  @media screen and (max-width: $media950) {
+    background-size: 323px;
+    padding-left: 20px;
+    min-height: 500px;
+  }
+
+  @media screen and (max-width: $media615) {
+    background-size: 254px;
+    padding: 89px 18px 79px 18px;
+    background-position: top 234px right 18px;
+  }
+}
