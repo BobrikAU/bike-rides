@@ -9,6 +9,7 @@
 
   .bikes__choice:checked + .bikes__cards > & {
     visibility: visible;
+    transition: visibility 0s .4s;
   }
 
   @media screen and (max-width: $media850) {
@@ -33,7 +34,7 @@
       left: 0;
       border-radius: 20px;
       background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaTransparent));
-      transition: background-color .4s;
+      transition: background-color .4s .4s;
 
       @media screen and (max-width: $media450) {
         width: 284px;
@@ -43,6 +44,7 @@
 
     &.card_invisible::after{
       background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaFull));
+      transition: background-color .4s 0s;
     }
   }
 }

@@ -404,7 +404,7 @@ template {
   font-weight: 500;
   line-height: 1.0624;
   cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
+  transition: opacity 0.4s;
   margin-right: 30px;
 }
 .header__link:hover {
@@ -494,7 +494,7 @@ template {
   font-weight: 500;
   line-height: 1;
   cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
+  transition: opacity 0.4s;
   margin-bottom: 32px;
   transition: 0s;
 }
@@ -658,7 +658,7 @@ template {
   font-weight: 600;
   line-height: 1.0624;
   cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
+  transition: opacity 0.4s;
   letter-spacing: 1px;
   display: flex;
   justify-content: center;
@@ -1407,7 +1407,7 @@ template {
   font-weight: 600;
   line-height: 22px;
   cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
+  transition: opacity 0.4s;
   padding: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
@@ -1418,6 +1418,7 @@ template {
 }
 .bikes__choice:checked + .bikes__cards > .card {
   visibility: visible;
+  transition: visibility 0s 0.4s;
 }
 @media screen and (max-width: 850px) {
   .card {
@@ -1442,7 +1443,7 @@ template {
     left: 0;
     border-radius: 20px;
     background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaTransparent));
-    transition: background-color 0.4s;
+    transition: background-color 0.4s 0.4s;
   }
 }
 @media screen and (max-width: 850px) and (max-width: 450px) {
@@ -1454,6 +1455,7 @@ template {
 @media screen and (max-width: 850px) {
   .card.card_invisible::after {
     background-color: rgba(var(--backgroundColorRGBA), var(--RGBAlfaFull));
+    transition: background-color 0.4s 0s;
   }
 }
 
@@ -1466,7 +1468,7 @@ template {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
-  transition: 0.4s;
+  transition: box-shadow 0.4s;
 }
 .card:hover .card__image {
   box-shadow: 0 20px 140px rgba(0, 0, 0, 0.11);
@@ -1708,7 +1710,7 @@ template {
   font-weight: 600;
   line-height: 1.2853;
   cursor: url("../images/pointer.svg"), auto;
-  transition: 0.4s;
+  transition: opacity 0.4s;
   margin-right: 25px;
 }
 .container__link:hover {

@@ -2,6 +2,6 @@
   text-decoration: none;
   @include text ($colorLink, $fontSize, $fontWeight, $lineHeight);
   cursor: $cusor;
-  transition: .4s;
+  transition: opacity .4s;
   @content;
 }

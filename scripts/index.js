@@ -56,8 +56,6 @@ function changeTheme() {
     listRoadsTitle.classList.add('bikes__choice-tite_theme_dark');
     listRoadsTitle = document.querySelector('.bikes__choice-tite_theme_dark');
     listRoadsTitle.classList.remove('bikes__choice-tite');
-
-
     document.querySelector('.container__line').classList.add('container__line_theme_dark');
     document.querySelectorAll('.switch__icon-light').forEach( item => {
       item.classList.add('switch__icon-light_theme_dark');
@@ -66,10 +64,6 @@ function changeTheme() {
       item.classList.add('switch__icon-dark_theme_dark');
     });
     iconTheme.classList.add('footer__icon-theme_theme_dark');
-
-
-
-
     numberTheme = 1;
   } else {
     root.style.setProperty('--colorTextMainRGB', '21, 21, 21');
@@ -95,8 +89,6 @@ function changeTheme() {
     listRoadsTitle.classList.add('bikes__choice-tite');
     listRoadsTitle = document.querySelector('.bikes__choice-tite');
     listRoadsTitle.classList.remove('bikes__choice-tite_theme_dark');
-
-
     document.querySelector('.container__line').classList.remove('container__line_theme_dark');
     document.querySelectorAll('.switch__icon-light').forEach( item => {
       item.classList.remove('switch__icon-light_theme_dark');
@@ -105,9 +97,6 @@ function changeTheme() {
       item.classList.remove('switch__icon-dark_theme_dark');
     });
     iconTheme.classList.remove('footer__icon-theme_theme_dark');
-
-
-
     numberTheme = 0;
   }
 }

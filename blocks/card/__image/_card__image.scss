@@ -6,7 +6,7 @@
   padding: 20px;
   background-color: $colorWhite;
   box-shadow: 0 20px 140px $shadowCardImage;
-  transition: .4s;
+  transition: box-shadow .4s;
 
   .card:hover & {
     box-shadow: 0 20px 140px $shadowCardImageHover;
