@@ -1,14 +1,16 @@
-# Шоссе, ТТ и Грэвел
-Представленный проект представляет собой страницу с краткой информацией о критериях выбора приобретаемого велосипеда в зависиммости от дорожного покрытия, на котором предполагается его использовать, а также со ссылками на сервисы, которые облегчают тренировочный процесс. В целях облегчения поиска подходящих велосипедов на странице имееются ссылки на страницы магазина, в котором их можно приобрести.
+# Das Rennrad, das TT-Rad, das Gravelbike
 
-### Учебный проект
-Являясь также учебным проектом, он имеет своей целью закрепление навыков по верстке адаптивной web-страницы с элементами интерактивности, побудить студента самостоятельно находить решения задач, для которых требуется дополнительная информация, а также овладение технологией препроцессоров.
+[Русский](README.ru.md)
 
-### Примененные технологии
-При верстке страницы использовались HTML5, JavaScript, SCSS. Файловая структура организована в соответствии с требованиями БЭМ.
-Запуск и просмотр проектной работы возможны с помощью браузеров.
+Dieses Projekt ist eine Webseite mit der kurzen Information über Kriterien der Auswahl von dem gekauften Fahrrad in Abhängigkeit von der Beschaffenheit der Straße, auf der es gefahren wird. Auf der Webseite gibt es auch die Linken auf die Services, die das Training erleichtern. Indem die Linken auf den Webseiten von Geschäften, die entsprechende Fahrräder verkaufen, wird die Suche des benötigten Fahrrads einfacher.
 
-Проект размещён по следующему [адресу](https://bobrikau.github.io/bike-rides/)
+### Lernprojekt
 
-#### Улучшение кода
-Недавний рефакторинг кода (по прошествии полугода после работы над проектом) выявил необходимость его переработки, в частности скрипта. Цель - исключение излишних операций поиска по DOM-дереву, улучшения его читабельности. Это ставится в план.
+Es ist ein Lernprojekt, dessen Ziele die Übung des Entwicklung von eine adaptive Webseite mit interaktiven Elementen, die Aufreizung von Lernenden, selbständig die für die Lösung nötige Information zu finden, und das Lernen der CSS-Präprozessoren.
+
+### Gebrauchte Technologien
+
+Bei der Entwicklung der Webseite wurden HTML5, JavaScript und SCSS benutzt. Die Struktur von SCSS-Dateien ist entsprechend [BEM](https://en.bem.info/methodology/filestructure/) organisiert.\
+Man kann das Projekt mit einem Browser starten und ansehen.
+
+Die Webseite ist unter [der Adresse](https://bobrikau.github.io/bike-rides/) erreichbar.
