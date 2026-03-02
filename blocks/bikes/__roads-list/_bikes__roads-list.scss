@@ -6,19 +6,21 @@
 
   @media screen and (max-width: $media850) {
     position: absolute;
-     z-index: 5;
+    z-index: 5;
     top: 28px;
     left: 1px;
 
     height: 0;
-    width: 100px;
+    width: 148px;
     overflow: hidden;
-    transition: .3s .3s;
+    transition: 0.3s 0.3s;
 
     .bikes__control:focus & {
       height: max-content;
     }
   }
+
+  @media screen and (max-width: $media750) {
+    width: 108px;
+  }
 }
-
-

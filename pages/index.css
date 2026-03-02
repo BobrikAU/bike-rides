@@ -703,7 +703,7 @@ template {
 
 .container__caption {
   margin: 0;
-  max-width: 460px;
+  max-width: 330px;
   width: 100%;
   color: var(--colorTextMain);
   font-family: inherit;
@@ -1308,7 +1308,7 @@ template {
     line-height: 1.5556;
     cursor: url("../images/pointer.svg"), auto;
     box-sizing: border-box;
-    width: 114px;
+    width: 150px;
     padding-left: 10px;
     height: 30px;
     border: 1px solid #e3e3e3;
@@ -1335,6 +1335,7 @@ template {
 }
 @media screen and (max-width: 750px) {
   .bikes__choice-tite {
+    width: 110px;
     font-size: 11px;
     line-height: 14px;
     padding-top: 7px;
@@ -1401,12 +1402,17 @@ template {
     top: 28px;
     left: 1px;
     height: 0;
-    width: 100px;
+    width: 148px;
     overflow: hidden;
     transition: 0.3s 0.3s;
   }
   .bikes__control:focus .bikes__roads-list {
     height: max-content;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bikes__roads-list {
+    width: 108px;
   }
 }
 

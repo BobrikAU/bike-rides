@@ -4,10 +4,10 @@
   @media screen and (max-width: $media850) {
     display: block;
     margin: 0;
-    @include text (var(--colorTextMain), 18px, 600, 1.5556);
+    @include text(var(--colorTextMain), 18px, 600, 1.5556);
     cursor: $cusor;
     box-sizing: border-box;
-    width: 114px;
+    width: 150px;
     padding-left: 10px;
     height: 30px;
     border: 1px solid $colorBorderBikesChoiceTite;
@@ -17,7 +17,7 @@
     background-color: var(--backgroundColor);
 
     &::after {
-      content: ' ';
+      content: " ";
       background-image: url(../images/arrow-down.svg);
       background-repeat: no-repeat;
       width: 12px;
@@ -26,15 +26,16 @@
       z-index: 100;
       right: 10px;
       top: 11px;
-      transition: .4s;
+      transition: 0.4s;
     }
 
-    .bikes__control:focus &::after{
+    .bikes__control:focus &::after {
       transform: rotate(-180deg);
     }
   }
 
   @media screen and (max-width: $media750) {
+    width: 110px;
     font-size: 11px;
     line-height: 14px;
     padding-top: 7px;
