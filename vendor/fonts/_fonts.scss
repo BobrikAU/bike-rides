@@ -1,8 +1,6 @@
-@import '../../mixins/font';
+@import "../../mixins/font";
 
 @include font(SemiBold, 600);
 @include font(Bold, 700);
 @include font(Medium, 500);
 @include font(Regular, 400);
-
-

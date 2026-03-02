@@ -2,12 +2,11 @@
   --colorTextMainRGB: 21, 21, 21;
   --backgroundColorRGBA: 244, 244, 244;
   --colorGrey: 67, 67, 67;
-  --colorGreyButton:235, 235, 235;
-  --RGBAlfaHover: .7;
-  --RGBAlfaStrongHover: .6;
+  --colorGreyButton: 235, 235, 235;
+  --RGBAlfaHover: 0.7;
+  --RGBAlfaStrongHover: 0.6;
   --RGBAlfaFull: 1;
   --RGBAlfaTransparent: 0;
-
 
   --colorTextMain: #151515;
   --inputTextInactive: #222; //цвет текста placeholder без hover
@@ -17,16 +16,20 @@
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;
-  --fieldsetBorderFocus: rgba(199, 199, 199, 1); //цвет границы fialdset при фокусе
-  --fieldsetBorder: rgba(199, 199, 199, .5); //цвет границы fialdset без фокуса
+  --fieldsetBorderFocus: rgba(
+    199,
+    199,
+    199,
+    1
+  ); //цвет границы fialdset при фокусе
+  --fieldsetBorder: rgba(199, 199, 199, 0.5); //цвет границы fialdset без фокуса
   --backgroundColorRange: #fff; // цвет фона линии input range
   --pointCardInactiveColor: #cacaca;
 }
 
 $colorTextMain: #151515; //основной цвет текста сайта
 $colorTextMainDarkTheme: #fff; //основной цвет текста сайта для темной темы
-$cusor: url('../images/pointer.svg'), auto; //внешний вид курсора
-
+$cusor: url("../images/pointer.svg"), auto; //внешний вид курсора
 
 $media1439: 1439px;
 $media1420: 1420px;
@@ -44,6 +47,7 @@ $media850: 850px;
 $media785: 785px;
 $media780: 780px;
 $media750: 750px;
+$media660: 660px;
 $media630: 630px;
 $media615: 615px;
 $media450: 450px;
@@ -52,7 +56,7 @@ $colorBorderSectionMobilVer: #e3e3e3;
 $colorWhite: #fff;
 $colorLightGreen: rgba(36, 180, 126, 1);
 $colorGreen: rgba(49, 158, 117, 1);
-$shadowCardImage: rgba(0, 0, 0, .06);
-$shadowCardImageHover: rgba(0, 0, 0, .11);
-$shadowCardSticky: rgba(0, 0, 0, .2);
-$fonts: 'Inter', Arial, Helvetica, sans-serif;
+$shadowCardImage: rgba(0, 0, 0, 0.06);
+$shadowCardImageHover: rgba(0, 0, 0, 0.11);
+$shadowCardSticky: rgba(0, 0, 0, 0.2);
+$fonts: "Inter", Arial, Helvetica, sans-serif;
