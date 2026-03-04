@@ -5,14 +5,13 @@
   width: 20px;
   height: 20px;
   background-color: inherit;
-  background-image: url(../images/line.svg),
-                    url(../images/line.svg),
-                    url(../images/line.svg);
+  background-image: url(../images/line.svg), url(../images/line.svg),
+    url(../images/line.svg);
   background-repeat: no-repeat;
   background-position: top, center, bottom;
   cursor: $cusor;
 
-  @media screen and (max-width: $media615) {
+  @media screen and (max-width: $media660) {
     display: block;
   }
 }

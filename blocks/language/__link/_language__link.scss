@@ -1,0 +1,22 @@
+.language__link {
+  @include link(var(--colorTextMain), 14px, 500, 1.0624);
+  @include linkHover(var(--opacityLinkHeaderHover));
+  margin: 0 10px 0 10px;
+  font-size: 14px;
+}
+
+.language__link:not(:last-child)::after {
+  content: "";
+  border-left: solid $colorTextMain 2px;
+  position: relative;
+  right: -11px;
+  cursor: default;
+}
+
+.language__link:first-child {
+  margin-left: 0;
+}
+
+.language__link:last-child {
+  margin-right: 0;
+}

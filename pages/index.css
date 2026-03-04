@@ -6,8 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -42,9 +44,12 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -52,8 +57,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -70,10 +77,12 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -91,8 +100,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -142,10 +153,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -153,7 +168,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +178,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -211,12 +228,18 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -239,8 +262,10 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -256,8 +281,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -272,8 +299,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -312,9 +341,9 @@ template {
   --colorTextMainRGB: 21, 21, 21;
   --backgroundColorRGBA: 244, 244, 244;
   --colorGrey: 67, 67, 67;
-  --colorGreyButton:235, 235, 235;
-  --RGBAlfaHover: .7;
-  --RGBAlfaStrongHover: .6;
+  --colorGreyButton: 235, 235, 235;
+  --RGBAlfaHover: 0.7;
+  --RGBAlfaStrongHover: 0.6;
   --RGBAlfaFull: 1;
   --RGBAlfaTransparent: 0;
   --colorTextMain: #151515;
@@ -325,8 +354,13 @@ template {
   --opacityLinkHeaderHover: 75%;
   --opacityLinkHover: 75%;
   --opacityLinkClosedSlideHover: 60%;
-  --fieldsetBorderFocus: rgba(199, 199, 199, 1);
-  --fieldsetBorder: rgba(199, 199, 199, .5);
+  --fieldsetBorderFocus: rgba(
+    199,
+    199,
+    199,
+    1
+  );
+  --fieldsetBorder: rgba(199, 199, 199, 0.5);
   --backgroundColorRange: #fff;
   --pointCardInactiveColor: #cacaca;
 }
@@ -380,20 +414,80 @@ template {
   width: 100%;
   min-height: 94px;
   box-sizing: border-box;
-  padding: 0 120px 20px 0;
+  padding: 0 120px 20px 120px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 100;
   background-color: var(--backgroundColor);
 }
+@media screen and (max-width: 1050px) {
+  .header {
+    padding-left: calc(120px - (1050px - 100%));
+  }
+}
+@media screen and (max-width: 950px) {
+  .header {
+    padding-left: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header {
+    padding-right: 24px;
+  }
+}
 @media screen and (max-width: 615px) {
   .header {
-    padding: 24px 18px 46px 0;
+    padding: 24px 18px 46px 18px;
     min-height: 74px;
   }
+}
+
+.language {
+  display: flex;
+}
+
+.language__link {
+  text-decoration: none;
+  color: var(--colorTextMain);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.0624;
+  cursor: url("../images/pointer.svg"), auto;
+  transition: opacity 0.4s;
+  margin: 0 10px 0 10px;
+  font-size: 14px;
+}
+.language__link:hover {
+  opacity: var(--opacityLinkHeaderHover);
+}
+
+.language__link:not(:last-child)::after {
+  content: "";
+  border-left: solid #151515 2px;
+  position: relative;
+  right: -11px;
+  cursor: default;
+}
+
+.language__link:first-child {
+  margin-left: 0;
+}
+
+.language__link:last-child {
+  margin-right: 0;
+}
+
+.language__link_active {
+  font-weight: 700;
+  cursor: default;
+}
+
+.language__link_theme_dark:not(:last-child)::after {
+  border-color: #fff;
 }
 
 .header__link {
@@ -413,7 +507,7 @@ template {
 .header__link:last-child {
   margin-right: 0;
 }
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 660px) {
   .header__link {
     display: none;
   }
@@ -431,7 +525,7 @@ template {
   background-position: top, center, bottom;
   cursor: url("../images/pointer.svg"), auto;
 }
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 660px) {
   .header__button {
     display: block;
   }
@@ -568,7 +662,7 @@ template {
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: rgb(36, 180, 126);
+  background-color: #24b47e;
 }
 
 .switch__range::-moz-range-thumb {
@@ -576,7 +670,7 @@ template {
   width: 20px;
   height: 20px;
   border-radius: 9999px;
-  background-color: rgb(36, 180, 126);
+  background-color: #24b47e;
 }
 
 .container {
@@ -612,7 +706,7 @@ template {
 
 .container__caption {
   margin: 0;
-  max-width: 460px;
+  max-width: 330px;
   width: 100%;
   color: var(--colorTextMain);
   font-family: inherit;
@@ -666,7 +760,7 @@ template {
   width: 180px;
   height: 50px;
   border-radius: 4px;
-  background-color: rgb(36, 180, 126);
+  background-color: #24b47e;
   position: relative;
   z-index: 10;
   overflow: hidden;
@@ -678,7 +772,7 @@ template {
   width: 180px;
   height: 50px;
   border-radius: 4px;
-  background-color: rgb(49, 158, 117);
+  background-color: #319e75;
   position: absolute;
   z-index: -10;
   top: 0;
@@ -708,8 +802,7 @@ template {
   height: 260px;
   padding: 20px 50px;
   background-color: #fff;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: sticky;
   float: right;
   margin: 140px 370px 79px 20px;
@@ -719,7 +812,7 @@ template {
 }
 @media screen and (max-width: 1420px) {
   .container__image {
-    margin-right: calc(370px + 100% - 1300px);
+    margin-right: calc(370px + (100% - 1300px));
   }
 }
 @media screen and (max-width: 1280px) {
@@ -802,7 +895,7 @@ template {
 }
 @media screen and (max-width: 1050px) {
   .slogan {
-    background-position: left calc(120px + 100% - 600px) top 120px;
+    background-position: left calc(120px + (100% - 600px)) top 120px;
   }
 }
 @media screen and (max-width: 950px) {
@@ -837,7 +930,7 @@ template {
 }
 @media screen and (max-width: 1420px) {
   .slogan__box {
-    margin-right: calc(155px + 100% - 1420px);
+    margin-right: calc(155px + (100% - 1420px));
   }
 }
 @media screen and (max-width: 1285px) {
@@ -847,7 +940,7 @@ template {
 }
 @media screen and (max-width: 780px) {
   .slogan__box {
-    width: calc(435px + 100% - 780px);
+    width: calc(435px + (100% - 780px));
   }
 }
 @media screen and (max-width: 630px) {
@@ -923,7 +1016,7 @@ template {
 }
 @media screen and (max-width: 1050px) {
   .slider-roads {
-    padding-left: calc(120px + 100% - 1050px);
+    padding-left: calc(120px + (100% - 1050px));
   }
 }
 @media screen and (max-width: 950px) {
@@ -1137,7 +1230,7 @@ template {
 }
 @media screen and (max-width: 1050px) {
   .bikes {
-    padding-left: calc(123px + 100% - 1050px);
+    padding-left: calc(123px + (100% - 1050px));
   }
 }
 @media screen and (max-width: 945px) {
@@ -1218,10 +1311,10 @@ template {
     line-height: 1.5556;
     cursor: url("../images/pointer.svg"), auto;
     box-sizing: border-box;
-    width: 114px;
+    width: 150px;
     padding-left: 10px;
     height: 30px;
-    border: 1px solid rgb(227, 227, 227);
+    border: 1px solid #e3e3e3;
     border-radius: 2px;
     position: relative;
     z-index: 10;
@@ -1245,6 +1338,7 @@ template {
 }
 @media screen and (max-width: 750px) {
   .bikes__choice-tite {
+    width: 110px;
     font-size: 11px;
     line-height: 14px;
     padding-top: 7px;
@@ -1268,7 +1362,7 @@ template {
     width: 114px;
     padding-left: 10px;
     height: 30px;
-    border: 1px solid rgb(227, 227, 227);
+    border: 1px solid #e3e3e3;
     border-radius: 2px;
     position: relative;
     z-index: 10;
@@ -1311,13 +1405,17 @@ template {
     top: 28px;
     left: 1px;
     height: 0;
-    width: 100px;
+    width: 148px;
     overflow: hidden;
     transition: 0.3s 0.3s;
   }
   .bikes__control:focus .bikes__roads-list {
-    height: -moz-max-content;
     height: max-content;
+  }
+}
+@media screen and (max-width: 750px) {
+  .bikes__roads-list {
+    width: 108px;
   }
 }
 
@@ -1411,7 +1509,6 @@ template {
   padding: 30px 30px 0 0;
   display: flex;
   flex-direction: column;
-  width: -moz-min-content;
   width: min-content;
   visibility: hidden;
   transition: visibility 0s 0.4s;
@@ -1463,8 +1560,7 @@ template {
   display: block;
   width: 340px;
   border-radius: 20px;
-  -o-object-position: -1px -1px;
-     object-position: -1px -1px;
+  object-position: -1px -1px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
@@ -1669,7 +1765,7 @@ template {
 }
 @media screen and (max-width: 1439px) {
   .container_theme_trainnig {
-    background-position: right calc(119px + 100% - 859px) top 208px;
+    background-position: right calc(119px + (100% - 859px)) top 208px;
   }
 }
 @media screen and (max-width: 1338px) {
@@ -1679,7 +1775,7 @@ template {
 }
 @media screen and (max-width: 1180px) {
   .container_theme_trainnig {
-    background-size: calc(580px + 100% - 1180px);
+    background-size: calc(580px + (100% - 1180px));
   }
 }
 @media screen and (max-width: 884px) {
@@ -1757,7 +1853,7 @@ template {
 }
 @media screen and (max-width: 1439px) {
   .footer {
-    padding-right: calc(120px + 100% - 1439px);
+    padding-right: calc(120px + (100% - 1439px));
   }
 }
 @media screen and (max-width: 1338px) {
@@ -1835,16 +1931,6 @@ template {
 .footer__input:hover {
   cursor: url("../images/pointer.svg"), auto;
 }
-.footer__input::-moz-placeholder {
-  color: var(--inputTextInactive);
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 28px;
-  opacity: 0.7;
-  -moz-transition: 0.4s;
-  transition: 0.4s;
-}
 .footer__input::placeholder {
   color: var(--inputTextInactive);
   font-family: inherit;
@@ -1853,10 +1939,6 @@ template {
   line-height: 28px;
   opacity: 0.7;
   transition: 0.4s;
-}
-.footer__form:hover .footer__input::-moz-placeholder {
-  color: var(--colorTextMain);
-  opacity: 1;
 }
 .footer__form:hover .footer__input::placeholder {
   color: var(--colorTextMain);
@@ -1867,13 +1949,7 @@ template {
   opacity: 1;
   outline: none;
 }
-.footer__form:hover .footer__input:focus::-moz-placeholder {
-  opacity: 0;
-}
 .footer__form:hover .footer__input:focus::placeholder {
-  opacity: 0;
-}
-.footer__input:focus::-moz-placeholder {
   opacity: 0;
 }
 .footer__input:focus::placeholder {
@@ -1965,4 +2041,6 @@ template {
 
 .footer__icon-theme_theme_dark {
   background-image: url(../images/logo-color_theme_dark.svg);
-}/*# sourceMappingURL=index.css.map */
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -2,7 +2,7 @@
 
 [Русский](README.ru.md)
 
-Dieses Projekt ist eine Webseite mit der kurzen Information über Kriterien der Auswahl von dem gekauften Fahrrad in Abhängigkeit von der Beschaffenheit der Straße, auf der es gefahren wird. Auf der Webseite gibt es auch die Linken auf die Services, die das Training erleichtern. Indem die Linken auf den Webseiten von Geschäften, die entsprechende Fahrräder verkaufen, wird die Suche des benötigten Fahrrads einfacher.
+Dieses Projekt ist eine Webseite mit der kurzen Information über Kriterien der Auswahl von dem gekauften Fahrrad in Abhängigkeit von dem Straßenbelag, auf dem es gefahren wird. Auf der Webseite gibt es auch die Linken auf die Services, die das Training erleichtern. Indem die Linken auf den Webseiten von Geschäften, die entsprechende Fahrräder verkaufen, wird die Suche des benötigten Fahrrads einfacher.
 
 ### Lernprojekt
 

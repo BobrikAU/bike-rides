@@ -1,15 +1,13 @@
 .header__link {
-  @include link (var(--colorTextMain), 14px, 500, 1.0624);
-  @include linkHover (var(--opacityLinkHeaderHover));
+  @include link(var(--colorTextMain), 14px, 500, 1.0624);
+  @include linkHover(var(--opacityLinkHeaderHover));
   margin-right: 30px;
 
   &:last-child {
     margin-right: 0;
   }
 
-  @media screen and (max-width: $media615) {
-      display: none;
+  @media screen and (max-width: $media660) {
+    display: none;
   }
 }
-
-
