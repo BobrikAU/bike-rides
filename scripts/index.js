@@ -13,6 +13,7 @@ const ranges = document.querySelectorAll(".switch__range");
 const iconTheme = document.querySelector(".footer__icon-theme");
 const popupLink = document.querySelectorAll(".popup__link");
 let listRoadsTitle = document.querySelector(".bikes__choice-tite");
+const languageLinks = document.querySelectorAll(".language__link");
 const languageLinkActive = document.querySelector(".language__link_active");
 
 //открытие и закрытие попапа
@@ -70,6 +71,9 @@ function changeTheme() {
       item.classList.add("switch__icon-dark_theme_dark");
     });
     iconTheme.classList.add("footer__icon-theme_theme_dark");
+    languageLinks.forEach((item) => {
+      item.classList.add("language__link_theme_dark");
+    });
     numberTheme = 1;
   } else {
     root.style.setProperty("--colorTextMainRGB", "21, 21, 21");
@@ -107,6 +111,9 @@ function changeTheme() {
       item.classList.remove("switch__icon-dark_theme_dark");
     });
     iconTheme.classList.remove("footer__icon-theme_theme_dark");
+    languageLinks.forEach((item) => {
+      item.classList.remove("language__link_theme_dark");
+    });
     numberTheme = 0;
   }
 }

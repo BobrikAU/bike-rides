@@ -7,10 +7,9 @@
 
 .language__link:not(:last-child)::after {
   content: "";
-  border-left: solid black 2px;
+  border-left: solid $colorTextMain 2px;
   position: relative;
   right: -11px;
-  padding: 0 10 0 10px;
   cursor: default;
 }
 
